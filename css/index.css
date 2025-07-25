@@ -3,16 +3,17 @@ body {
   padding: 0;
 }
 /* Стили для header */
-.header {
-  width: 100%;
-}
 header {
   background-color: #030303;
   width: 100%;
 }
+
+.header {
+  width: 100%;
+}
+
 .navbar {
   font-family: "Roboto Flex", sans-serif;
-  background-color: #030303;
   color: #ffffff;
   font-weight: 200;
   font-size: 22px;
@@ -27,6 +28,7 @@ header {
   display: flex;
   gap: 40px;
 }
+
 .menu a {
   color: #ffffff;
   text-decoration: none;
@@ -40,40 +42,41 @@ header {
 /* Стили для main (section 'Welcome')*/
 .welcome {
   background-color: #030303;
+  color: #ffffff;
 }
 
 .parent-container {
   position: relative;
-    width: 80%;
-    height: 550px;
-    overflow: hidden;
-    margin: 0 auto;
+  width: 80%;
+  height: 550px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .image-container {
-    position: absolute;
-    right: 0;
-    top: 35%;
-    transform: translateY(-50%);
-    width: 50%;
-    height: 50%;
+  position: absolute;
+  right: 0;
+  top: 35%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 50%;
+  z-index: 0;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .text-container {
-    position: absolute;
-    top: 44%;
-    left: 48%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: left;
-    z-index: 1;
-    width: 598px;
+  position: absolute;
+  top: 44%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 1;
+  width: 598px;
 }
 
 .text-container h1 {
@@ -81,7 +84,6 @@ header {
   font-size: 60px;
   font-weight: 400;
   margin: 0;
-  color: #ffffff;
 }
 
 .text-container p {
@@ -90,7 +92,6 @@ header {
   font-size: 22px;
   font-optical-sizing: auto;
   font-style: normal;
-  color: white;
   margin-bottom: 50px;
 }
 
@@ -114,15 +115,82 @@ header {
 }
 
 .image-container::before {
-    content: '';
-    position: absolute;
-    width: 30%;
-    height: 166%;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 166%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
 }
 
-/* section 'Gallery' */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  background-color: #030303;
+  vertical-align: bottom;
+  font-family: "Roboto Flex", sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  position: absolute;
+  right: 0;
+  bottom: 7%;
+  z-index: 1;
+}
+
+.numbers {
+  display: flex;
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+}
+
+.numbers-fst,
+.numbers-scnd,
+.direct_slash,
+.arrow-left,
+.arrow-right {
+  margin: 0 5px;
+}
+.arrow-left,
+.arrow-right {
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.arrow-left:hover {
+  color: #9d8665;
+}
+.arrow-right:hover {
+  color: #9d8665;
+}
+.squares {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.square {
+  margin: 0 auto;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+}
+
+.golden {
+  background-color: #d2b183;
+}
+
+.arrows {
+  display: flex;
+  width: 25%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* section 'Visting' */
 .visiting {
   display: flex;
   flex-direction: column;
@@ -153,7 +221,7 @@ header {
 }
 
 .gallery-item img:hover {
-    filter: brightness(70%);
+  filter: brightness(70%);
 }
 
 figcaption {
@@ -184,11 +252,10 @@ figcaption {
   font-family: "Roboto Flex", sans-serif;
   font-size: 22px;
   font-weight: 200;
-  color: #000000;
+  color: #030303;
   border-top: #710707 2px solid;
   width: 45%;
   padding-top: 10px;
-  
 }
 
 .signature {
@@ -198,3 +265,5 @@ figcaption {
   color: #000000;
   margin-bottom: 30px;
 }
+
+/* Caroesel */
