@@ -39,7 +39,8 @@ header {
   color: #9d8665;
 }
 
-/* Стили для main (section 'Welcome')*/
+/* Стили для main */
+/* section 'Welcome' */
 .welcome {
   background-color: #030303;
   color: #ffffff;
@@ -80,7 +81,7 @@ header {
 }
 
 .text-container h1 {
-  font-family: "Forum";
+  font-family: "Forum", monospace;
   font-size: 60px;
   font-weight: 400;
   margin: 0;
@@ -240,7 +241,6 @@ figcaption {
   font-weight: 400;
   margin-bottom: 10px;
   color: #9d8665;
-  text-align: left;
 }
 
 .heading {
@@ -266,4 +266,51 @@ figcaption {
   margin-bottom: 30px;
 }
 
-/* Caroesel */
+/* section "explore" */
+.explore {
+  background-color: #030303;
+  color: #ffffff;
+  height: 680px;
+  margin-top: 40px;
+}
+
+.explore-container {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.explore-contant {
+  width: 50%;
+}
+
+.explore-heading h1 {
+  display: inline-block;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 100;
+  margin: 60px 0 30px 0;
+  border-bottom: #710707 3px solid;
+  padding-bottom: 30px;
+}
+
+.explore-text {
+  /* border-top: #710707 3px solid; */
+  padding-top: 50px;
+}
+
+.explore-text p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.explore-text span {
+  color: #d2b183;
+}
+
+.explore-img {
+  width: 50%;
+  margin: 70px 0 0 0;
+  text-align: right;
+}
