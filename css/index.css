@@ -191,7 +191,7 @@ header {
   justify-content: center;
 }
 
-/* section 'Visting' */
+/* section 'Visiting' */
 .visiting {
   display: flex;
   flex-direction: column;
@@ -266,7 +266,7 @@ figcaption {
   margin-bottom: 30px;
 }
 
-/* section "explore" */
+/* section "Explore" */
 .explore {
   background-color: #030303;
   color: #ffffff;
@@ -318,7 +318,7 @@ figcaption {
   width: 100%;
 }
 
-/* section "video" */
+/* section "Video" */
 .video {
   height: 1246px;
   margin-top: 70px;
@@ -491,6 +491,92 @@ figcaption {
   cursor: pointer;
 }
 
-.video-carousel svg {
+.video-carousel {
+  width: 100%;
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+
+.video-carousel-item {
+  width: 31%;
+  position: relative;
+}
+
+.video-carousel-item img {
+  width: 100%;
+}
+
+.yuotube-icon {
+  position: absolute;
   width: 68px;
+  top: 33%;
+  left: 40%;
+  cursor: pointer;
+}
+
+.logo-louvre {
+    background-image: url('/img/welcome-slider/1.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+
+.item-txt {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  font-size: 15px;
+  color: #ffffff;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+}
+
+.menu-dots {
+  width: 25px;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.small-video-carousel {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-video-carousel {
+  width: 5%;
+  text-align: center;
+}
+
+.arrow-video-carousel svg {
+  cursor: pointer;
+  width: 12px;
+}
+
+.points-video-carousel {
+  display: flex;
+  width: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.point-video-carousel {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #999999;
+}
+
+.black-point {
+  background-color: #000000;
 }
