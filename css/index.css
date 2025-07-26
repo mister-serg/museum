@@ -491,3 +491,6 @@ figcaption {
   cursor: pointer;
 }
 
+.video-carousel svg {
+  width: 68px;
+}
