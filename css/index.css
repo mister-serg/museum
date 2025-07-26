@@ -270,7 +270,7 @@ figcaption {
 .explore {
   background-color: #030303;
   color: #ffffff;
-  height: 680px;
+  height: 720px;
   margin-top: 40px;
 }
 
@@ -311,5 +311,183 @@ figcaption {
 .explore-img {
   width: 50%;
   margin: 70px 0 0 0;
-  text-align: right;
+  text-align: left;
 }
+
+.explore-img img {
+  width: 100%;
+}
+
+/* section "video" */
+.video {
+  height: 1246px;
+  margin-top: 70px;
+}
+.video-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.video-content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.video-heading {
+  width: 50%;
+}
+
+.video-heading h1 {
+  text-transform: uppercase;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #9d8665;
+  margin-top: 0;
+}
+
+.video-text {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.video-text p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.video-main {
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+}
+
+.video-main img {
+  width: 100%;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: #ffffff 5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 90px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    cursor: pointer;
+}
+
+.playback-panel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+  background-color: #030303;
+}
+
+.play-icon {
+  width: 4%;
+  padding-top: 2px;
+}
+
+.play-icon svg {
+  width: 90%;
+  cursor: pointer;
+}
+
+.time {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passed-time {
+  width: 60%;
+  height: 4px;
+  background-color: #710707;
+}
+
+.slider {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.remain-time {
+  width: 30%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.volume-level {
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.volume-icon {
+  width: 4%;
+  padding-top: 5px;
+}
+
+.volume-icon svg {
+  width: 100%;
+  cursor: pointer;
+}
+
+.less-level {
+  width: 30%;
+  height: 4px;
+  background-color: #710707;
+}
+
+.more-level {
+  width: 35%;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.fullscreen-icon {
+  width: 4%;
+}
+
+.fullscreen-icon svg {
+  width: 100%;
+  cursor: pointer;
+}
+
