@@ -1,8 +1,9 @@
+/* Общие стили */
 body {
   margin: 0;
   padding: 0;
 }
-/* Стили для header */
+/* Стили для хедер */
 header {
   background-color: #030303;
   width: 100%;
@@ -12,11 +13,20 @@ header {
   width: 100%;
 }
 
+.logo {
+  text-align: center;
+  cursor: pointer;
+}
+.logo svg {
+  width: 40px;
+  height: 40px;
+}
 .navbar {
   font-family: "Roboto Flex", sans-serif;
   color: #ffffff;
   font-weight: 200;
   font-size: 22px;
+  letter-spacing: 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,26 +34,56 @@ header {
   margin: 0 auto;
   width: 80%;
 }
+
 .menu {
   display: flex;
-  gap: 40px;
+  gap: 50px;
 }
 
+.menu-svg {
+  display: none;
+  margin-left: 20px;
+}
+
+.menu-svg svg {
+  width: 16px;
+  height: 16px;
+}
 .menu a {
   color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
 }
+
 .menu a:hover {
   color: #9d8665;
 }
 
-/* Стили для main */
+.menu a:active {
+  color: #9d8665;
+  font-weight: bold;
+}
+
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  /* cursor: pointer; */
+  z-index: 1000;
+}
+
+.burger .line {
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px;
+}
+
 /* section 'Welcome' */
 .welcome {
   background-color: #030303;
   color: #ffffff;
+  margin-bottom: 50px;
 }
 
 .parent-container {
@@ -119,7 +159,7 @@ header {
   content: "";
   position: absolute;
   width: 30%;
-  height: 166%;
+  height: 168%;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
   z-index: 1;
 }
@@ -137,7 +177,7 @@ header {
   font-size: 16px;
   position: absolute;
   right: 0;
-  bottom: 7%;
+  bottom: 6%;
   z-index: 1;
 }
 
@@ -191,13 +231,65 @@ header {
   justify-content: center;
 }
 
+.welcome-gallery {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 82%;
+  margin: 280px auto 0 auto;
+  padding-bottom: 30px;
+  border-bottom: 1px solid gray;
+}
+
+.gallery-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.welcome-gallery img {
+  width: 100%;
+  height: 194px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.gallery-row img {
+  width: 49%;
+  height: 161px;
+  object-fit: cover;
+}
+
+.social-network {
+  display: none;
+  width: 60%;
+  background: #030303;
+  margin: 7% auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-network-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-network-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 /* section 'Visiting' */
 .visiting {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
 }
 
 .gallery-container {
@@ -206,10 +298,12 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .gallery-item {
-  width: 30%;
+  width: 32%;
+  height: 50%;
   margin: 0 0 10px 0;
   overflow: hidden;
   transition: filter 0.3s ease;
@@ -239,22 +333,24 @@ figcaption {
   font-family: "Forum", sans-serif;
   font-size: 80px;
   font-weight: 400;
-  margin-bottom: 10px;
+  letter-spacing: 5px;
+  margin: 0 0 10px 0;
   color: #9d8665;
 }
 
 .heading {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
+  letter-spacing: 5px;
 }
 
 .subtitle {
   font-family: "Roboto Flex", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 200;
   color: #030303;
   border-top: #710707 2px solid;
-  width: 45%;
+  width: 100%;
   padding-top: 10px;
 }
 
@@ -263,32 +359,32 @@ figcaption {
   font-size: 18px;
   font-weight: 200;
   color: #000000;
-  margin-bottom: 30px;
 }
 
 /* section "Explore" */
 .explore {
   background-color: #030303;
   color: #ffffff;
-  height: 720px;
-  margin-top: 40px;
+  height: 660px;
 }
 
 .explore-container {
   display: flex;
   width: 80%;
   margin: 0 auto;
+  gap: 0 25px;
 }
 
 .explore-contant {
-  width: 50%;
+  width: 55%;
 }
 
 .explore-heading h1 {
   display: inline-block;
   font-family: "Forum", sans-serif;
   font-size: 80px;
-  font-weight: 100;
+  font-weight: 400;
+  letter-spacing: 5px;
   margin: 60px 0 30px 0;
   border-bottom: #710707 3px solid;
   padding-bottom: 15px;
@@ -309,7 +405,7 @@ figcaption {
 }
 
 .explore-img {
-  width: 50%;
+  width: 43%;
   margin: 70px 0 0 0;
   text-align: left;
 }
@@ -318,10 +414,10 @@ figcaption {
   width: 100%;
 }
 
-/* section "Video" */
+/* section 'VIDEO' */
 .video {
-  height: 1246px;
-  margin-top: 70px;
+  height: 1175px;
+  margin-top: 50px;
 }
 .video-container {
   width: 80%;
@@ -331,11 +427,11 @@ figcaption {
 .video-content {
   display: flex;
   width: 100%;
-  align-items: center;
+  align-items: start;
 }
 
 .video-heading {
-  width: 50%;
+  width: 57%;
 }
 
 .video-heading h1 {
@@ -343,35 +439,39 @@ figcaption {
   font-family: "Forum", sans-serif;
   font-size: 80px;
   font-weight: 400;
-  margin-bottom: 10px;
+  letter-spacing: 5px;
   color: #9d8665;
-  margin-top: 0;
+  margin: 0;
 }
 
 .video-text {
-  width: 50%;
-  padding-right: 20px;
+  width: 43%;
 }
 
 .video-text p {
   font-family: "Roboto Flex", sans-serif;
   font-size: 22px;
   font-weight: 300;
+  margin: 0;
+  padding-top: 10px;
 }
 
 .video-main {
   position: relative;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .video-main img {
   width: 100%;
+  height: auto;
 }
 
 .play-button {
+    width: 20%;
+    height: 34%;
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -380,8 +480,8 @@ figcaption {
 }
 
 .circle {
-    width: 220px;
-    height: 220px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     border: #ffffff 5px solid;
     display: flex;
@@ -411,7 +511,7 @@ figcaption {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 85px;
+  height: 10%;
   background-color: #030303;
 }
 
@@ -503,13 +603,17 @@ figcaption {
   position: relative;
 }
 
+.video-carousel-item:nth-child(4) { /* Скрываем 4й элемент */
+    display: none;
+}
+
 .video-carousel-item img {
   width: 100%;
 }
 
 .yuotube-icon {
   position: absolute;
-  width: 68px;
+  width: 18.02%;
   top: 33%;
   left: 40%;
   cursor: pointer;
@@ -520,8 +624,8 @@ figcaption {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    width: 35px;
-    height: 35px;
+    width: 9.28%;
+    height: 16.2%;
     position: absolute;
     top: 4%;
     left: 2%;
@@ -529,6 +633,7 @@ figcaption {
 
 .item-txt {
   position: absolute;
+  width: 72.65%;
   top: 0;
   left: 15%;
   font-size: 15px;
@@ -537,8 +642,13 @@ figcaption {
   font-weight: 400;
 }
 
+.item-txt  p {
+  white-space: nowrap; /* запрещаем перенос на новую строку */
+  overflow: hidden; /* скрываем лишнее */
+  text-overflow: ellipsis; /* добавляем многоточие */
+}
 .menu-dots {
-  width: 25px;
+  width: 6.63%;
   position: absolute;
   top: 5%;
   right: 2%;
@@ -548,9 +658,10 @@ figcaption {
 .small-video-carousel {
   display: flex;
   width: 100%;
-  height: 80px;
+  height: 7%;
   align-items: center;
   justify-content: center;
+  margin-top: 2.6%;
 }
 
 .arrow-video-carousel {
@@ -581,8 +692,616 @@ figcaption {
   background-color: #000000;
 }
 
+/* section 'Gallery' */
 .gallery {
   width: 100%;
-  height: 2200px;
+  height: 1750px;
   background-color: #030303;
+  margin-top: 20px;
+}
+
+.parent-gallery-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.parent-gallery-container h1 {
+  text-transform: uppercase;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.gallery-container-img {
+  display: flex;
+  width: 100%;
+  height: 1600px;
+  margin-top: 20px;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-container-img::after { /* Создаем градиетнт */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
+}
+
+.column-img {
+  width: 32%;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.column-padding {
+  padding-top: 3%;
+}
+
+.gallery-container-img-adaptive {
+  display: none;
+}
+
+/* Адаптивные стили */
+@media (max-width: 1024px) {
+  /* для header */
+  .header {
+    position: relative;
+    height: 130px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 30%;
+    height: 100%;
+    gap: 20px;
+    background-color: #030303;
+    flex-direction: column;
+    transition: left 0.5s ease;
+    z-index: 2;
+  }
+
+  .menu a {
+    margin-left: 70px;
+    cursor: default;
+  }
+
+  .menu a:hover {
+    color: unset;
+  }
+
+  .menu-svg {
+    display: inline;
+  }
+
+  .logo {
+    cursor: default;
+    margin-left: 5px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navbar {
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: space-between;
+    width: 98%;
+    height: 130px;
+    padding: 0;
+  }
+
+  .menu.active {
+    left: 0;
+  }
+
+  /* для секции welcome */
+  .welcome {
+  margin-bottom: 40px;
+}
+  .parent-container {
+    width: 98%;
+    height: 585px;
+    overflow: hidden;
+  }
+  .image-container {
+    width: 65%;
+    height: 65%;
+  }
+
+  .text-container h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 0 0 30px 0;
+  }
+
+  .text-container p {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+  .text-container {
+    top: 44%;
+    left: 30.5%;
+    width: 598px;
+  }
+
+  .btn {
+    letter-spacing: 2px;
+    width: 200px;
+  }
+
+  .carousel {
+    bottom: 4%;
+    right: 5%;
+  }
+
+  .square {
+    width: 12px;
+    height: 12px;
+  }
+
+  .arrow-left,
+.arrow-right {
+  cursor: default;
+  font-size: 20px;
+}
+
+  /* для секции 'Visiting' */
+  .visiting {
+    width: 96%;
+    margin-bottom: 20px;
+  }
+
+  .gallery-item {
+    width: 35%;
+  }
+
+  .gallery-container {
+  justify-content: center;
+  gap: 0 70px;
+}
+
+.gallery-item img {
+  cursor: default;
+}
+
+.visiting-container h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.heading {
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.subtitle {
+  font-size: 18px;
+  padding-top: 7px;
+}
+
+.signature {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* для секции 'Explore' */
+.explore {
+  display: flex;
+  height: 1149px;
+  margin-top: 20px;
+}
+
+.explore-container {
+  display: block;
+  margin: 0 auto 0 auto;
+  width: 97%;
+}
+
+.explore-contant {
+  width: 100%;
+}
+
+.explore-heading h1 {
+  display: block;
+  font-size: 50px;
+  letter-spacing: 5px;
+  margin: 30px 0 50px 0;
+  border-bottom: #710707 3px solid;
+  padding-bottom: 20px;
+}
+
+.explore-text {
+  padding-top: 0;
+}
+
+.explore-text-hidden {
+  display: none;
+}
+
+.explore-text p {
+  font-size: 20px;
+}
+
+.explore-img {
+  width: 82%;
+  margin: 70px auto 0 auto;
+}
+
+.explore-img img {
+  width: 100%;
+}
+
+/* для секции 'Video' */
+.video {
+  height: 881px;
+  margin-top: 45px;
+}
+.video-container {
+  width: 98%;
+}
+
+.video-content {
+  width: 100%;
+}
+
+.video-heading {
+  width: 100%;
+}
+
+.video-heading h1 {
+  font-size: 50px;
+}
+
+.video-text {
+  display: none;
+}
+
+.video-main {
+  margin-top: 2%;
+}
+
+.triangle {
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 80px solid #ffffff;
+    cursor: default;
+}
+
+.item-txt {
+  left: 21%;
+  font-size: 18px;
+  width: 63%;
+}
+
+.video-carousel {
+  margin-top: 3%;
+}
+
+.logo-louvre {
+    width: 13.08%;
+    height: 22.98%;
+    top: 6%;
+    left: 3%;
+}
+
+.menu-dots {
+  width: 8%;
+  top: 8.2%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.yuotube-icon {
+  width: 26%;
+  top: 28%;
+  left: 37%;
+  cursor: pointer;
+}
+
+.small-video-carousel{
+  margin-top: 1%;
+}
+
+.points-video-carousel {
+  width: 15%;
+}
+
+/* для секции 'GALLERY' */
+.gallery {
+  height: 1460px;
+  margin-top: 18px;
+}
+
+.parent-gallery-container {
+  width: 97%;
+  padding-top: 20px;
+}
+
+.parent-gallery-container h1 {
+  font-size: 50px;
+}
+
+.gallery-container-img {
+  height: 1330px;
+  margin-top: 18px;
+}
+
+.column-img {
+  width: 31%;
+  gap: 32px;
+}
+
+.column-padding {
+  padding-top: 3%;
+}
+}
+
+@media (max-width: 768px) {
+  /* для header */
+  /* для секции welcome */
+  .header {
+    height: 110px;
+  }
+  .parent-container {
+    display: block;
+    position: static;
+    width: 98%;
+    height: 861px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    top: 110%;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .text-container {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    z-index: auto;
+    width: 98%;
+  }
+
+  .text-container h1 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin: 0 0 20px 0;
+  }
+
+  .text-container p {
+    font-size: 20px;
+  }
+
+  .image-container {
+    position: static;
+    display: flex;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    z-index: auto;
+  }
+
+  .image-container::before {
+    display: none;
+  }
+
+  .image-container img {
+    width: 98%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .btn {
+    display: none;
+  }
+
+  .carousel {
+    position: static;
+    bottom: auto;
+    right: auto;
+    display: flex;
+    z-index: auto;
+    margin: 30px auto;
+  }
+
+  /* для секции 'Visiting' */
+  .visiting {
+    margin-bottom: 0;
+  }
+
+  .gallery-item {
+    width: 40%;
+  }
+
+  .gallery-container {
+  gap: 0 50px;
+}
+
+.visiting-container h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+.heading {
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+.signature {
+  margin-bottom: 15px;
+}
+
+  /* для секции 'Explore' */
+  .explore {
+  height: 910px;
+}
+
+.explore-container {
+  display: block;
+  width: 96%;
+  margin: 0 auto 0 auto;
+}
+
+.explore-contant {
+  width: 100%;
+}
+
+.explore-heading h1 {
+  font-size: 40px;
+  margin: 35px 0 40px 0;
+}
+
+.explore-text {
+  display: none;
+}
+
+.explore-img {
+  width: 100%;
+  margin: 60px 0 0 0;
+  text-align: center;
+}
+
+.explore-img img {
+  width: 100%;
+}
+
+/* для секции 'Video' */
+.video {
+  height: 757px;
+  margin-top: 40px;
+}
+
+.video-container {
+  width: 97%;
+}
+
+.video-heading h1 {
+  font-size: 40px;
+}
+
+.triangle {
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 60px solid #ffffff;
+}
+
+.video-carousel-item {
+  width: 49%;
+}
+
+.video-carousel-item:nth-child(3) { /* Скрываем 3й элемент */
+    display: none;
+}
+
+.item-txt {
+  left: 16%;
+  width: 63%;
+}
+
+.video-carousel {
+  margin-top: 3.5%;
+}
+
+.logo-louvre {
+    width: 11.25%;
+    height: 19.61%;
+    top: 6%;
+    left: 3%;
+}
+
+.menu-dots {
+  width: 6%;
+  top: 8.2%;
+  right: 1.7%;
+  cursor: pointer;
+}
+
+.yuotube-icon {
+  width: 22.27%;
+  top: 29.5%;
+  left: 37%;
+  cursor: pointer;
+}
+.small-video-carousel{
+  margin-top: 2%;
+}
+
+.points-video-carousel {
+  width: 22%;
+}
+
+/* для секции 'GALLERY' */
+.gallery {
+  height: 1220px;
+  margin-top: 14px;
+}
+
+.parent-gallery-container {
+  width: 97%;
+  padding-top: 4%;
+  margin: 0 auto 0 auto;
+}
+
+.parent-gallery-container h1 {
+  font-size: 40px;
+  padding-left: 2px;
+}
+
+.gallery-container-img {
+  display: none;
+}
+
+.gallery-container-img-adaptive {
+  display: flex;
+  width: 99%;
+  height: 1115px;
+  margin: 3% auto 0 auto;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.gallery-container-img-adaptive::after { /* Создаем градиетнт */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
+}
+
+.column-img {
+  width: 49%;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 1.2%;
+}
+
+.column-padding {
+  padding-top: 5%;
+}
 }
