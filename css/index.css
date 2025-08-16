@@ -620,7 +620,7 @@ figcaption {
 }
 
 .logo-louvre {
-    background-image: url('/img/welcome-slider/1.jpg');
+    background-image: url('../img/welcome-slider/1.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 50%;
