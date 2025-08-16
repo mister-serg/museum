@@ -468,39 +468,39 @@ figcaption {
 }
 
 .play-button {
-    width: 20%;
-    height: 34%;
-    position: absolute;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 20%;
+  height: 34%;
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .circle {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: #ffffff 5px solid;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: #ffffff 5px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .triangle {
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-top: 90px solid #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    cursor: pointer;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-top: 90px solid #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  cursor: pointer;
 }
 
 .playback-panel {
@@ -603,8 +603,9 @@ figcaption {
   position: relative;
 }
 
-.video-carousel-item:nth-child(4) { /* Скрываем 4й элемент */
-    display: none;
+.video-carousel-item:nth-child(4) {
+  /* Скрываем 4й элемент */
+  display: none;
 }
 
 .video-carousel-item img {
@@ -620,15 +621,15 @@ figcaption {
 }
 
 .logo-louvre {
-    background-image: url('../img/welcome-slider/1.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
-    width: 9.28%;
-    height: 16.2%;
-    position: absolute;
-    top: 4%;
-    left: 2%;
+  background-image: url("../img/welcome-slider/1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 9.28%;
+  height: 16.2%;
+  position: absolute;
+  top: 4%;
+  left: 2%;
 }
 
 .item-txt {
@@ -642,7 +643,7 @@ figcaption {
   font-weight: 400;
 }
 
-.item-txt  p {
+.item-txt p {
   white-space: nowrap; /* запрещаем перенос на новую строку */
   overflow: hidden; /* скрываем лишнее */
   text-overflow: ellipsis; /* добавляем многоточие */
@@ -727,7 +728,8 @@ figcaption {
   cursor: pointer;
 }
 
-.gallery-container-img::after { /* Создаем градиетнт */
+.gallery-container-img::after {
+  /* Создаем градиетнт */
   content: "";
   position: absolute;
   bottom: 0;
@@ -751,6 +753,100 @@ figcaption {
 
 .gallery-container-img-adaptive {
   display: none;
+}
+
+/* section 'BUY TICKETS' */
+.buy-tickets {
+  width: 100%;
+  height: 743px;
+  margin-top: 50px;
+}
+
+.heading-buy-tickets {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: #710707 3px solid;
+}
+
+.heading-buy-tickets h1 {
+  text-transform: uppercase;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #9d8665;
+  margin: 0 0 10px 0;
+}
+
+.buy-tickets-container {
+  display: flex;
+  width: 80%;
+  margin: 60px auto 0 auto;
+}
+
+.buy-tickets-img {
+  width: 50%;
+}
+
+.buy-tickets-img img {
+  width: 100%;
+}
+
+.buy-tickets-content {
+  width: 50%;
+  display: flex;
+}
+
+.buy-tickets-content-ticket-type {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buy-tickets-content-ticket-type h1 {
+  margin: 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 37px;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.ticket-type {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.buy-tickets-content-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.buy-tickets-content-amount h1 {
+  margin: 0;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
 }
 
 /* Адаптивные стили */
@@ -811,8 +907,8 @@ figcaption {
 
   /* для секции welcome */
   .welcome {
-  margin-bottom: 40px;
-}
+    margin-bottom: 40px;
+  }
   .parent-container {
     width: 98%;
     height: 585px;
@@ -856,10 +952,10 @@ figcaption {
   }
 
   .arrow-left,
-.arrow-right {
-  cursor: default;
-  font-size: 20px;
-}
+  .arrow-right {
+    cursor: default;
+    font-size: 20px;
+  }
 
   /* для секции 'Visiting' */
   .visiting {
@@ -872,183 +968,183 @@ figcaption {
   }
 
   .gallery-container {
-  justify-content: center;
-  gap: 0 70px;
-}
+    justify-content: center;
+    gap: 0 70px;
+  }
 
-.gallery-item img {
-  cursor: default;
-}
+  .gallery-item img {
+    cursor: default;
+  }
 
-.visiting-container h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-.heading {
-  font-size: 20px;
-  letter-spacing: 3px;
-}
+  .visiting-container h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .heading {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 
-.subtitle {
-  font-size: 18px;
-  padding-top: 7px;
-}
+  .subtitle {
+    font-size: 18px;
+    padding-top: 7px;
+  }
 
-.signature {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
+  .signature {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 
-/* для секции 'Explore' */
-.explore {
-  display: flex;
-  height: 1149px;
-  margin-top: 20px;
-}
+  /* для секции 'Explore' */
+  .explore {
+    display: flex;
+    height: 1149px;
+    margin-top: 20px;
+  }
 
-.explore-container {
-  display: block;
-  margin: 0 auto 0 auto;
-  width: 97%;
-}
+  .explore-container {
+    display: block;
+    margin: 0 auto 0 auto;
+    width: 97%;
+  }
 
-.explore-contant {
-  width: 100%;
-}
+  .explore-contant {
+    width: 100%;
+  }
 
-.explore-heading h1 {
-  display: block;
-  font-size: 50px;
-  letter-spacing: 5px;
-  margin: 30px 0 50px 0;
-  border-bottom: #710707 3px solid;
-  padding-bottom: 20px;
-}
+  .explore-heading h1 {
+    display: block;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 30px 0 50px 0;
+    border-bottom: #710707 3px solid;
+    padding-bottom: 20px;
+  }
 
-.explore-text {
-  padding-top: 0;
-}
+  .explore-text {
+    padding-top: 0;
+  }
 
-.explore-text-hidden {
-  display: none;
-}
+  .explore-text-hidden {
+    display: none;
+  }
 
-.explore-text p {
-  font-size: 20px;
-}
+  .explore-text p {
+    font-size: 20px;
+  }
 
-.explore-img {
-  width: 82%;
-  margin: 70px auto 0 auto;
-}
+  .explore-img {
+    width: 82%;
+    margin: 70px auto 0 auto;
+  }
 
-.explore-img img {
-  width: 100%;
-}
+  .explore-img img {
+    width: 100%;
+  }
 
-/* для секции 'Video' */
-.video {
-  height: 881px;
-  margin-top: 45px;
-}
-.video-container {
-  width: 98%;
-}
+  /* для секции 'Video' */
+  .video {
+    height: 881px;
+    margin-top: 45px;
+  }
+  .video-container {
+    width: 98%;
+  }
 
-.video-content {
-  width: 100%;
-}
+  .video-content {
+    width: 100%;
+  }
 
-.video-heading {
-  width: 100%;
-}
+  .video-heading {
+    width: 100%;
+  }
 
-.video-heading h1 {
-  font-size: 50px;
-}
+  .video-heading h1 {
+    font-size: 50px;
+  }
 
-.video-text {
-  display: none;
-}
+  .video-text {
+    display: none;
+  }
 
-.video-main {
-  margin-top: 2%;
-}
+  .video-main {
+    margin-top: 2%;
+  }
 
-.triangle {
+  .triangle {
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     border-top: 80px solid #ffffff;
     cursor: default;
-}
+  }
 
-.item-txt {
-  left: 21%;
-  font-size: 18px;
-  width: 63%;
-}
+  .item-txt {
+    left: 21%;
+    font-size: 18px;
+    width: 63%;
+  }
 
-.video-carousel {
-  margin-top: 3%;
-}
+  .video-carousel {
+    margin-top: 3%;
+  }
 
-.logo-louvre {
+  .logo-louvre {
     width: 13.08%;
     height: 22.98%;
     top: 6%;
     left: 3%;
-}
+  }
 
-.menu-dots {
-  width: 8%;
-  top: 8.2%;
-  right: 2%;
-  cursor: pointer;
-}
+  .menu-dots {
+    width: 8%;
+    top: 8.2%;
+    right: 2%;
+    cursor: pointer;
+  }
 
-.yuotube-icon {
-  width: 26%;
-  top: 28%;
-  left: 37%;
-  cursor: pointer;
-}
+  .yuotube-icon {
+    width: 26%;
+    top: 28%;
+    left: 37%;
+    cursor: pointer;
+  }
 
-.small-video-carousel{
-  margin-top: 1%;
-}
+  .small-video-carousel {
+    margin-top: 1%;
+  }
 
-.points-video-carousel {
-  width: 15%;
-}
+  .points-video-carousel {
+    width: 15%;
+  }
 
-/* для секции 'GALLERY' */
-.gallery {
-  height: 1460px;
-  margin-top: 18px;
-}
+  /* для секции 'GALLERY' */
+  .gallery {
+    height: 1460px;
+    margin-top: 18px;
+  }
 
-.parent-gallery-container {
-  width: 97%;
-  padding-top: 20px;
-}
+  .parent-gallery-container {
+    width: 97%;
+    padding-top: 20px;
+  }
 
-.parent-gallery-container h1 {
-  font-size: 50px;
-}
+  .parent-gallery-container h1 {
+    font-size: 50px;
+  }
 
-.gallery-container-img {
-  height: 1330px;
-  margin-top: 18px;
-}
+  .gallery-container-img {
+    height: 1330px;
+    margin-top: 18px;
+  }
 
-.column-img {
-  width: 31%;
-  gap: 32px;
-}
+  .column-img {
+    width: 31%;
+    gap: 32px;
+  }
 
-.column-padding {
-  padding-top: 3%;
-}
+  .column-padding {
+    padding-top: 3%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1136,172 +1232,174 @@ figcaption {
   }
 
   .gallery-container {
-  gap: 0 50px;
-}
+    gap: 0 50px;
+  }
 
-.visiting-container h1 {
-  font-size: 40px;
-  margin-bottom: 8px;
-}
-.heading {
-  font-size: 22px;
-  letter-spacing: 3px;
-}
+  .visiting-container h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  .heading {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
 
-.signature {
-  margin-bottom: 15px;
-}
+  .signature {
+    margin-bottom: 15px;
+  }
 
   /* для секции 'Explore' */
   .explore {
-  height: 910px;
-}
+    height: 910px;
+  }
 
-.explore-container {
-  display: block;
-  width: 96%;
-  margin: 0 auto 0 auto;
-}
+  .explore-container {
+    display: block;
+    width: 96%;
+    margin: 0 auto 0 auto;
+  }
 
-.explore-contant {
-  width: 100%;
-}
+  .explore-contant {
+    width: 100%;
+  }
 
-.explore-heading h1 {
-  font-size: 40px;
-  margin: 35px 0 40px 0;
-}
+  .explore-heading h1 {
+    font-size: 40px;
+    margin: 35px 0 40px 0;
+  }
 
-.explore-text {
-  display: none;
-}
+  .explore-text {
+    display: none;
+  }
 
-.explore-img {
-  width: 100%;
-  margin: 60px 0 0 0;
-  text-align: center;
-}
+  .explore-img {
+    width: 100%;
+    margin: 60px 0 0 0;
+    text-align: center;
+  }
 
-.explore-img img {
-  width: 100%;
-}
+  .explore-img img {
+    width: 100%;
+  }
 
-/* для секции 'Video' */
-.video {
-  height: 757px;
-  margin-top: 40px;
-}
+  /* для секции 'Video' */
+  .video {
+    height: 757px;
+    margin-top: 40px;
+  }
 
-.video-container {
-  width: 97%;
-}
+  .video-container {
+    width: 97%;
+  }
 
-.video-heading h1 {
-  font-size: 40px;
-}
+  .video-heading h1 {
+    font-size: 40px;
+  }
 
-.triangle {
+  .triangle {
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
     border-top: 60px solid #ffffff;
-}
+  }
 
-.video-carousel-item {
-  width: 49%;
-}
+  .video-carousel-item {
+    width: 49%;
+  }
 
-.video-carousel-item:nth-child(3) { /* Скрываем 3й элемент */
+  .video-carousel-item:nth-child(3) {
+    /* Скрываем 3й элемент */
     display: none;
-}
+  }
 
-.item-txt {
-  left: 16%;
-  width: 63%;
-}
+  .item-txt {
+    left: 16%;
+    width: 63%;
+  }
 
-.video-carousel {
-  margin-top: 3.5%;
-}
+  .video-carousel {
+    margin-top: 3.5%;
+  }
 
-.logo-louvre {
+  .logo-louvre {
     width: 11.25%;
     height: 19.61%;
     top: 6%;
     left: 3%;
-}
+  }
 
-.menu-dots {
-  width: 6%;
-  top: 8.2%;
-  right: 1.7%;
-  cursor: pointer;
-}
+  .menu-dots {
+    width: 6%;
+    top: 8.2%;
+    right: 1.7%;
+    cursor: pointer;
+  }
 
-.yuotube-icon {
-  width: 22.27%;
-  top: 29.5%;
-  left: 37%;
-  cursor: pointer;
-}
-.small-video-carousel{
-  margin-top: 2%;
-}
+  .yuotube-icon {
+    width: 22.27%;
+    top: 29.5%;
+    left: 37%;
+    cursor: pointer;
+  }
+  .small-video-carousel {
+    margin-top: 2%;
+  }
 
-.points-video-carousel {
-  width: 22%;
-}
+  .points-video-carousel {
+    width: 22%;
+  }
 
-/* для секции 'GALLERY' */
-.gallery {
-  height: 1220px;
-  margin-top: 14px;
-}
+  /* для секции 'GALLERY' */
+  .gallery {
+    height: 1220px;
+    margin-top: 14px;
+  }
 
-.parent-gallery-container {
-  width: 97%;
-  padding-top: 4%;
-  margin: 0 auto 0 auto;
-}
+  .parent-gallery-container {
+    width: 97%;
+    padding-top: 4%;
+    margin: 0 auto 0 auto;
+  }
 
-.parent-gallery-container h1 {
-  font-size: 40px;
-  padding-left: 2px;
-}
+  .parent-gallery-container h1 {
+    font-size: 40px;
+    padding-left: 2px;
+  }
 
-.gallery-container-img {
-  display: none;
-}
+  .gallery-container-img {
+    display: none;
+  }
 
-.gallery-container-img-adaptive {
-  display: flex;
-  width: 99%;
-  height: 1115px;
-  margin: 3% auto 0 auto;
-  justify-content: space-between;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
+  .gallery-container-img-adaptive {
+    display: flex;
+    width: 99%;
+    height: 1115px;
+    margin: 3% auto 0 auto;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
 
-.gallery-container-img-adaptive::after { /* Создаем градиетнт */
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 18%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-  z-index: 1;
-}
+  .gallery-container-img-adaptive::after {
+    /* Создаем градиетнт */
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
+  }
 
-.column-img {
-  width: 49%;
-  display: inline-flex;
-  flex-direction: column;
-  gap: 1.2%;
-}
+  .column-img {
+    width: 49%;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 1.2%;
+  }
 
-.column-padding {
-  padding-top: 5%;
-}
+  .column-padding {
+    padding-top: 5%;
+  }
 }
