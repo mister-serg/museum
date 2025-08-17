@@ -836,7 +836,6 @@ input[type="radio"] {
   font-size: 22px;
   font-weight: 300;
   margin-bottom: 10px;
-
 }
 
 .buy-tickets-content-amount {
@@ -862,7 +861,8 @@ input[type="radio"] {
   margin-left: 185px;
 }
 
-.basic, .senior {
+.basic,
+.senior {
   display: flex;
   width: 44%;
   height: 50px;
@@ -874,7 +874,10 @@ input[type="radio"] {
   justify-content: center; /* Горизонтальное выравнивание по центру */
 }
 
-.basic-plus, .basic-minus, .senior-plus, .senior-minus {
+.basic-plus,
+.basic-minus,
+.senior-plus,
+.senior-minus {
   width: 33%;
   height: 100%;
   font-family: "Roboto Flex", sans-serif;
@@ -884,9 +887,11 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   text-align: center; /* Выравнивание текста по центру */
+  cursor: pointer;
 }
 
-.basic-value, .senior-value {
+.basic-value,
+.senior-value {
   width: 33%;
   height: 100%;
   font-family: "Roboto Flex", sans-serif;
@@ -1232,8 +1237,79 @@ input[type="radio"] {
   }
 
   /* для секции BUY TICKETS */
-  .buy-tickets-content-ticket-type{
+  .buy-tickets {
+    margin-top: 40px;
+  }
+  .buy-tickets-content-ticket-type {
     display: none;
+  }
+
+  .heading-buy-tickets {
+    width: 97%;
+  }
+
+  .heading-buy-tickets h1 {
+    font-size: 50px;
+    margin: 0 0 8px 0;
+  }
+
+  .buy-tickets-container {
+    width: 97%;
+    margin: 40px auto 0 auto;
+  }
+
+  .buy-tickets-img {
+    width: 70%;
+  }
+
+  .buy-tickets-content {
+    width: 24%;
+    margin-left: auto;
+    height: auto;
+  }
+
+  .buy-tickets-content-amount {
+    width: 100%;
+  }
+
+  .buy-tickets-content-amount h1 {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .ticket-type-content {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .basic,
+  .senior {
+    width: 80%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .total {
+    margin-top: 30px;
+  }
+
+  .buy-now {
+    width: 80%;
+    height: 50px;
+    left: 0;
+    bottom: 0.8%;
+  }
+
+  .buy-tickets-panorama {
+    height: 268px;
+    margin-top: 50px;
+  }
+
+  .buy-tickets-panorama img {
+    transform: translateY(-38%);
+    clip-path: polygon(0 30%, 100% 30%, 100% 85%, 0 85%);
   }
 }
 
@@ -1491,5 +1567,72 @@ input[type="radio"] {
 
   .column-padding {
     padding-top: 5%;
+  }
+
+  /* для секции 'BUY TICKETS' */
+  .buy-tickets {
+    margin-top: 40px;
+    height: 825px;
+  }
+  
+  .heading-buy-tickets h1 {
+    font-size: 50px;
+    margin: 0 0 10px 0;
+  }
+
+  .buy-tickets-container {
+    margin: 35px auto 0 auto;
+    height: 415px;
+  }
+
+  .buy-tickets-img {
+    width: 60%;
+  }
+
+  .buy-tickets-content {
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .buy-tickets-content-amount {
+    width: 100%;
+    height: auto;
+  }
+
+  .buy-tickets-content-amount h1 {
+    margin-bottom: 30px;
+    font-weight: 800;
+  }
+
+  .ticket-type-content {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .basic,
+  .senior {
+    width: 96%;
+  }
+
+  .total {
+    margin-top: 30px;
+  }
+
+  .buy-now {
+    width: 100%;
+    left: 0;
+    bottom: 0.8%;
+  }
+
+  .buy-tickets-panorama {
+    height: 265px;
+    margin-top: 40px;
+    background-color: #710707;
+  }
+
+  .buy-tickets-panorama img {
+    transform: translateY(-28%);
+    clip-path: polygon(0 20%, 100% 20%, 100% 90%, 0 90%);;
   }
 }
