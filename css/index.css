@@ -30,14 +30,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 50px;
+  padding-top: auto;
   margin: 0 auto;
-  width: 80%;
+  width: 75%;
+  height: 150px;
 }
 
 .menu {
   display: flex;
-  gap: 50px;
+  gap: 60px;
 }
 
 .menu-svg {
@@ -83,25 +84,29 @@ header {
 .welcome {
   background-color: #030303;
   color: #ffffff;
+  width: 100%;
+  height: 800px;
   margin-bottom: 50px;
 }
 
 .parent-container {
   position: relative;
-  width: 80%;
-  height: 550px;
-  overflow: hidden;
+  width: 75%;
+  height: 744px;
+  background-color: #030303;
   margin: 0 auto;
+  /* overflow: hidden; */
 }
 
 .image-container {
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  top: 35%;
-  transform: translateY(-50%);
-  width: 50%;
-  height: 50%;
+  top: 35%; */
+  /* transform: translateY(-50%); */
+  width: 69.44%;
+  height: 100%;
   z-index: 0;
+  margin-left: auto;
 }
 
 .image-container img {
@@ -112,17 +117,16 @@ header {
 
 .text-container {
   position: absolute;
-  top: 44%;
-  left: 48%;
-  transform: translate(-50%, -50%);
-  text-align: left;
-  z-index: 1;
+  top: 20%;
+  left: 0;
+  /* transform: translate(-50%, -50%); */
+  z-index: 2;
   width: 598px;
 }
 
 .text-container h1 {
   font-family: "Forum", monospace;
-  font-size: 60px;
+  font-size: 80px;
   font-weight: 400;
   margin: 0;
 }
@@ -130,20 +134,23 @@ header {
 .text-container p {
   font-family: "Roboto Flex", sans-serif;
   font-weight: 100;
-  font-size: 22px;
+  font-size: 28px;
   font-optical-sizing: auto;
   font-style: normal;
   margin-bottom: 50px;
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 300;
-  font-size: 18px;
-  text-align: center;
-  width: 190px;
-  padding: 10px 20px;
+  font-size: 22px;
+  letter-spacing: 2px;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  height: 75px;
+  padding-top: auto;
   background-color: #710707;
   color: #ffffff;
   text-decoration: none;
@@ -158,8 +165,8 @@ header {
 .image-container::before {
   content: "";
   position: absolute;
-  width: 30%;
-  height: 168%;
+  width: 40%;
+  height: 101%;
   background: linear-gradient(to right, rgba(0, 0, 0, 1), transparent);
   z-index: 1;
 }
@@ -168,17 +175,17 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 40px;
+  width: 600px;
+  height: 110px;
   background-color: #030303;
   vertical-align: bottom;
   font-family: "Roboto Flex", sans-serif;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 22px;
   position: absolute;
   right: 0;
-  bottom: 6%;
-  z-index: 1;
+  bottom: -7.5%;
+  z-index: 2;
 }
 
 .numbers {
@@ -236,7 +243,9 @@ header {
   flex-direction: column;
   align-items: center;
   width: 82%;
-  margin: 280px auto 0 auto;
+  height: 45%;
+  margin: 0 auto 0 auto;
+  padding-top: 281px;
   padding-bottom: 30px;
   border-bottom: 1px solid gray;
 }
@@ -264,7 +273,7 @@ header {
   display: none;
   width: 60%;
   background: #030303;
-  margin: 7% auto;
+  margin: 50px auto;
   justify-content: space-between;
   align-items: center;
 }
@@ -288,7 +297,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
+  width: 75%;
   margin: 0 auto 50px auto;
 }
 
@@ -365,18 +374,19 @@ figcaption {
 .explore {
   background-color: #030303;
   color: #ffffff;
-  height: 660px;
+  height: 760px;
+  padding-top: 70px;
 }
 
 .explore-container {
   display: flex;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   gap: 0 25px;
 }
 
 .explore-contant {
-  width: 55%;
+  width: 50%;
 }
 
 .explore-heading h1 {
@@ -385,7 +395,7 @@ figcaption {
   font-size: 80px;
   font-weight: 400;
   letter-spacing: 5px;
-  margin: 60px 0 30px 0;
+  margin: 0 0 30px 0;
   border-bottom: #710707 3px solid;
   padding-bottom: 15px;
 }
@@ -405,9 +415,8 @@ figcaption {
 }
 
 .explore-img {
-  width: 43%;
-  margin: 70px 0 0 0;
-  text-align: left;
+  margin-top: 5px;
+  width: 50%;
 }
 
 .explore-img img {
@@ -417,11 +426,11 @@ figcaption {
 /* section 'VIDEO' */
 .video {
   width: 100%;
-  height: 1247px;
+  height: 1302px;
   margin-top: 50px;
 }
 .video-container {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -703,7 +712,7 @@ figcaption {
 }
 
 .parent-gallery-container {
-  width: 80%;
+  width: 75%;
   height: 100%;
   margin: 0 auto;
   padding-top: 30px;
@@ -760,12 +769,12 @@ figcaption {
 /* section 'BUY TICKETS' */
 .buy-tickets {
   width: 100%;
-  height: 951px;
+  height: 1032px;
   margin-top: 50px;
 }
 
 .heading-buy-tickets {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   border-bottom: #710707 3px solid;
 }
@@ -782,7 +791,7 @@ figcaption {
 
 .buy-tickets-container {
   display: flex;
-  width: 80%;
+  width: 75%;
   margin: 60px auto 0 auto;
 }
 
@@ -937,6 +946,30 @@ input[type="radio"] {
   width: 100%;
   transform: translateY(-50%);
   clip-path: polygon(0 50%, 100% 50%, 100% 80%, 0 80%);
+  object-fit: cover;
+}
+
+/* section 'CONTACTS' */
+.contacts {
+  width: 100%;
+  margin-top: 50px;
+  height: 900px;
+}
+
+.contacts-heading {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: #710707 3px solid;
+}
+
+.contacts-heading h1 {
+  text-transform: uppercase;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #9d8665;
+  margin: 0 0 10px 0;
 }
 
 /* Адаптивные стили */
@@ -997,16 +1030,21 @@ input[type="radio"] {
 
   /* для секции welcome */
   .welcome {
+    height: 587px;
     margin-bottom: 40px;
   }
   .parent-container {
     width: 98%;
     height: 585px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .image-container {
     width: 65%;
     height: 65%;
+  }
+
+  .image-container::before {
+    height: 82%;
   }
 
   .text-container h1 {
@@ -1021,19 +1059,21 @@ input[type="radio"] {
     letter-spacing: 2px;
   }
   .text-container {
-    top: 44%;
-    left: 30.5%;
+    top: 14%;
+    left: 0;
     width: 598px;
   }
 
   .btn {
     letter-spacing: 2px;
-    width: 200px;
+    width: 300px;
   }
 
   .carousel {
-    bottom: 4%;
-    right: 5%;
+    width: 700px;
+    height: ;
+    bottom: 0;
+    right: 0;
   }
 
   .square {
@@ -1050,7 +1090,7 @@ input[type="radio"] {
   /* для секции 'Visiting' */
   .visiting {
     width: 96%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
 
   .gallery-item {
@@ -1089,7 +1129,8 @@ input[type="radio"] {
   .explore {
     display: flex;
     height: 1149px;
-    margin-top: 20px;
+    margin-top: 40px;
+    padding-top: 0;
   }
 
   .explore-container {
@@ -1134,7 +1175,7 @@ input[type="radio"] {
 
   /* для секции 'Video' */
   .video {
-    height: 881px;
+    height: 868px;
     margin-top: 45px;
   }
   .video-container {
@@ -1210,7 +1251,7 @@ input[type="radio"] {
   /* для секции 'GALLERY' */
   .gallery {
     height: 1460px;
-    margin-top: 18px;
+    margin-top: 40px;
   }
 
   .parent-gallery-container {
@@ -1239,6 +1280,7 @@ input[type="radio"] {
   /* для секции BUY TICKETS */
   .buy-tickets {
     margin-top: 40px;
+    height: 959px;
   }
   .buy-tickets-content-ticket-type {
     display: none;
@@ -1311,6 +1353,21 @@ input[type="radio"] {
     transform: translateY(-38%);
     clip-path: polygon(0 30%, 100% 30%, 100% 85%, 0 85%);
   }
+
+  /* для секции 'CONTACTS' */
+  .contacts {
+    margin-top: 40px;
+    height: 950px; /* Исправить */
+  }
+
+  .contacts-heading {
+    width: 97%;
+  }
+
+  .contacts-heading h1 {
+    font-size: 50px;
+    margin: 0 0 8px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1319,6 +1376,12 @@ input[type="radio"] {
   .header {
     height: 110px;
   }
+
+  .welcome {
+    height: 860px;
+    margin-bottom: 40px;
+  }
+
   .parent-container {
     display: block;
     position: static;
@@ -1385,7 +1448,8 @@ input[type="radio"] {
     right: auto;
     display: flex;
     z-index: auto;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
+    height: 40px;
   }
 
   /* для секции 'Visiting' */
@@ -1450,7 +1514,7 @@ input[type="radio"] {
 
   /* для секции 'Video' */
   .video {
-    height: 757px;
+    height: 730px;
     margin-top: 40px;
   }
 
@@ -1517,7 +1581,7 @@ input[type="radio"] {
   /* для секции 'GALLERY' */
   .gallery {
     height: 1220px;
-    margin-top: 14px;
+    margin-top: 30px;
   }
 
   .parent-gallery-container {
@@ -1571,12 +1635,12 @@ input[type="radio"] {
 
   /* для секции 'BUY TICKETS' */
   .buy-tickets {
-    margin-top: 40px;
-    height: 825px;
+    margin-top: 30px;
+    height: 811px;
   }
-  
+
   .heading-buy-tickets h1 {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0 0 10px 0;
   }
 
@@ -1628,11 +1692,21 @@ input[type="radio"] {
   .buy-tickets-panorama {
     height: 265px;
     margin-top: 40px;
-    background-color: #710707;
   }
 
   .buy-tickets-panorama img {
     transform: translateY(-28%);
-    clip-path: polygon(0 20%, 100% 20%, 100% 90%, 0 90%);;
+    clip-path: polygon(0 20%, 100% 20%, 100% 90%, 0 90%);
+  }
+
+  /* для секции 'CONTACTS' */
+  .contacts {
+    margin-top: 30px;
+    height: 950px; /* Исправить */
+  }
+
+  .contacts-heading h1 {
+    font-size: 40px;
+    margin: 0 0 10px 0;
   }
 }
