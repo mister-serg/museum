@@ -953,7 +953,7 @@ input[type="radio"] {
 .contacts {
   width: 100%;
   margin-top: 50px;
-  height: 900px;
+  height: 843px;
 }
 
 .contacts-heading {
@@ -975,12 +975,12 @@ input[type="radio"] {
 .contacts-item {
   width: 75%;
   margin: 40px auto 0 auto;
-  height: 759px;
+  height: 700px;
   display: flex;
 }
 
 .contacts-content {
-  width: 30%;
+  width: 33%;
   height: 100%;
   font-family: "Roboto Flex", sans-serif;;
 }
@@ -1006,8 +1006,7 @@ input[type="radio"] {
 }
 
 #map {
-  display: block;
-  width: 70%;
+  width: 67%;
   height: 100%;
   background-color: #999999;
 }

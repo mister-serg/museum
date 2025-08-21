@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Инициализация карты
-const map = L.map("map").setView([48.86091, 2.3364], 15.7);
+const map = L.map("map").setView([48.86091, 2.3364], 16.5);
 
 // Добавление тайлов (фонов карты)
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
