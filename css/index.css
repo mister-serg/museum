@@ -957,7 +957,7 @@ input[type="radio"] {
 }
 
 .contacts-heading {
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   border-bottom: #710707 3px solid;
 }
@@ -970,6 +970,46 @@ input[type="radio"] {
   letter-spacing: 5px;
   color: #9d8665;
   margin: 0 0 10px 0;
+}
+
+.contacts-item {
+  width: 75%;
+  margin: 40px auto 0 auto;
+  height: 759px;
+  display: flex;
+}
+
+.contacts-content {
+  width: 30%;
+  height: 100%;
+  font-family: "Roboto Flex", sans-serif;;
+}
+
+.contacts-content-txt {
+  width: 100%;
+}
+
+.contacts-content-txt-heading {
+  width: 227px;
+  margin: 0 0 60px 0;
+}
+
+.contacts-content-txt-heading h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.contacts-content-txt-adress p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+
+#map {
+  display: block;
+  width: 70%;
+  height: 100%;
+  background-color: #999999;
 }
 
 /* Адаптивные стили */
@@ -1071,7 +1111,7 @@ input[type="radio"] {
 
   .carousel {
     width: 700px;
-    height: ;
+    /* height: ; */
     bottom: 0;
     right: 0;
   }

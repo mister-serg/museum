@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   </head>
   <body>
     <!-- Создаем HEADER -->
@@ -746,12 +747,28 @@
         <div class="contacts-heading">
           <h1>Contacts</h1>
         </div>
+        <div class="contacts-item">
+          <div class="contacts-content">
+            <div class="contacts-content-txt">
+              <div class="contacts-content-txt-heading">
+                <h1>Palais Royal Musee du Louvre</h1>
+              </div>
+              <div class="contacts-content-txt-adress">
+                <p>adress: 75001 Paris, France</p>
+                <p>phone: +33(0) 1 40 20 50 50</p>
+                <p>mail: info@louvre.fr</p>
+              </div>
+            </div>
+          </div>
+          <div id="map"></div>
+        </div>
       </section>
 
     </main>
     
     <!-- Создаем FOOTER -->
     <footer></footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

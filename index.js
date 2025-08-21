@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         textContainer.style.display = "block";
       }
     }
-    
+
     // Для диапазона 421-768px
     if (window.innerWidth >= 421 && window.innerWidth <= 768) {
       menu.classList.toggle("active");
@@ -49,3 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Инициализация карты
+const map = L.map("map").setView([48.86091, 2.3364], 15.7);
+
+// Добавление тайлов (фонов карты)
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+// Добавление маркеров
+const marker1 = L.marker([48.86091, 2.3364]).addTo(map);
+const marker2 = L.marker([48.8602, 2.3333]).addTo(map);
+const marker3 = L.marker([48.8607, 2.3397]).addTo(map);
+const marker4 = L.marker([48.8619, 2.333]).addTo(map);
+const marker5 = L.marker([48.8625, 2.3365]).addTo(map);
