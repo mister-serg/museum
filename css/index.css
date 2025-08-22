@@ -14,7 +14,6 @@ header {
 }
 
 .logo {
-  text-align: center;
   cursor: pointer;
 }
 .logo svg {
@@ -314,7 +313,7 @@ header {
   width: 32%;
   height: 50%;
   margin: 0 0 10px 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   transition: filter 0.3s ease;
 }
 
@@ -1013,9 +1012,83 @@ input[type="radio"] {
 /* для footer */
 footer {
   width: 100%;
-  height: 250px;
+  height: 180px;
   background-color: #030303;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-conteiner {
+  width: 75%;
+  height: 64%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-conteiner svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-conteiner-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-left: 389px;
+}
+
+.footer-conteiner-nav-item {
+  width: 100px;
+  display: inline-flex;
+  flex-direction: column; /* Вертикальное расположение элементов */
+  align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+.footer-conteiner-nav-item span {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.footer-conteiner-social-networks {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.footer-conteiner-social-network {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-conteiner-social-network-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-conteiner-social-network-icon svg {
+  width:32px;
+  height: 32px;
+}
+
+.footer-conteiner-social-networks-hidden {
+  display: none;
 }
 
 /* Адаптивные стили */
@@ -1117,7 +1190,6 @@ footer {
 
   .carousel {
     width: 700px;
-    /* height: ; */
     bottom: 0;
     right: 0;
   }
@@ -1136,7 +1208,6 @@ footer {
   /* для секции 'Visiting' */
   .visiting {
     width: 96%;
-    /* margin-bottom: 20px; */
   }
 
   .gallery-item {
@@ -1326,7 +1397,7 @@ footer {
   /* для секции BUY TICKETS */
   .buy-tickets {
     margin-top: 40px;
-    height: 959px;
+    height: 952px;
   }
   .buy-tickets-content-ticket-type {
     display: none;
@@ -1438,7 +1509,52 @@ footer {
     font-size: 20px;
     margin-bottom: 30px;
   }
+
+  /* для 'FOOTER' */
+  footer {
+  height: 185px;
+  margin-top: 40px;
 }
+
+.footer-conteiner {
+  width: 97%;
+  height: 60%;
+}
+
+.footer-conteiner-nav {
+  width: 30%;
+  margin-left: 155px;
+  height: 99%;
+}
+
+.footer-conteiner-nav-item {
+  width: 94px;
+}
+
+.footer-conteiner-nav-item span {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-conteiner-social-networks {
+  width: 50%;
+}
+
+.footer-conteiner-social-network {
+  width: 70%;
+}
+
+.footer-conteiner-social-network-icon {
+  width: 46px;
+  height: 46px;
+}
+
+.footer-conteiner-social-network-icon svg {
+  width:28px;
+  height: 28px;
+}
+}
+
 
 @media (max-width: 768px) {
   /* для header */
@@ -1817,4 +1933,56 @@ footer {
     width: 100%;
     height: 495px;
   }
+
+  /* для секции 'FOOTER' */
+  footer {
+  height: 305px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.footer-conteiner {
+  width: 97%;
+  height: 121px;
+  margin-top: 50px;
+}
+
+.footer-conteiner-nav {
+  width: 50%;
+  margin-left: 180px;
+  height: 100%;
+  padding-top: 10px;
+
+}
+
+.footer-conteiner-nav-item {
+  width: 94px;
+}
+
+.footer-conteiner-nav-item span {
+  font-size: 18px;
+  margin-bottom: 27px;
+}
+
+.footer-conteiner-social-networks {
+  display: none;
+}
+
+.footer-conteiner-social-networks-hidden {
+  display: flex;
+  width: 364px;
+  justify-content: space-between;
+  margin: 50px 0 0 232px;
+}
+
+.footer-conteiner-social-network-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-conteiner-social-network-icon svg {
+  width:26px;
+  height: 26px;
+}
 }
