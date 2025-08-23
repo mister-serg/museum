@@ -1,0 +1,276 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+section {
+  width: 1440px;
+  height: 845px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent-container {
+  width: 970px;
+  height: 663px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-fst {
+  width: 400px;
+  height: 100%;
+  display: inline-block;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+}
+
+.content {
+    width: 100%;
+    height: 514px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.child-snd {
+  width: 530px;
+  height: 100%;
+  margin-left: auto;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  background-color: red;
+}
+
+.logo {
+  height: 41px;
+}
+
+.logo svg {
+  width: 41px;
+  height: 41px;
+}
+
+.heading {
+  font-family: "Forum", monospace;
+  font-size: 50px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #9d8665;
+}
+
+.sub-heading {
+  border-bottom: 3px solid #740c11;
+  margin-top: 20px;
+  height: 30px;
+}
+
+.sub-heading span {
+  font-family: "Roboto Flex", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: #710707;
+}
+
+.date-time {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  height: 45px;
+  justify-content: space-between;
+}
+
+.date {
+  width: 47.5%;
+  height: 45px;
+  position: relative;
+}
+
+.date-input,
+.time-input,
+.name,
+.email,
+.phone,
+.ticketType {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 45px;
+}
+
+.calendar {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 27%;
+  left: 5%;
+}
+
+.dropDownDate {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.time {
+  width: 47.5%;
+  height: 45px;
+  position: relative;
+}
+
+.clock {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 27%;
+  left: 5%;
+}
+
+.dropDownTime {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.name-conteiner,
+.email-conteiner,
+.phone-conteiner,
+.ticketType-conteiner {
+  /* margin-top: 20px; */
+  width: 100%;
+  height: 45px;
+  position: relative;
+}
+
+.name-conteiner svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  left: 2.5%;
+}
+
+.email-conteiner svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  left: 2.5%;
+}
+
+.phone-conteiner svg {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  left: 2.5%;
+}
+
+.ticketSVG {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 23%;
+    left: 2.5%;
+}
+
+.dropDownTicketType {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  right: 2%;
+  cursor: pointer;
+}
+
+.entry-tickets {
+    width: 100%;
+    height: 135px;
+    border: #030303 1px solid;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+.child-entry-tickets {
+    width: 92.5%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.entry-tickets-heading {
+    width: 100%;
+    height: 22px;
+    font-family: "Forum", monospace;
+    font-size: 18px;
+    font-weight: 400;
+    color: #9d8665;
+    border-bottom: #710707 2px solid;
+}
+
+.child-entry-tickets-basic, .child-entry-tickets-senior {
+    display: flex;
+    width: 100%;
+    height: 22px;
+}
+
+.child-entry-tickets-price {
+    width: 70%;
+    height: 22px;
+    font-family: "Roboto Flex", monospace;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.quantity {
+    width: 30%;
+    height: 22px;
+    display: flex;
+    justify-content: space-between;
+    border: #030303 2px solid;
+    box-sizing: border-box;
+}
+
+.minus, .plus {
+    width: 33.33%;
+    background-color: #030303;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Forum", monospace;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.basic-value, .senior-value {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-family: "Forum", monospace;
+    font-size: 18px;
+}

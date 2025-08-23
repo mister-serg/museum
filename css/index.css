@@ -127,6 +127,7 @@ header {
   font-family: "Forum", monospace;
   font-size: 80px;
   font-weight: 400;
+  letter-spacing: 5px;
   margin: 0;
 }
 
@@ -1053,6 +1054,7 @@ footer {
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: #ffffff;
+  display: block;
   cursor: pointer;
 }
 
@@ -1168,7 +1170,6 @@ footer {
 
   .text-container h1 {
     font-size: 50px;
-    letter-spacing: 5px;
     margin: 0 0 30px 0;
   }
 
@@ -1597,7 +1598,6 @@ footer {
 
   .text-container h1 {
     font-size: 40px;
-    letter-spacing: 5px;
     margin: 0 0 20px 0;
   }
 
