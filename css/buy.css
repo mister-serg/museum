@@ -39,14 +39,6 @@ section {
     flex-direction: column;
     justify-content: space-between;
 }
-.child-snd {
-  width: 530px;
-  height: 100%;
-  margin-left: auto;
-  border: 1px solid #030303;
-  box-sizing: border-box;
-  background-color: red;
-}
 
 .logo {
   height: 41px;
@@ -252,7 +244,7 @@ section {
     box-sizing: border-box;
 }
 
-.minus, .plus {
+.basic-minus, .basic-plus, .senior-minus, .senior-plus {
     width: 33.33%;
     background-color: #030303;
     cursor: pointer;
@@ -273,4 +265,90 @@ section {
     font-weight: bolder;
     font-family: "Forum", monospace;
     font-size: 18px;
+}
+
+.child-snd {
+  width: 530px;
+  height: 100%;
+  margin-left: auto;
+  border: 1px solid #030303;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Потребуется корректировка */
+  align-items: center;
+}
+
+.results {
+  width: 88.67%;
+  height: 22.77%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  position: relative;
+}
+
+.results-heading {
+  width: 100%;
+  font-family: "Roboto Flex", monospace;
+  font-size: 32px;
+  font-weight: 500;
+  color: #272727;
+}
+
+.results-sub-heading {
+  width: 100%;
+  font-family: "Roboto Flex", monospace;
+  font-size: 22px;
+  font-weight: 500;
+  color: #740c11;
+}
+
+.results-date {
+  width: 100%;
+  display: flex;
+}
+
+.results-date svg {
+  width: 22px;
+  height: 22px;
+}
+
+.res-date-txt, .res-time-txt, .res-exhibition-txt {
+  font-family: "Roboto Flex", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.result-time {
+  width: 100%;
+  display: flex;
+}
+
+.result-time svg {
+  width: 22px;
+  height: 22px;
+}
+
+.result-exhibition {
+  width: 100%;
+  display: flex;
+}
+
+.result-exhibition svg {
+  width: 22px;
+  height: 22px;
+}
+
+.image-buy {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.image-buy img {
+  width: 100%;
 }
