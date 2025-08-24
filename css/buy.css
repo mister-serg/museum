@@ -99,6 +99,10 @@ section {
   padding-left: 45px;
 }
 
+.time-input {
+  padding-left: 40px;
+}
+
 .calendar {
   width: 25px;
   height: 25px;
@@ -123,8 +127,8 @@ section {
 }
 
 .clock {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   position: absolute;
   top: 27%;
   left: 5%;
@@ -275,8 +279,9 @@ section {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Потребуется корректировка */
+  justify-content: center;
   align-items: center;
+  gap: 15px;
 }
 
 .results {
@@ -285,7 +290,6 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: antiquewhite;
   position: relative;
 }
 
@@ -351,4 +355,270 @@ section {
 
 .image-buy img {
   width: 100%;
+}
+
+.results-tickets {
+  width: 88.67%;;
+  height: 17.709%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.results-tickets-child {
+  width: 100%;
+  height: 21.36%;
+  display: flex;
+}
+
+.results-tickets-child-fst-quantity, .results-tickets-child-snd-quantity {
+  width: 9%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #030303;
+  border-radius: 5px;
+}
+
+.basic-quantity, .senior-quantity {
+  font-family: "Roboto Flex", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: #a4a4a3;
+}
+
+.results-tickets-child-fst-txt, .results-tickets-child-snd-txt {
+  width: 81.86%;
+  font-family: "Roboto Flex", monospace;
+  font-size: 22px;
+  font-weight: 400;
+  padding-left: 5px;
+}
+
+.results-tickets-child-fst-price, .results-tickets-child-snd-price {
+  width: 9.14%;
+  font-family: "Roboto Flex", monospace;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.results-tickets-child-thd {
+  width: 100%;
+  height: 38%;
+  display: flex;
+  border-top: #740c11 2px solid;
+  font-family: "Roboto Flex", monospace;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.total-txt {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+
+}
+
+.total-price {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+}
+
+.card {
+  width: 88.67%;
+  height: 50%;
+  position: relative;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 76.9%;
+  height: 63.845%;
+  background-color: #bcbcbc;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.visa {
+  width: 90px;
+  height: 40px;
+  position: absolute;
+  top: 13.5%;
+  right: -2%;
+}
+
+.mastercard {
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  top: 30%;
+  right: 3%;
+}
+
+.child-card-front {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.number-card {
+  width: 65%;
+  height: 25%;
+}
+
+.number-card-txt {
+  font-family: "Roboto Flex", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 30%;
+}
+
+.number-card-input {
+  width: 100%;
+  height: 70%;
+}
+
+.number-card-input input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", monospace;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-validity {
+  width: 50%;
+  height: 25%;
+}
+
+.card-validity-txt {
+  font-family: "Roboto Flex", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 30%;
+}
+
+.card-validity-input {
+  width: 100%;
+  height: 70%;
+}
+
+.card-validity-input input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", monospace;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-name {
+  width: 100%;
+  height: 25%;
+}
+
+.card-name-txt {
+  font-family: "Roboto Flex", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 30%;
+}
+
+.card-name-input {
+  width: 100%;
+  height: 70%;
+}
+
+.card-name-input input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", monospace;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card-back {
+  display: flex;
+  position: absolute;
+  width: 76.9%;
+  height: 63.845%;
+  background-color: #939393;
+  top: 20%;
+  right: 0;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+.magnetic-tape {
+  width: 100%;
+  height: 20%;
+  background-color: #030303;
+  margin-top: 8%;
+}
+
+.cvc-field {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 20%;
+  height: 25%;
+}
+
+.cvc-field-txt {
+  font-family: "Roboto Flex", monospace;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+}
+.cvc-field-input {
+  width: 100%;
+  height: 70%;
+}
+
+.cvc-field-input input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", monospace;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.buy-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #710707;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  font-family: "Roboto Flex", monospace;
+  font-size: 22px;
+  font-weight: 400;
 }
