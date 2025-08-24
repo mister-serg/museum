@@ -287,6 +287,12 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.social-network-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .social-network-icon svg {
   width: 24px;
   height: 24px;
@@ -1082,11 +1088,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* position: relative; */
+}
+
+.footer-conteiner-social-network-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-conteiner-social-network-icon svg {
   width:32px;
   height: 32px;
+  /* position: absolute;
+  top: 2%;
+  left: 2%; */
 }
 
 .footer-conteiner-social-networks-hidden {
