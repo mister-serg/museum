@@ -30,11 +30,11 @@ section {
 }
 
 .content {
-    width: 100%;
-    height: 514px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100%;
+  height: 514px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
@@ -144,7 +144,6 @@ section {
 .email-conteiner,
 .phone-conteiner,
 .ticketType-conteiner {
-  /* margin-top: 20px; */
   width: 100%;
   height: 45px;
   position: relative;
@@ -175,11 +174,11 @@ section {
 }
 
 .ticketSVG {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 23%;
-    left: 2.5%;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 23%;
+  left: 2.5%;
 }
 
 .dropDownTicketType {
@@ -192,78 +191,85 @@ section {
 }
 
 .entry-tickets {
-    width: 100%;
-    height: 135px;
-    border: #030303 1px solid;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 135px;
+  border: #030303 1px solid;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .child-entry-tickets {
-    width: 92.5%;
-    height: 110px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
+  width: 92.5%;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .entry-tickets-heading {
-    width: 100%;
-    height: 22px;
-    font-family: "Forum", monospace;
-    font-size: 18px;
-    font-weight: 400;
-    color: #9d8665;
-    border-bottom: #710707 2px solid;
+  width: 100%;
+  height: 22px;
+  font-family: "Forum", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: #9d8665;
+  border-bottom: #710707 2px solid;
 }
 
-.child-entry-tickets-basic, .child-entry-tickets-senior {
-    display: flex;
-    width: 100%;
-    height: 22px;
+.child-entry-tickets-basic,
+.child-entry-tickets-senior {
+  display: flex;
+  width: 100%;
+  height: 22px;
 }
 
 .child-entry-tickets-price {
-    width: 70%;
-    height: 22px;
-    font-family: "Roboto Flex", monospace;
-    font-size: 18px;
-    font-weight: 400;
+  width: 70%;
+  height: 25px;
+  font-family: "Roboto Flex", monospace;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
 }
 
 .quantity {
-    width: 30%;
-    height: 22px;
-    display: flex;
-    justify-content: space-between;
-    border: #030303 2px solid;
-    box-sizing: border-box;
+  width: 30%;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  border: #030303 2px solid;
+  box-sizing: border-box;
 }
 
-.basic-minus, .basic-plus, .senior-minus, .senior-plus {
-    width: 33.33%;
-    background-color: #030303;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-family: "Forum", monospace;
-    font-size: 18px;
-    font-weight: bolder;
+.basic-minus,
+.basic-plus,
+.senior-minus,
+.senior-plus {
+  width: 33.33%;
+  background-color: #030303;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "Forum", monospace;
+  font-size: 18px;
+  font-weight: bolder;
 }
 
-.basic-value, .senior-value {
-    width: 33.33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bolder;
-    font-family: "Forum", monospace;
-    font-size: 18px;
+.basic-value,
+.senior-value {
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  font-family: "Forum", monospace;
+  font-size: 18px;
 }
 
 .child-snd {
@@ -314,7 +320,9 @@ section {
   height: 22px;
 }
 
-.res-date-txt, .res-time-txt, .res-exhibition-txt {
+.res-date-txt,
+.res-time-txt,
+.res-exhibition-txt {
   font-family: "Roboto Flex", monospace;
   font-size: 18px;
   font-weight: 400;
@@ -353,7 +361,7 @@ section {
 }
 
 .results-tickets {
-  width: 88.67%;;
+  width: 88.67%;
   height: 17.709%;
   display: flex;
   flex-direction: column;
@@ -366,7 +374,8 @@ section {
   display: flex;
 }
 
-.results-tickets-child-fst-quantity, .results-tickets-child-snd-quantity {
+.results-tickets-child-fst-quantity,
+.results-tickets-child-snd-quantity {
   width: 9%;
   height: 100%;
   display: flex;
@@ -376,14 +385,16 @@ section {
   border-radius: 5px;
 }
 
-.basic-quantity, .senior-quantity {
+.basic-quantity,
+.senior-quantity {
   font-family: "Roboto Flex", monospace;
   font-size: 18px;
   font-weight: 400;
   color: #a4a4a3;
 }
 
-.results-tickets-child-fst-txt, .results-tickets-child-snd-txt {
+.results-tickets-child-fst-txt,
+.results-tickets-child-snd-txt {
   width: 81.86%;
   font-family: "Roboto Flex", monospace;
   font-size: 22px;
@@ -391,7 +402,8 @@ section {
   padding-left: 5px;
 }
 
-.results-tickets-child-fst-price, .results-tickets-child-snd-price {
+.results-tickets-child-fst-price,
+.results-tickets-child-snd-price {
   width: 9.14%;
   font-family: "Roboto Flex", monospace;
   font-size: 22px;
@@ -414,7 +426,6 @@ section {
   height: 100%;
   display: flex;
   align-items: end;
-
 }
 
 .total-price {
@@ -586,6 +597,7 @@ section {
   height: 30%;
   text-align: center;
 }
+
 .cvc-field-input {
   width: 100%;
   height: 70%;
@@ -616,4 +628,34 @@ section {
   font-family: "Roboto Flex", monospace;
   font-size: 22px;
   font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  section {
+  width: 1024px;
+  height: 664px;
+}
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 590px;
+    height: 1375px;
+  }
+
+  .parent-container {
+  width: 530px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.child-fst {
+  width: 100%;
+  height: 663px;
+}
+
+.child-snd {
+  height: 665px;
+}
 }
