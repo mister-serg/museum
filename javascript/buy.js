@@ -15,7 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
       burger.style.display = "block"; // Показываем бургер на малых экранах
     } else {
       burger.style.display = "none"; // Скрываем бургер на больших экранах
-      menuAdaptive.style.display = "none"; // Обязательно прячем меню на больших экранах
+      menuAdaptive.style.display = "none"; // Всегда прячем меню на больших экранах
+    }
+
+    // Проверяем особые условия для сокрытия меню при изменении размера окна
+    if (
+      (window.innerWidth < 1024 && menuAdaptive.style.display !== "none") ||
+      (window.innerWidth < 768 && menuAdaptive.style.display !== "none")
+    ) {
+      menuAdaptive.style.display = "none"; // Автоматически скрываем меню при смене размера окна
     }
   }
 
