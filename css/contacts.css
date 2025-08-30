@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Стили для HEADER */
+header {
+  background-color: #030303;
+  width: 1920px;
+}
+
+.header {
+  width: 100%;
+}
+
+.logo {
+  cursor: pointer;
+}
+.logo svg {
+  width: 40px;
+  height: 40px;
+}
+.navbar {
+  font-family: "Roboto Flex", sans-serif;
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 22px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 75%;
+  height: 150px;
+}
+
+.menu {
+  display: flex;
+  gap: 60px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #9d8665;
+}
+
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+  /* z-index: 1000; */
+}
+
+.burger .line {
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px;
+}
+
+/* Стили для адаптивного меню */
+.menu-adaptive {
+  display: none;
+  flex-direction: row;
+  width: 300px;
+  height: 230px;
+  justify-content: center;
+  align-items: center;
+  background-color: #030303;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+}
+
+.menu-adaptive-fst {
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: #030303;
+}
+
+.menu-adaptive-fst-txt {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 16.5%;
+}
+
+.menu-adaptive-fst-txt a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.menu-adaptive-snd {
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+
+.menu-adaptive-snd-svg {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 16.5%;
+}
+
+.menu-adaptive-snd-svg svg {
+  width: 20px;
+}
+
+@media (max-width: 1024px) {
+  body {
+    width: 1024px;
+  }
+
+  /* для header */
+  header {
+    width: 1024px;
+  }
+
+  .header {
+    width: 1024px;
+    position: relative;
+    height: 130px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    cursor: default;
+    margin-left: 5px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navbar {
+    font-size: 20px;
+    font-weight: 300;
+    justify-content: space-between;
+    width: 98%;
+    height: 130px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+    body {
+    width: 768px;
+  }
+
+  /* для Header */
+  header {
+    width: 768px;
+  }
+
+  .header {
+    width: 100%;
+  }
+}

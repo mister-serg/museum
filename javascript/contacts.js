@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function checkScreenSize() {
     if (window.innerWidth >= 0 && window.innerWidth <= 1024) {
-      burger.style.display = "block"; // Показываем бургер на малых экранах
+      burger.style.display = "block"; // Показываем гамбургер на малых экранах
     } else {
-      burger.style.display = "none"; // Скрываем бургер на больших экранах
+      burger.style.display = "none"; // Скрываем гамбургер на больших экранах
       menuAdaptive.style.display = "none"; // Обязательно прячем меню на больших экранах
     }
   }

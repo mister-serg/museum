@@ -30,7 +30,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: auto;
   margin: 0 auto;
   width: 75%;
   height: 150px;
@@ -1170,6 +1169,7 @@ footer {
   body {
     width: 1024px;
   }
+  
   /* для header */
   header {
     width: 1024px;
