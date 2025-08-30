@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth > 1024 || window.innerWidth > 768) {
       // За пределами границ меню всегда скрыто
       menuAdaptive.style.display = "none";
-      
+
       // Устанавливаем соответствующие состояния других блоков
       textContainer.style.display = "block";
       imageContainer.style.display = "block";
@@ -60,8 +60,158 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Инициализация карты
-const map = L.map("map").setView([48.86091, 2.3364], 16.5);
+// document.addEventListener("DOMContentLoaded", () => {
+//   const circleElement = document.querySelector('.explore-img-child-line-circle');
+//   const exploreImgChild = document.querySelector('.explore-img-child');
+//   const exploreImgEre = document.querySelector('.explore-img-ere');
+
+//   let dragging = false;
+//   let startX, clientX, originalLeft;
+
+//   // Размеры окружности и контейнера
+//   const circleRect = circleElement.getBoundingClientRect();
+//   const circleCenterX = circleRect.x + circleRect.width / 2; // Центр окружности
+//   const parentWidth = exploreImgChild.parentNode.offsetWidth;
+
+//   // Начало движения (при нажатии мышью)
+//   circleElement.addEventListener('mousedown', e => {
+//     dragging = true;
+//     startX = e.clientX;
+//     originalLeft = parseFloat(getComputedStyle(exploreImgChild).left) || 0;
+//   });
+
+//   // Перемещение мыши
+//   document.addEventListener('mousemove', e => {
+//     if (!dragging) return;
+
+//     // Получаем новые координаты перемещения
+//     const deltaX = e.clientX - startX;
+//     const newLeft = originalLeft + deltaX;
+
+//     // Ограничиваем перемещение элементами контейнера
+//     const boundedLeft = Math.max(
+//       0,                                // Минимальная позиция слева
+//       Math.min(newLeft, parentWidth - circleRect.width)  // Максимальная позиция справа
+//     );
+
+//     // Применяем новую позицию
+//     exploreImgChild.style.left = `${boundedLeft}px`;
+
+//     // Пересчёт clip-path относительно центра окружности
+//     const relativeCenter = (boundedLeft + circleRect.width / 2) / parentWidth;
+//     const centerPointPercent = relativeCenter * 100 + '%';
+
+//     exploreImgEre.style.clipPath = `polygon(0 0, ${centerPointPercent} 0, ${centerPointPercent} 100%, 0 100%)`;
+//   });
+
+//   // Завершение движения (отпускаем кнопку мыши)
+//   document.addEventListener('mouseup', () => {
+//     dragging = false;
+//   });
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const circleElement = document.querySelector('.explore-img-child-line-circle');
+//   const exploreImgChild = document.querySelector('.explore-img-child');
+//   const exploreImgEre = document.querySelector('.explore-img-ere');
+
+//   let dragging = false;
+//   let startX, clientX, originalLeft;
+
+//   // Размеры окружности и контейнера
+//   const circleRect = circleElement.getBoundingClientRect();
+//   const parentWidth = exploreImgChild.parentNode.offsetWidth;
+
+//   // Начало движения (при нажатии мышью)
+//   circleElement.addEventListener('mousedown', e => {
+//     dragging = true;
+//     startX = e.clientX;
+//     originalLeft = parseFloat(getComputedStyle(exploreImgChild).left) || 0;
+//   });
+
+//   // Перемещение мыши
+//   document.addEventListener('mousemove', e => {
+//     if (!dragging) return;
+
+//     // Получаем новые координаты перемещения
+//     const deltaX = e.clientX - startX;
+//     const newLeft = originalLeft + deltaX;
+
+//     // Ограничиваем перемещение элементами контейнера
+//     const boundedLeft = Math.max(
+//       0,                                    // Мин. позиция слева
+//       Math.min(newLeft, parentWidth - circleRect.width)  // Макс. позиция справа
+//     );
+
+//     // Применяем новую позицию
+//     exploreImgChild.style.left = `${boundedLeft}px`;
+
+//     // Пересчёт clip-path относительно центра окружности
+//     const relativeCenter = (boundedLeft + circleRect.width / 2) / parentWidth;
+//     const centerPointPercent = relativeCenter * 100 + '%';
+
+//     exploreImgEre.style.clipPath = `polygon(0 0, ${centerPointPercent} 0, ${centerPointPercent} 100%, 0 100%)`;
+//   });
+
+//   // Завершение движения (отпускаем кнопку мыши)
+//   document.addEventListener('mouseup', () => {
+//     dragging = false;
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const circleElement = document.querySelector(
+    ".explore-img-child-line-circle"
+  );
+  const exploreImgChild = document.querySelector(".explore-img-child");
+  const exploreImgEre = document.querySelector(".explore-img-ere");
+
+  let dragging = false;
+  let startX, clientX, originalLeft;
+
+  // Размеры окружности и контейнера
+  const circleRect = circleElement.getBoundingClientRect();
+  const parentWidth = exploreImgChild.parentNode.offsetWidth;
+
+  // Начало движения (при нажатии мышью)
+  circleElement.addEventListener("mousedown", (e) => {
+    dragging = true;
+    startX = e.clientX;
+    originalLeft = parseFloat(getComputedStyle(exploreImgChild).left) || 0;
+    circleElement.style.cursor = "grabbing";
+  });
+
+  // Перемещение мыши
+  document.addEventListener("mousemove", (e) => {
+    if (!dragging) return;
+
+    // Получаем новые координаты перемещения
+    const deltaX = e.clientX - startX;
+    const newLeft = originalLeft + deltaX;
+
+    // Ограничиваем перемещение элементами контейнера
+    const boundedLeft = Math.max(
+      0, // Минимальная позиция слева
+      Math.min(newLeft, parentWidth - circleRect.width / 6) // Максимальная позиция справа
+    );
+
+    // Применяем новую позицию
+    exploreImgChild.style.left = `${boundedLeft}px`;
+
+    // Пересчёт clip-path относительно центра окружности
+    const centerOfCircle = boundedLeft + circleRect.width / 5; // НАСТОЯЩИЙ ЦЕНТР ОКРУЖНОСТИ
+    const relativeCenter = centerOfCircle / parentWidth;
+    const centerPointPercent = relativeCenter * 100 + "%";
+
+    exploreImgEre.style.clipPath = `polygon(0 0, ${centerPointPercent} 0, ${centerPointPercent} 100%, 0 100%)`;
+  });
+
+  // Завершение движения (отпускаем кнопку мыши)
+  document.addEventListener("mouseup", () => {
+    dragging = false;
+    circleElement.style.cursor = '';
+  });
+});
 
 // Добавление тайлов (фонов карты)
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {

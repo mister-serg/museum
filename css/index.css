@@ -507,14 +507,14 @@ header {
 }
 
 .explore-img-child {
-  width: 10%;
+  width: 5px;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: absolute;
   align-items: center;
   top: 0;
-  left: 55%;
+  left: 59.5%;
 }
 
 .explore-img-child-line-top,
@@ -525,10 +525,11 @@ header {
 }
 
 .explore-img-child-line-circle {
-  width: 40%;
-  height: 4%;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 5px solid #ffffff;
+  cursor: grab;
 }
 
 /* section 'VIDEO' */
