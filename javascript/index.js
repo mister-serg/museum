@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Слайдер
 document.addEventListener("DOMContentLoaded", () => {
   const circleElement = document.querySelector(
     ".explore-img-child-line-circle"
