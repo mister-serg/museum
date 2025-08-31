@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
   </head>
   <body>
     <!-- Создаем HEADER -->
@@ -55,24 +59,13 @@
           <div class="menu">
             <a href="index.html">
               Visiting
-              <div class="menu-svg">
-              </div>
+              <div class="menu-svg"></div>
             </a>
-            <a href="#">
-              Explore
-            </a>
-            <a href="#">
-              Video
-            </a>
-            <a href="#">
-              Gallery
-            </a>
-            <a href="buy.html">
-              Tickets
-            </a>
-            <a href="#">
-              Contacts
-            </a>
+            <a href="#"> Explore </a>
+            <a href="#"> Video </a>
+            <a href="#"> Gallery </a>
+            <a href="buy.html"> Tickets </a>
+            <a href="#"> Contacts </a>
           </div>
           <div class="burger">
             <div class="line"></div>
@@ -81,97 +74,406 @@
           </div>
         </div>
         <div class="menu-adaptive">
-      <div class="menu-adaptive-fst">
-        <div class="menu-adaptive-fst-txt"><a href="index.html">Visiting</a></div>
-        <div class="menu-adaptive-fst-txt"><a href="explore.html">Explore</a></div>
-        <div class="menu-adaptive-fst-txt"><a href="video.html">Video</a></div>
-        <div class="menu-adaptive-fst-txt"><a href="gallery.html">Gallery</a></div>
-        <div class="menu-adaptive-fst-txt"><a href="buy.html">Tickets</a></div>
-        <div class="menu-adaptive-fst-txt"><a href="contacts.html">Contacts</a></div>
-      </div>
-      <div class="menu-adaptive-snd">
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
+          <div class="menu-adaptive-fst">
+            <div class="menu-adaptive-fst-txt">
+              <a href="index.html">Visiting</a>
+            </div>
+            <div class="menu-adaptive-fst-txt">
+              <a href="explore.html">Explore</a>
+            </div>
+            <div class="menu-adaptive-fst-txt">
+              <a href="video.html">Video</a>
+            </div>
+            <div class="menu-adaptive-fst-txt">
+              <a href="gallery.html">Gallery</a>
+            </div>
+            <div class="menu-adaptive-fst-txt">
+              <a href="buy.html">Tickets</a>
+            </div>
+            <div class="menu-adaptive-fst-txt">
+              <a href="contacts.html">Contacts</a>
+            </div>
+          </div>
+          <div class="menu-adaptive-snd">
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+            <div class="menu-adaptive-snd-svg">
+              <svg
+                fill="#ffffff"
+                width="800px"
+                height="800px"
+                viewBox="0 0 1024 1024"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
-        </div>
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
-        </div>
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
-        </div>
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
-        </div>
-        <div class="menu-adaptive-snd-svg">
-          <svg
-            fill="#ffffff"
-            width="800px"
-            height="800px"
-            viewBox="0 0 1024 1024"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M419.3 264.8l-61.8 61.8L542.9 512 357.5 697.4l61.8 61.8L666.5 512z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
       </section>
     </header>
+
+    <main>
+      <!-- Создаем секцию CONACTS -->
+      <section class="contacts">
+        <div class="contacts-heading">
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #9d8665;
+                  stroke-miterlimit: 10;
+                  stroke-width: 1.92px;
+                }
+              </style>
+            </defs>
+            <polyline class="cls-1" points="1.46 19.67 12 4.33 22.54 19.67" />
+            <line class="cls-1" x1="23.5" y1="19.67" x2="0.5" y2="19.67" />
+            <polyline
+              class="cls-1"
+              points="14.4 7.82 12 11.3 9.6 14.79 7.21 18.28 6.25 19.67"
+            />
+            <polyline
+              class="cls-1"
+              points="16.79 11.3 14.4 14.79 12 18.28 11.04 19.67"
+            />
+            <polyline
+              class="cls-1"
+              points="19.19 14.79 16.79 18.28 15.83 19.67"
+            />
+            <polyline
+              class="cls-1"
+              points="9.6 7.82 12 11.3 14.4 14.79 16.79 18.28 17.75 19.67"
+            />
+            <polyline
+              class="cls-1"
+              points="7.21 11.3 9.6 14.79 12 18.28 12.96 19.67"
+            />
+            <polyline class="cls-1" points="4.81 14.79 7.21 18.28 8.17 19.67" />
+          </svg>
+          <h1>Contacts</h1>
+        </div>
+        <div class="contacts-item">
+          <div class="contacts-content">
+            <div class="contacts-content-txt">
+              <div class="contacts-content-txt-heading">
+                <h1>Palais Royal Musee du Louvre</h1>
+              </div>
+              <div class="contacts-content-txt-adress">
+                <p>adress: 75001 Paris, France</p>
+                <p>phone: +33(0) 1 40 20 50 50</p>
+                <p>mail: info@louvre.fr</p>
+              </div>
+            </div>
+            <div class="operating-time">
+              <div class="operating-time-heading">
+                <h1>Operating time</h1>
+              </div>
+              <div class="operating-time-child">
+                <p>Mon, Thu, Sat, Sun: 09:00 - 18:00</p>
+                <p>Wed, Fri: 09:00 - 21:45</p>
+                <p><span>Tue: Closed</span></p>
+              </div>
+            </div>
+            <a href="buy.html">
+              <button class="buy-tickets">Buy tickets</button>
+            </a>
+          </div>
+          <div id="map"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Создаем FOOTER -->
+    <footer>
+      <div class="footer-conteiner">
+        <div class="footer-conteiner-logo">
+          <a href="index.html">
+            <svg
+              height="800px"
+              width="800px"
+              version="1.1"
+              id="x32"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 512 512"
+              xml:space="preserve"
+            >
+              <style type="text/css">
+                .st0 {
+                  fill: #ffffff;
+                }
+              </style>
+              <g>
+                <path
+                  class="st0"
+                  d="M491.818,416.224L436.124,333.5l-55.702-82.7l-55.694-82.739L256.034,65.934l-71.482,106.1v0.053
+		l-52.974,78.666l-55.702,82.754l-55.71,82.74L0,446.066h29.635h7.176h104.22h7.176h104.22h7.146h104.22h7.176h104.22H512
+		L491.818,416.224z M352.482,265.625l-40.807,60.601l-44.859-66.638l40.793-60.608L352.482,265.625z M216.014,181.694v-0.038
+		l39.997-59.378l40.77,60.6l-40.8,60.616l-40.8-60.57L216.014,181.694z M204.345,199.018l40.8,60.577l-44.82,66.6l-40.8-60.616
+		L204.345,199.018z M59.202,414.612l33.785-50.192l33.785,50.192H59.202z M144.623,408.942l-40.8-60.616l44.866-66.645l40.8,60.608
+		L144.623,408.942z M162.482,414.612l37.843-56.23l37.842,56.23H162.482z M256.019,408.934l-44.859-66.645l44.82-66.599
+		l44.858,66.645L256.019,408.934z M273.87,414.612l37.812-56.183l37.828,56.183H273.87z M367.37,408.942l-44.859-66.607
+		l40.808-60.616l44.858,66.606L367.37,408.942z M385.228,414.612l33.785-50.184l33.785,50.184H385.228z"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-conteiner-nav">
+          <div class="footer-conteiner-nav-item">
+            <a href="index.html" style="text-decoration: none"
+              ><span>Visiting</span></a
+            >
+            <a href="#" style="text-decoration: none"><span>Explore</span></a>
+            <a href="#" style="text-decoration: none"><span>Video</span></a>
+          </div>
+          <div class="footer-conteiner-nav-item">
+            <a href="#" style="text-decoration: none"><span>Gallery</span></a>
+            <a href="buy.html" style="text-decoration: none"
+              ><span>Tickets</span></a
+            >
+            <a href="#" style="text-decoration: none"><span>Contacts</span></a>
+          </div>
+        </div>
+        <div class="footer-conteiner-social-networks">
+          <div class="footer-conteiner-social-network">
+            <div class="footer-conteiner-social-network-icon">
+              <a href="https://www.youtube.com/user/louvre">
+                <svg
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#ffffff"
+                  class="bi bi-youtube"
+                >
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-conteiner-social-network-icon">
+              <a href="https://www.instagram.com/museelouvre/">
+                <svg
+                  fill="#ffffff"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 1024 1024"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                >
+                  <path
+                    d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-conteiner-social-network-icon">
+              <a href="https://www.facebook.com/museedulouvre">
+                <svg
+                  fill="#ffffff"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-conteiner-social-network-icon">
+              <a href="http://twitter.com/museelouvre">
+                <svg
+                  fill="#ffffff"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 1024 1024"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                >
+                  <path
+                    d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-conteiner-social-network-icon">
+              <a href="https://www.pinterest.fr/museedulouvre/">
+                <svg
+                  fill="#ffffff"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.99 2C6.472 2 2 6.473 2 11.99c0 4.232 2.633 7.85 6.35 9.306-.088-.79-.166-2.006.034-2.868.182-.78 1.172-4.966 1.172-4.966s-.299-.599-.299-1.484c0-1.388.805-2.425 1.808-2.425.853 0 1.264.64 1.264 1.407 0 .858-.546 2.139-.827 3.327-.235.994.499 1.805 1.479 1.805 1.775 0 3.141-1.872 3.141-4.575 0-2.392-1.719-4.064-4.173-4.064-2.843 0-4.512 2.132-4.512 4.335 0 .858.331 1.779.744 2.28a.3.3 0 0 1 .069.286c-.076.315-.245.994-.277 1.133-.044.183-.145.222-.335.134-1.247-.581-2.027-2.405-2.027-3.871 0-3.151 2.289-6.045 6.601-6.045 3.466 0 6.159 2.469 6.159 5.77 0 3.444-2.171 6.213-5.184 6.213-1.013 0-1.964-.525-2.29-1.146l-.623 2.374c-.225.868-.834 1.956-1.241 2.62a10 10 0 0 0 2.958.445c5.517 0 9.99-4.473 9.99-9.99S17.507 2 11.99 2"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-conteiner-social-networks-hidden">
+        <div class="footer-conteiner-social-network-icon">
+          <a href="https://www.youtube.com/user/louvre" target="_blank">
+            <svg
+              width="800px"
+              height="800px"
+              viewBox="0 0 16 16"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#ffffff"
+              class="bi bi-youtube"
+            >
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"
+              />
+            </svg>
+          </a>
+        </div>
+        <a href="https://www.instagram.com/museelouvre/" target="_blank">
+          <div class="footer-conteiner-social-network-icon">
+            <svg
+              fill="#ffffff"
+              width="800px"
+              height="800px"
+              viewBox="0 0 1024 1024"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                d="M512 306.9c-113.5 0-205.1 91.6-205.1 205.1S398.5 717.1 512 717.1 717.1 625.5 717.1 512 625.5 306.9 512 306.9zm0 338.4c-73.4 0-133.3-59.9-133.3-133.3S438.6 378.7 512 378.7 645.3 438.6 645.3 512 585.4 645.3 512 645.3zm213.5-394.6c-26.5 0-47.9 21.4-47.9 47.9s21.4 47.9 47.9 47.9 47.9-21.3 47.9-47.9a47.84 47.84 0 0 0-47.9-47.9zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zm-88 235.8c-7.3 18.2-16.1 31.8-30.2 45.8-14.1 14.1-27.6 22.9-45.8 30.2C695.2 844.7 570.3 840 512 840c-58.3 0-183.3 4.7-235.9-16.1-18.2-7.3-31.8-16.1-45.8-30.2-14.1-14.1-22.9-27.6-30.2-45.8C179.3 695.2 184 570.3 184 512c0-58.3-4.7-183.3 16.1-235.9 7.3-18.2 16.1-31.8 30.2-45.8s27.6-22.9 45.8-30.2C328.7 179.3 453.7 184 512 184s183.3-4.7 235.9 16.1c18.2 7.3 31.8 16.1 45.8 30.2 14.1 14.1 22.9 27.6 30.2 45.8C844.7 328.7 840 453.7 840 512c0 58.3 4.7 183.2-16.2 235.8z"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/museedulouvre">
+          <div class="footer-conteiner-social-network-icon">
+            <svg
+              fill="#ffffff"
+              width="800px"
+              height="800px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="http://twitter.com/museelouvre">
+          <div class="footer-conteiner-social-network-icon">
+            <svg
+              fill="#ffffff"
+              width="800px"
+              height="800px"
+              viewBox="0 0 1024 1024"
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon"
+            >
+              <path
+                d="M928 254.3c-30.6 13.2-63.9 22.7-98.2 26.4a170.1 170.1 0 0 0 75-94 336.64 336.64 0 0 1-108.2 41.2A170.1 170.1 0 0 0 672 174c-94.5 0-170.5 76.6-170.5 170.6 0 13.2 1.6 26.4 4.2 39.1-141.5-7.4-267.7-75-351.6-178.5a169.32 169.32 0 0 0-23.2 86.1c0 59.2 30.1 111.4 76 142.1a172 172 0 0 1-77.1-21.7v2.1c0 82.9 58.6 151.6 136.7 167.4a180.6 180.6 0 0 1-44.9 5.8c-11.1 0-21.6-1.1-32.2-2.6C211 652 273.9 701.1 348.8 702.7c-58.6 45.9-132 72.9-211.7 72.9-14.3 0-27.5-.5-41.2-2.1C171.5 822 261.2 850 357.8 850 671.4 850 843 590.2 843 364.7c0-7.4 0-14.8-.5-22.2 33.2-24.3 62.3-54.4 85.5-88.2z"
+              />
+            </svg>
+          </div>
+        </a>
+        <a href="https://www.pinterest.fr/museedulouvre/">
+          <div class="footer-conteiner-social-network-icon">
+            <svg
+              fill="#ffffff"
+              width="800px"
+              height="800px"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11.99 2C6.472 2 2 6.473 2 11.99c0 4.232 2.633 7.85 6.35 9.306-.088-.79-.166-2.006.034-2.868.182-.78 1.172-4.966 1.172-4.966s-.299-.599-.299-1.484c0-1.388.805-2.425 1.808-2.425.853 0 1.264.64 1.264 1.407 0 .858-.546 2.139-.827 3.327-.235.994.499 1.805 1.479 1.805 1.775 0 3.141-1.872 3.141-4.575 0-2.392-1.719-4.064-4.173-4.064-2.843 0-4.512 2.132-4.512 4.335 0 .858.331 1.779.744 2.28a.3.3 0 0 1 .069.286c-.076.315-.245.994-.277 1.133-.044.183-.145.222-.335.134-1.247-.581-2.027-2.405-2.027-3.871 0-3.151 2.289-6.045 6.601-6.045 3.466 0 6.159 2.469 6.159 5.77 0 3.444-2.171 6.213-5.184 6.213-1.013 0-1.964-.525-2.29-1.146l-.623 2.374c-.225.868-.834 1.956-1.241 2.62a10 10 0 0 0 2.958.445c5.517 0 9.99-4.473 9.99-9.99S17.507 2 11.99 2"
+              />
+            </svg>
+          </div>
+        </a>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="javascript/contacts.js"></script>
   </body>
 </html>
