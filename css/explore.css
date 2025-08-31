@@ -122,6 +122,198 @@ header {
   width: 20px;
 }
 
+/* Прописываем стили для "HERO" */
+.hero {
+  width: 1920px;
+  height: 201px;
+  margin-top: 50px;
+}
+
+.hero-parent-container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hero-container-heading {
+  width: 1095px;
+  height: 65px;
+  border-bottom: #710707 3px solid;
+}
+
+.hero-container-heading h1 {
+  font-family: "Forum", monospace;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-container-heading h1 span {
+  font-style: italic;
+}
+
+.hero-container-content {
+  width: 100%;
+  height: 121px;
+  margin-top: 15px;
+}
+
+.hero-container-content p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.hero-container-content p span {
+  font-style: italic;
+}
+
+/* Для секции "ABOUT" */
+.about-painting {
+  width: 1920px;
+  height: 737px;
+  margin-top: 50px;
+}
+
+.about-painting-parent-container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.about-painting-parent-container-heading {
+    width: 440px;
+    height: 65px;
+    border-bottom: #710707 3px solid;
+}
+
+.about-painting-parent-container-heading h1 {
+    font-family: "Forum", monospace;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.about-painting-parent-container-content {
+    width: 100%;
+    height: 657px;
+    margin-top: 15px;
+}
+
+.about-painting-parent-container-content h2 {
+    font-family: "Forum", monospace;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 12px;
+    letter-spacing: 2px;
+}
+
+.about-painting-parent-container-content p {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+}
+
+.about-painting-parent-container-content p span {
+    font-style: italic;
+}
+
+/* section 'EXPLORE' */
+.explore {
+  background-color: #030303;
+  color: #ffffff;
+  width: 1920px;
+  height: 865px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.explore-container {
+  display: flex;
+  width: 1440px;
+  height: 715px;
+}
+
+.explore-contant {
+  width: 50%;
+}
+
+.explore-heading h1 {
+  display: inline-block;
+  font-family: "Forum", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin: 0 0 30px 0;
+  border-bottom: #710707 3px solid;
+}
+
+.explore-text {
+  padding-top: 50px;
+  width: 660px;
+}
+
+.explore-text p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.explore-text span {
+  color: #d2b183;
+}
+
+.explore-img {
+  width: 50%;
+  height: 715px;
+  position: relative;
+  background: url(../img/explore-slider/after.jpg);
+  background-size: cover;
+}
+
+.explore-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.explore-img-ere {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 60% 0, 60% 100%, 0 100%);
+}
+
+.explore-img-child {
+  width: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 59.5%;
+}
+
+.explore-img-child-line-top,
+.explore-img-child-line-bottom {
+  width: 5px;
+  height: 48%;
+  background-color: #ffffff;
+}
+
+.explore-img-child-line-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  cursor: grab;
+}
+
 /* Прописываем стили для Footer */
 footer {
   width: 1920px;
@@ -129,6 +321,7 @@ footer {
   background-color: #030303;
   display: flex;
   align-items: center;
+  margin-top: 50px;
 }
 
 .footer-conteiner {
@@ -248,11 +441,77 @@ footer {
     padding: 0;
   }
 
+  /* для секции HERO */
+  .hero {
+    width: 1024px;
+    height: 215px;
+    margin-top: 40px;
+  }
+
+  .hero-parent-container {
+    width: 984px;
+  }
+
+  .hero-container-heading {
+    width: 100%;
+    height: 65px;
+  }
+
+  .hero-container-heading h1 {
+    font-size: 45px;
+  }
+
+  .hero-container-content {
+    width: 100%;
+    height: 135px;
+    margin-top: 15px;
+  }
+
+  .hero-container-content p {
+    font-size: 22px;
+  }
+
+  /* Для секции "ABOUT" */
+.about-painting {
+  width: 1024px;
+  height: 820px;
+  margin-top: 40px;
+}
+
+.about-painting-parent-container {
+  width: 984px;
+  height: 100%;
+}
+
+.about-painting-parent-container-heading {
+    width: 400px;
+    height: 65px;
+
+}
+
+.about-painting-parent-container-heading h1 {
+    font-size: 45px;
+}
+
+.about-painting-parent-container-content {
+    width: 100%;
+    height: 740px;
+    margin-top: 15px;
+}
+
+.about-painting-parent-container-content h2 {
+    font-size: 32px;
+}
+
+.about-painting-parent-container-content p {
+    font-size: 22px;
+}
+
   /* для Footer */
   footer {
     width: 1024px;
     height: 185px;
-    /* margin-top: 40px; */
+    margin-top: 40px;
   }
 
   .footer-conteiner {
@@ -308,11 +567,76 @@ footer {
     width: 100%;
   }
 
+  /* для секции HERO */
+  .hero {
+    width: 768px;
+    height: 270px;
+    margin-top: 30px;
+  }
+
+  .hero-parent-container {
+    width: 728px;
+  }
+
+  .hero-container-heading {
+    width: 100%;
+    height: 110px;
+  }
+
+  .hero-container-heading h1 {
+    font-size: 45px;
+  }
+
+  .hero-container-content {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+  }
+
+  .hero-container-content p {
+    font-size: 20px;
+  }
+
+    /* Для секции "ABOUT" */
+.about-painting {
+  width: 768px;
+  height: 917px;
+  margin-top: 30px;
+}
+
+.about-painting-parent-container {
+  width: 728px;
+}
+
+.about-painting-parent-container-heading {
+    width: 400px;
+    height: 65px;
+
+}
+
+.about-painting-parent-container-heading h1 {
+    font-size: 45px;
+}
+
+.about-painting-parent-container-content {
+    width: 100%;
+    height: 837px;
+    margin-top: 15px;
+}
+
+.about-painting-parent-container-content h2 {
+    font-size: 32px;
+}
+
+.about-painting-parent-container-content p {
+    font-size: 20px;
+}
+
   /* для Footer */
-footer {
+  footer {
     width: 768px;
     height: 305px;
-    /* margin-top: 30px; */
+    margin-top: 30px;
     display: inline-block;
   }
 
