@@ -232,7 +232,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  background-color: #030303;
+  /* background-color: #030303; */
 }
 
 .explore-container {
@@ -250,7 +250,7 @@ header {
 
 .explore-contant {
   width: 50%;
-  background-color: gray;
+  /* background-color: gray; */
 }
 
 .explore-heading h1 {
@@ -266,7 +266,7 @@ header {
   margin-top: 132px;
   width: 690px;
   height: 379px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .explore-txt p {
@@ -522,7 +522,7 @@ footer {
 /* section 'EXPLORE' */
 .explore {
   width: 1024px;
-  height: 1294px;
+  height: 1277px;
   margin-top: 40px;
 }
 
@@ -547,7 +547,7 @@ footer {
 .explore-txt {
   margin: 20px 0;
   width: 100%;
-  height: 212px;
+  height: 211px;
 }
 
 .explore-txt p {
@@ -556,7 +556,7 @@ footer {
 
 .explore-img {
   width: 984px;
-  height: 977px;
+  height: auto;
 }
 
   /* для Footer */
@@ -682,6 +682,46 @@ footer {
 
 .about-painting-parent-container-content p {
     font-size: 20px;
+}
+
+/* section 'EXPLORE' */
+.explore {
+  width: 768px;
+  height: 1047px;
+  margin-top: 30px;
+}
+
+.explore-container {
+  flex-direction: column;
+  width: 728px;
+}
+
+.explore-heading {
+  width: 50%;
+
+}
+
+.explore-contant {
+  width: 100%;
+}
+
+.explore-heading h1 {
+  font-size: 45px;
+}
+
+.explore-txt {
+  margin: 10px 0;
+  /* width: 100%; */
+  height: 250px;
+}
+
+.explore-txt p {
+  font-size: 20px;
+}
+
+.explore-img {
+  width: 728px;
+  height: auto;
 }
 
   /* для Footer */
