@@ -136,7 +136,7 @@ header {
 }
 
 .hero-container-heading {
-  width: 1095px;
+  width: 1243px;
   height: 65px;
   border-bottom: #710707 3px solid;
 }
@@ -146,6 +146,7 @@ header {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .hero-container-heading h1 span {
@@ -173,7 +174,7 @@ header {
 /* Для секции "ABOUT" */
 .about-painting {
   width: 1920px;
-  height: 737px;
+  height: 709px;
   margin-top: 50px;
 }
 
@@ -184,7 +185,7 @@ header {
 }
 
 .about-painting-parent-container-heading {
-    width: 440px;
+    width: 490px;
     height: 65px;
     border-bottom: #710707 3px solid;
 }
@@ -194,11 +195,12 @@ header {
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 .about-painting-parent-container-content {
     width: 100%;
-    height: 657px;
+    height: 629px;
     margin-top: 15px;
 }
 
@@ -224,49 +226,59 @@ header {
 
 /* section 'EXPLORE' */
 .explore {
-  background-color: #030303;
-  color: #ffffff;
   width: 1920px;
-  height: 865px;
+  height: 715px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  background-color: #030303;
 }
 
 .explore-container {
   display: flex;
+  flex-direction: row;
   width: 1440px;
-  height: 715px;
+  height: 100%;
+}
+
+.explore-heading {
+  width: 57%;
+  height: 65px;
+  border-bottom: #710707 3px solid;
 }
 
 .explore-contant {
   width: 50%;
+  background-color: gray;
 }
 
 .explore-heading h1 {
   display: inline-block;
   font-family: "Forum", sans-serif;
-  font-size: 80px;
-  font-weight: 400;
-  letter-spacing: 5px;
-  margin: 0 0 30px 0;
-  border-bottom: #710707 3px solid;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  
 }
 
-.explore-text {
-  padding-top: 50px;
-  width: 660px;
+.explore-txt {
+  margin-top: 132px;
+  width: 690px;
+  height: 379px;
+  background-color: aqua;
 }
 
-.explore-text p {
+.explore-txt p {
   font-family: "Roboto Flex", sans-serif;
-  font-size: 22px;
-  font-weight: 300;
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
-.explore-text span {
-  color: #d2b183;
+.explore-txt span {
+  font-style: italic;
 }
 
 .explore-img {
@@ -302,7 +314,7 @@ header {
 .explore-img-child-line-top,
 .explore-img-child-line-bottom {
   width: 5px;
-  height: 48%;
+  height: 49%;
   background-color: #ffffff;
 }
 
@@ -444,7 +456,7 @@ footer {
   /* для секции HERO */
   .hero {
     width: 1024px;
-    height: 215px;
+    height: 264px;
     margin-top: 40px;
   }
 
@@ -454,7 +466,7 @@ footer {
 
   .hero-container-heading {
     width: 100%;
-    height: 65px;
+    height: 115px;
   }
 
   .hero-container-heading h1 {
@@ -474,7 +486,7 @@ footer {
   /* Для секции "ABOUT" */
 .about-painting {
   width: 1024px;
-  height: 820px;
+  height: 793px;
   margin-top: 40px;
 }
 
@@ -484,7 +496,7 @@ footer {
 }
 
 .about-painting-parent-container-heading {
-    width: 400px;
+    width: 450px;
     height: 65px;
 
 }
@@ -495,7 +507,7 @@ footer {
 
 .about-painting-parent-container-content {
     width: 100%;
-    height: 740px;
+    height: 713px;
     margin-top: 15px;
 }
 
@@ -505,6 +517,46 @@ footer {
 
 .about-painting-parent-container-content p {
     font-size: 22px;
+}
+
+/* section 'EXPLORE' */
+.explore {
+  width: 1024px;
+  height: 1294px;
+  margin-top: 40px;
+}
+
+.explore-container {
+  flex-direction: column;
+  width: 984px;
+}
+
+.explore-heading {
+  width: 43%;
+
+}
+
+.explore-contant {
+  width: 100%;
+}
+
+.explore-heading h1 {
+  font-size: 45px;
+}
+
+.explore-txt {
+  margin: 20px 0;
+  width: 100%;
+  height: 212px;
+}
+
+.explore-txt p {
+  font-size: 22px;
+}
+
+.explore-img {
+  width: 984px;
+  height: 977px;
 }
 
   /* для Footer */
@@ -579,7 +631,7 @@ footer {
   }
 
   .hero-container-heading {
-    width: 100%;
+    width: 580px;
     height: 110px;
   }
 
@@ -609,7 +661,7 @@ footer {
 }
 
 .about-painting-parent-container-heading {
-    width: 400px;
+    width: 450px;
     height: 65px;
 
 }
