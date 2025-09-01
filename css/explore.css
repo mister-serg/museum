@@ -55,7 +55,6 @@ header {
 .burger {
   display: none;
   cursor: pointer;
-  /* z-index: 1000; */
 }
 
 .burger .line {
@@ -232,7 +231,6 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  /* background-color: #030303; */
 }
 
 .explore-container {
@@ -250,7 +248,6 @@ header {
 
 .explore-contant {
   width: 50%;
-  /* background-color: gray; */
 }
 
 .explore-heading h1 {
@@ -259,14 +256,12 @@ header {
   font-size: 50px;
   font-weight: 700;
   letter-spacing: 2px;
-  
 }
 
 .explore-txt {
   margin-top: 132px;
   width: 690px;
   height: 379px;
-  /* background-color: aqua; */
 }
 
 .explore-txt p {
@@ -324,6 +319,47 @@ header {
   border-radius: 50%;
   border: 5px solid #ffffff;
   cursor: grab;
+}
+
+/* Прописываем стили для PUBLIC REACTION */
+.public-reaction {
+  width: 1920px;
+  height: auto;
+  margin-top: 50px;
+}
+
+.public-reaction-container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.public-reaction-container-heading {
+  width: 420px;
+  height: 65px;
+  border-bottom: #710707 3px solid;
+}
+
+.public-reaction-container-heading h1 {
+  font-family: "Forum", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.public-reaction-container-content {
+  width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+.public-reaction-container-content p {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
 }
 
 /* Прописываем стили для Footer */
@@ -559,6 +595,34 @@ footer {
   height: auto;
 }
 
+/* для секции "PUBLIC REACTION" */
+.public-reaction {
+  width: 1024px;
+  margin-top: 40px;
+}
+
+.public-reaction-container {
+  width: 984px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.public-reaction-container-heading {
+  width: 420px;
+}
+
+.public-reaction-container-heading h1 {
+  font-size: 45px;
+}
+
+.public-reaction-container-content {
+  margin-top: 15px;
+}
+
+.public-reaction-container-content p {
+  font-size: 22px;
+}
+
   /* для Footer */
   footer {
     width: 1024px;
@@ -711,7 +775,6 @@ footer {
 
 .explore-txt {
   margin: 10px 0;
-  /* width: 100%; */
   height: 250px;
 }
 
@@ -722,6 +785,32 @@ footer {
 .explore-img {
   width: 728px;
   height: auto;
+}
+
+/* для секции "PUBLIC REACTION" */
+.public-reaction {
+  width: 768px;
+  margin-top: 30px;
+}
+
+.public-reaction-container {
+  width: 728px;
+}
+
+.public-reaction-container-heading {
+  width: 420px;
+}
+
+.public-reaction-container-heading h1 {
+  font-size: 45px;
+}
+
+.public-reaction-container-content {
+  margin-top: 12px;
+}
+
+.public-reaction-container-content p {
+  font-size: 20px;
 }
 
   /* для Footer */
