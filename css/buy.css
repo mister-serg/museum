@@ -6,7 +6,7 @@ body {
 /* Стили для HEADER */
 header {
   background-color: #030303;
-  width: 1920px;
+  width: 100%;
 }
 
 .header {
@@ -748,7 +748,7 @@ header {
 
 /* Прописываем стили для Footer */
 footer {
-  width: 1920px;
+  width: 100%;
   height: 180px;
   background-color: #030303;
   display: flex;
@@ -836,16 +836,16 @@ footer {
 
 @media (max-width: 1024px) {
   body {
-    width: 1024px;
+    width: 100%;
   }
  
   /* для header */
   header {
-    width: 1024px;
+    width: 100%;
   }
 
   .header {
-    width: 1024px;
+    width: 100%;
     position: relative;
     height: 130px;
   }
@@ -874,14 +874,14 @@ footer {
 
   /* для секции BUY-TICKETS */
   .buy-tickets {
-  width: 1024px;
+  width: 100%;
   height: 664px;
   margin-top: 40px;
 }
 
 /* для Footer */
 footer {
-    width: 1024px;
+    width: 100%;
     height: 185px;
     margin-top: 40px;
   }
@@ -927,12 +927,12 @@ footer {
 
 @media (max-width: 768px) {
   body {
-    width: 768px;
+    width: 100%;
   }
   
   /* для Header */
   header {
-    width: 768px;
+    width: 100%;
   }
 
   .header {
@@ -965,7 +965,7 @@ footer {
 
 /* для Footer */
 footer {
-    width: 768px;
+    width: 100%;
     height: 305px;
     margin-top: 30px;
     display: inline-block;

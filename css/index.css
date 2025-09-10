@@ -7,7 +7,7 @@ body {
 /* Стили для HEADER */
 header {
   background-color: #030303;
-  width: 1920px;
+  width: 100%;
 }
 
 .header {
@@ -126,7 +126,7 @@ header {
 .welcome {
   background-color: #030303;
   color: #ffffff;
-  width: 1920px;
+  width: 100%;
   height: 800px;
   margin-bottom: 50px;
 }
@@ -262,6 +262,7 @@ header {
   width: 16px;
   height: 16px;
   background-color: #ffffff;
+  cursor: pointer;
 }
 
 .golden {
@@ -335,8 +336,9 @@ header {
   height: 24px;
 }
 
+/* section 'Visiting' */
 .visiting {
-  width: 1920px;
+  width: 100%;
   height: 1141px;
 }
 
@@ -445,7 +447,7 @@ header {
 .explore {
   background-color: #030303;
   color: #ffffff;
-  width: 1920px;
+  width: 100%;
   height: 865px;
   display: flex;
   justify-content: center;
@@ -535,7 +537,7 @@ header {
 
 /* section 'VIDEO' */
 .video {
-  width: 1920px;
+  width: 100%;
   height: 1302px;
   margin-top: 50px;
 }
@@ -815,7 +817,7 @@ header {
 
 /* section 'Gallery' */
 .gallery {
-  width: 1920px;
+  width: 100%;
   height: 1750px;
   background-color: #030303;
   margin-top: 50px;
@@ -846,19 +848,22 @@ header {
   justify-content: space-between;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
+  cursor: grab;
+  touch-action: none;         /* даём управление нашему JS */
+  -webkit-user-drag: none;
+  user-select: none;
 }
 
-.gallery-container-img::after {
-  /* Создаем градиетнт */
-  content: "";
+.gradient {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 18%;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  pointer-events: none;
   z-index: 1;
+  transition: opacity 2s; /* Добавляем плавный переход */
 }
 
 .column-img {
@@ -878,7 +883,7 @@ header {
 
 /* section 'BUY TICKETS' */
 .buy-tickets {
-  width: 1920px;
+  width: 100%;
   height: 1032px;
   margin-top: 50px;
 }
@@ -1061,7 +1066,7 @@ input[type="radio"] {
 
 /* section 'CONTACTS' */
 .contacts {
-  width: 1920px;
+  width: 100%;
   margin-top: 50px;
   height: 843px;
 }
@@ -1122,7 +1127,7 @@ input[type="radio"] {
 
 /* для footer */
 footer {
-  width: 1920px;
+  width: 100%;
   height: 180px;
   background-color: #030303;
   margin-top: 50px;
@@ -1212,17 +1217,16 @@ footer {
 /* Адаптивные стили */
 @media (max-width: 1024px) {
   body {
-    width: 1024px;
+    width: 100%;
   }
   
   /* для header */
-  /* для header */
   header {
-    width: 1024px;
+    width: 100%;
   }
 
   .header {
-    width: 1024px;
+    width: 100%;
     position: relative;
     height: 130px;
   }
@@ -1251,7 +1255,7 @@ footer {
 
   /* для секции welcome */
   .welcome {
-    width: 1024px;
+    width: 100%;
     height: 587px;
     margin-bottom: 40px;
   }
@@ -1308,7 +1312,7 @@ footer {
 
   /* для секции 'Visiting' */
   .visiting {
-    width: 1024px;
+    width: 100%;
     height: 1313px;
     margin: 0 auto;
   }
@@ -1387,7 +1391,7 @@ footer {
 
   /* для секции 'Explore' */
 .explore {
-  width: 1024px;
+  width: 100%;
   height: 1149px;
   margin-top: 40px;
 }
@@ -1440,7 +1444,7 @@ footer {
 
   /* для секции 'Video' */
   .video {
-    width: 1024px;
+    width: 100%;
     height: 868px;
     margin-top: 45px;
   }
@@ -1516,7 +1520,7 @@ footer {
 
   /* для секции 'GALLERY' */
   .gallery {
-    width: 1024px;
+    width: 100%;
     height: 1460px;
     margin-top: 40px;
   }
@@ -1546,7 +1550,7 @@ footer {
 
   /* для секции BUY TICKETS */
   .buy-tickets {
-    width: 1024px;
+    width: 100%;
     margin-top: 40px;
     height: 952px;
   }
@@ -1624,7 +1628,7 @@ footer {
 
   /* для секции 'CONTACTS' */
   .contacts {
-    width: 1024px;
+    width: 100%;
     margin-top: 40px;
     height: 614px;
   }
@@ -1664,7 +1668,7 @@ footer {
 
   /* для 'FOOTER' */
   footer {
-    width: 1024px;
+    width: 100%;
     height: 185px;
     margin-top: 40px;
   }
@@ -1710,12 +1714,12 @@ footer {
 
 @media (max-width: 768px) {
   body {
-    width: 768px;
+    width: 100%;
   }
 
   /* для Header */
   header {
-    width: 768px;
+    width: 100%;
   }
 
   .header {
@@ -1725,7 +1729,7 @@ footer {
 
   /* для секции welcome */
   .welcome {
-    width: 768px;
+    width: 100%;
     height: 860px;
     margin-bottom: 40px;
   }
@@ -1801,7 +1805,7 @@ footer {
 
   /* для секции 'Visiting' */
   .visiting {
-    width: 768px;
+    width: 100%;
     height: 1146px;
   }
 
@@ -1850,7 +1854,7 @@ footer {
 
   /* для секции 'Explore' */
   .explore {
-  width: 768px;
+  width: 100%;
   height: 908px;
   margin-top: 30px;
 }
@@ -1888,7 +1892,7 @@ footer {
 
   /* для секции 'Video' */
   .video {
-    width: 768px;
+    width: 100%;
     height: 730px;
     margin-top: 30px;
   }
@@ -1955,7 +1959,7 @@ footer {
 
   /* для секции 'GALLERY' */
   .gallery {
-    width: 768px;
+    width: 100%;
     height: 1220px;
     margin-top: 30px;
   }
@@ -1983,20 +1987,27 @@ footer {
     justify-content: space-between;
     overflow: hidden;
     position: relative;
-    cursor: pointer;
+    cursor: grab;
+    touch-action: none; /* даём контроль pointer events нашему скрипту */
   }
 
-  .gallery-container-img-adaptive::after {
-    /* Создаем градиетнт */
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 18%;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
-    z-index: 1;
+  .gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 18%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
+  transition: opacity 0.18s ease, top 0.18s ease, bottom 0.18s ease;
+  pointer-events: none; /* не мешает событиям */
+  transition: opacity 2s; /* Добавляем плавный переход */
   }
+
+/* при активном захвате */
+/* .gallery-container-img-adaptive.dragging {
+  cursor: grabbing;
+} */
 
   .column-img {
     width: 49%;
@@ -2011,7 +2022,7 @@ footer {
 
   /* для секции 'BUY TICKETS' */
   .buy-tickets {
-    width: 768px;
+    width: 100%;
     margin-top: 30px;
     height: 811px;
   }
@@ -2083,7 +2094,7 @@ footer {
 
   /* для секции 'CONTACTS' */
   .contacts {
-    width: 768px;
+    width: 100%;
     margin-top: 30px;
     height: 818px;
   }
@@ -2137,7 +2148,7 @@ footer {
 
   /* для секции 'FOOTER' */
   footer {
-    width: 768px;
+    width: 100%;
     height: 305px;
     margin-top: 30px;
     display: inline-block;
