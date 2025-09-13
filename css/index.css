@@ -2,6 +2,11 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 /* Стили для HEADER */
@@ -133,7 +138,7 @@ header {
 
 .parent-container {
   position: relative;
-  width: 1440px;
+  width: 75%;
   height: 744px;
   background-color: #030303;
   margin: 0 auto;
@@ -148,7 +153,7 @@ header {
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -162,16 +167,16 @@ header {
 
 .text-container h1 {
   font-family: "Forum", monospace;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
   margin: 0;
 }
 
 .text-container p {
   font-family: "Roboto Flex", sans-serif;
   font-weight: 100;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-optical-sizing: auto;
   font-style: normal;
   margin-bottom: 50px;
@@ -185,7 +190,7 @@ header {
   letter-spacing: 2px;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 359px;
   height: 75px;
   padding-top: auto;
   background-color: #710707;
@@ -339,11 +344,11 @@ header {
 /* section 'Visiting' */
 .visiting {
   width: 100%;
-  height: 1141px;
+  height: 1139px;
 }
 
 .visiting-container {
-  width: 1440px;
+  width: 75%;
   height: 100%;
   margin: 0 auto;
 }
@@ -369,7 +374,6 @@ header {
   height: 1026px;
   border-top: 3px solid #710707;
   display: block;
-  justify-content: space-between;
 }
 
 .visiting-container-body-child {
@@ -377,18 +381,23 @@ header {
   height: 424px;
   margin-top: 89px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
 .visiting-container-body-child-content {
-  width: 440px;
-  height: 100%;
+  width: 30.7%;
+  /* height: 100%; */
   position: relative;
 }
 
 .visiting-container-body-child-content-image {
   width: 100%;
-  height: 285px;
+}
+
+.visiting-container-body-child-content img {
+  width: 100%;
+  height: auto;
 }
 
 .visiting-container-body-child-content img:hover {
@@ -396,12 +405,12 @@ header {
 }
 
 .visiting-container-body-child-content-header {
-  width: auto;
+  width: 100%;
   height: auto;
   position: absolute;
   font-family: "Forum", sans-serif;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
   letter-spacing: 5px;
   text-transform: uppercase;
   bottom: 20%;
@@ -409,7 +418,7 @@ header {
 }
 
 .visiting-container-body-child-content-line {
-  width: 318px;
+  width: 70%;
   height: 2px;
   background-color: #710707;
   position: absolute;
@@ -457,7 +466,7 @@ header {
 
 .explore-container {
   display: flex;
-  width: 1440px;
+  width: 75%;
   height: 715px;
 }
 
@@ -538,11 +547,11 @@ header {
 /* section 'VIDEO' */
 .video {
   width: 100%;
-  height: 1302px;
+  height: auto;
   margin-top: 50px;
 }
 .video-container {
-  width: 1440px;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -584,18 +593,17 @@ header {
   margin-top: 50px;
 }
 
-.video-main img {
+.video-main video {
   width: 100%;
   height: auto;
 }
 
 .play-button {
   width: 20%;
-  height: 34%;
+  height: 33.86%;
   position: absolute;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 34%;
+  left: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -609,108 +617,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 90px solid #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 55%;
-  transform: translate(-50%, -50%) rotate(-90deg);
   cursor: pointer;
 }
 
-.playback-panel {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  background-color: #030303;
-}
-
-.play-icon {
-  width: 4%;
-  padding-top: 2px;
-}
-
-.play-icon svg {
-  width: 90%;
-  cursor: pointer;
-}
-
-.time {
-  width: 67%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.passed-time {
-  width: 60%;
-  height: 4px;
-  background-color: #710707;
-}
-
-.slider {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-.remain-time {
-  width: 30%;
-  height: 4px;
-  background-color: #ffffff;
-}
-
-.volume-level {
-  width: 18%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.volume-icon {
-  width: 4%;
-  padding-top: 5px;
-}
-
-.volume-icon svg {
-  width: 100%;
-  cursor: pointer;
-}
-
-.less-level {
-  width: 30%;
-  height: 4px;
-  background-color: #710707;
-}
-
-.more-level {
-  width: 35%;
-  height: 4px;
-  background-color: #ffffff;
-}
-
-.fullscreen-icon {
-  width: 4%;
-}
-
-.fullscreen-icon svg {
-  width: 100%;
-  cursor: pointer;
+.circle svg {
+  width: 66.37%;
+  height: 88.49%;
 }
 
 .video-carousel {
@@ -726,15 +638,14 @@ header {
 }
 
 .video-carousel-item:nth-child(4) {
-  /* Скрываем 4й элемент */
-  display: none;
+  display: none;   /* Скрываем 4й элемент */
 }
 
-.video-carousel-item img {
+.video-element {
   width: 100%;
 }
 
-.yuotube-icon {
+.youtube-icon {
   position: absolute;
   width: 18.02%;
   top: 33%;
@@ -756,7 +667,7 @@ header {
 
 .item-txt {
   position: absolute;
-  width: 72.65%;
+  width: 80%;
   top: 0;
   left: 15%;
   font-size: 15px;
@@ -824,7 +735,7 @@ header {
 }
 
 .parent-gallery-container {
-  width: 1440px;
+  width: 75%;
   height: 100%;
   margin: 0 auto;
   padding-top: 30px;
@@ -884,12 +795,12 @@ header {
 /* section 'BUY TICKETS' */
 .buy-tickets {
   width: 100%;
-  height: 1032px;
+  /* height: 1032px; */
   margin-top: 50px;
 }
 
 .heading-buy-tickets {
-  width: 1440px;
+  width: 75%;
   margin: 0 auto;
   border-bottom: #710707 3px solid;
 }
@@ -908,6 +819,7 @@ header {
   display: flex;
   width: 75%;
   margin: 60px auto 0 auto;
+
 }
 
 .buy-tickets-img {
@@ -916,6 +828,7 @@ header {
 
 .buy-tickets-img img {
   width: 100%;
+  height: 100%;
 }
 
 .buy-tickets-content {
@@ -953,6 +866,12 @@ label {
 
 input[type="radio"] {
   margin-right: 5px;
+  accent-color: #000000;
+}
+
+/* Для активной кнопки */
+input[type="radio"]:checked + .ticket-type {
+    font-weight: bold;
 }
 
 .ticket-type {
@@ -1072,7 +991,7 @@ input[type="radio"] {
 }
 
 .contacts-heading {
-  width: 1440px;
+  width: 75%;
   margin: 0 auto;
   border-bottom: #710707 3px solid;
 }
@@ -1136,7 +1055,7 @@ footer {
 }
 
 .footer-conteiner {
-  width: 1440px;
+  width: 75%;
   height: 64%;
   margin: 0 auto;
   display: flex;
@@ -1256,20 +1175,20 @@ footer {
   /* для секции welcome */
   .welcome {
     width: 100%;
-    height: 587px;
+    height: 585px;
     margin-bottom: 40px;
   }
   .parent-container {
-    width: 984px;
-    height: 585px;
+    width: 96.09%;
+    height: 525px;
   }
   .image-container {
     width: 65%;
-    height: 65%;
+    height: 100%;
   }
 
   .image-container::before {
-    height: 82%;
+    height: 100%;
   }
 
   .text-container h1 {
@@ -1295,8 +1214,8 @@ footer {
 
   .carousel {
     width: 700px;
-    bottom: 0;
-    right: 0;
+    height: 120px;
+    bottom: -11.5%;
   }
 
   .square {
@@ -1445,11 +1364,10 @@ footer {
   /* для секции 'Video' */
   .video {
     width: 100%;
-    height: 868px;
     margin-top: 45px;
   }
   .video-container {
-    width: 984px;
+    width: 96.09%;
   }
 
   .video-content {
@@ -1472,17 +1390,9 @@ footer {
     margin-top: 2%;
   }
 
-  .triangle {
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-top: 80px solid #ffffff;
-    cursor: default;
-  }
-
   .item-txt {
     left: 21%;
     font-size: 18px;
-    width: 63%;
   }
 
   .video-carousel {
@@ -1503,7 +1413,7 @@ footer {
     cursor: pointer;
   }
 
-  .yuotube-icon {
+  .youtube-icon {
     width: 26%;
     top: 28%;
     left: 37%;
@@ -1613,7 +1523,7 @@ footer {
     width: 80%;
     height: 50px;
     left: 0;
-    bottom: 0.8%;
+    bottom: 0;
   }
 
   .buy-tickets-panorama {
@@ -1730,15 +1640,16 @@ footer {
   /* для секции welcome */
   .welcome {
     width: 100%;
-    height: 860px;
+    height: 861px;
     margin-bottom: 40px;
   }
 
   .parent-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: static;
     width: 728px;
-    height: 860px;
+    height: 861px;
     justify-content: center;
     align-items: center;
   }
@@ -1772,11 +1683,12 @@ footer {
 
   .image-container {
     position: static;
-    display: flex;
+    display: block;
     top: auto;
     left: auto;
     transform: none;
     width: 100%;
+    height: 546px;
     z-index: auto;
   }
 
@@ -1789,18 +1701,17 @@ footer {
     margin: 0 auto;
     height: auto;
   }
+
   .btn {
     display: none;
   }
 
   .carousel {
     position: static;
-    bottom: auto;
-    right: auto;
     display: flex;
     z-index: auto;
-    margin: 30px auto 0 auto;
     height: 40px;
+    margin: 25px 0 0 0;
   }
 
   /* для секции 'Visiting' */
@@ -1893,22 +1804,15 @@ footer {
   /* для секции 'Video' */
   .video {
     width: 100%;
-    height: 730px;
     margin-top: 30px;
   }
 
   .video-container {
-    width: 728px;
+    width: 94.79%;
   }
 
   .video-heading h1 {
     font-size: 40px;
-  }
-
-  .triangle {
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-top: 60px solid #ffffff;
   }
 
   .video-carousel-item {
@@ -1916,13 +1820,11 @@ footer {
   }
 
   .video-carousel-item:nth-child(3) {
-    /* Скрываем 3й элемент */
-    display: none;
+    display: none; /* Скрываем 3й элемент */
   }
 
   .item-txt {
     left: 16%;
-    width: 63%;
   }
 
   .video-carousel {
@@ -2079,7 +1981,7 @@ footer {
   .buy-now {
     width: 100%;
     left: 0;
-    bottom: 0.8%;
+    bottom: 0;
   }
 
   .buy-tickets-panorama {

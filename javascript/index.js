@@ -182,6 +182,248 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("touchend", handleEnd);
 });
 
+// --------------------- section Video ---------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".video-carousel");
+  const pointsContainer = document.querySelector(".points-video-carousel");
+  const pointNodes = pointsContainer
+    ? Array.from(pointsContainer.children)
+    : [];
+
+  const arrows = document.querySelectorAll(
+    ".small-video-carousel .arrow-video-carousel"
+  );
+  const leftArrow = arrows[0];
+  const rightArrow = arrows[1];
+
+  if (!carousel || !pointsContainer || !leftArrow || !rightArrow) return;
+
+  function findActivePointIndex() {
+    return pointNodes.findIndex((p) => p.classList.contains("black-point"));
+  }
+
+  function setActivePoint(idx) {
+    pointNodes.forEach((p, i) => {
+      if (i === idx) p.classList.add("black-point");
+      else p.classList.remove("black-point");
+    });
+  }
+
+  // безопасный обмен данных (poster + источники) между двумя <video> элементами
+  function swapVideoContent(vA, vB) {
+    if (!vA || !vB) return;
+
+    // Остановим оба видео
+    try {
+      vA.pause();
+    } catch {}
+    try {
+      vB.pause();
+    } catch {}
+
+    // Сохраняем метаданные
+    const aPoster = vA.getAttribute("poster") || "";
+    const bPoster = vB.getAttribute("poster") || "";
+
+    const aSources = Array.from(vA.querySelectorAll("source")).map((s) => ({
+      src: s.getAttribute("src") || s.src,
+      type: s.type || "",
+    }));
+    const bSources = Array.from(vB.querySelectorAll("source")).map((s) => ({
+      src: s.getAttribute("src") || s.src,
+      type: s.type || "",
+    }));
+
+    // Очистим текущие <source>
+    vA.querySelectorAll("source").forEach((n) => n.remove());
+    vB.querySelectorAll("source").forEach((n) => n.remove());
+
+    // Помещаем источники B в A
+    bSources.forEach((sObj) => {
+      const s = document.createElement("source");
+      s.src = sObj.src;
+      if (sObj.type) s.type = sObj.type;
+      vA.appendChild(s);
+    });
+
+    // Помещаем источники A в B
+    aSources.forEach((sObj) => {
+      const s = document.createElement("source");
+      s.src = sObj.src;
+      if (sObj.type) s.type = sObj.type;
+      vB.appendChild(s);
+    });
+
+    // Поменяем poster
+    if (bPoster) vA.setAttribute("poster", bPoster);
+    else vA.removeAttribute("poster");
+    if (aPoster) vB.setAttribute("poster", aPoster);
+    else vB.removeAttribute("poster");
+
+    // Обновим атрибуты управления: главный (vA) — controls, маленький (vB) — без controls
+    vA.setAttribute("controls", "");
+    vB.removeAttribute("controls");
+
+    // Сброс состояния и загрузка новых source
+    try {
+      vA.load();
+      vA.currentTime = 0;
+    } catch {}
+    try {
+      vB.load();
+      vB.currentTime = 0;
+    } catch {}
+  }
+
+  // Переключаем вправо: main <-> first, затем первый элемент переносим в конец
+  function rotateRight() {
+    const mainVideo = document.querySelector(".video-main video");
+    const firstItem = carousel.querySelector(
+      ".video-carousel-item:first-child"
+    );
+    if (!mainVideo || !firstItem) return;
+    const firstVideo = firstItem.querySelector("video");
+    if (!firstVideo) return;
+
+    swapVideoContent(mainVideo, firstVideo);
+
+    // Убедимся, что для carousel-элемента видим youtube-icon / текст / лого (т.к. теперь там может быть видео из main)
+    const yi = firstItem.querySelector(".youtube-icon");
+    const logo = firstItem.querySelector(".logo-louvre");
+    const txt = firstItem.querySelector(".item-txt");
+    if (yi) yi.style.display = "block";
+    if (logo) logo.style.display = "block";
+    if (txt) txt.style.display = "block";
+
+    // Перемещаем первый элемент в конец
+    carousel.appendChild(firstItem);
+
+    // Обновляем индикатор
+    const curr = findActivePointIndex();
+    const next = curr === -1 ? 0 : (curr + 1) % pointNodes.length;
+    setActivePoint(next);
+  }
+
+  // Переключаем влево: last -> beginning, затем swap с main
+  function rotateLeft() {
+    const mainVideo = document.querySelector(".video-main video");
+    const lastItem = carousel.querySelector(".video-carousel-item:last-child");
+    if (!mainVideo || !lastItem) return;
+    const lastVideo = lastItem.querySelector("video");
+    if (!lastVideo) return;
+
+    // Перед тем как поставить последний в начало — сначала переместим элемент в начало
+    carousel.insertBefore(lastItem, carousel.firstElementChild);
+
+    // Теперь первыйItem — это тот, который был lastItem
+    const newFirst = carousel.querySelector(".video-carousel-item:first-child");
+    const newFirstVideo = newFirst.querySelector("video");
+
+    swapVideoContent(mainVideo, newFirstVideo);
+
+    // Скрываем youtube-icon и т.п. у карусельного элемента, если нужно — но в маленьком виде они должны быть видны
+    const yi = newFirst.querySelector(".youtube-icon");
+    const logo = newFirst.querySelector(".logo-louvre");
+    const txt = newFirst.querySelector(".item-txt");
+    if (yi) yi.style.display = "block";
+    if (logo) logo.style.display = "block";
+    if (txt) txt.style.display = "block";
+
+    // Обновляем индикатор (сдвиг влево)
+    const curr = findActivePointIndex();
+    const prev =
+      curr === -1 ? 0 : (curr - 1 + pointNodes.length) % pointNodes.length;
+    setActivePoint(prev);
+  }
+
+  // Навешиваем обработчики
+  rightArrow.addEventListener("click", () => {
+    const playBtn = document.querySelector(".video-main .play-button");
+    if (playBtn) playBtn.style.display = "block";
+    rotateRight();
+  });
+  leftArrow.addEventListener("click", () => {
+    const playBtn = document.querySelector(".video-main .play-button");
+    if (playBtn) playBtn.style.display = "block";
+    rotateLeft();
+  });
+
+  // (опционально) клавиши влево/вправо на клавиатуре
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") rotateRight();
+    if (e.key === "ArrowLeft") rotateLeft();
+  });
+
+  // Устанавливаем активный элемент при загрузке страницы
+  setActivePoint(0);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector("video");
+  const playButton = document.querySelector(".play-button");
+
+  playButton.addEventListener("click", () => {
+    video
+      .play()
+      .then(() => {
+        playButton.style.display = "none";
+      })
+      .catch((error) => {
+        console.error("Ошибка при воспроизведении видео:", error);
+      });
+  });
+
+  video.addEventListener("ended", () => {
+    playButton.style.display = "block";
+    video.load(); // Обновляем видео для отображения poster
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Получаем все элементы
+  const videoElements = document.querySelectorAll(".video-element");
+  const youtubeIcons = document.querySelectorAll(".youtube-icon");
+  const logoLouvres = document.querySelectorAll(".logo-louvre");
+  const itemTxts = document.querySelectorAll(".item-txt");
+
+  // Перебираем элементы
+  videoElements.forEach((video, index) => {
+    const youtubeIcon = youtubeIcons[index];
+    const logoLouvre = logoLouvres[index];
+    const itemTxt = itemTxts[index];
+
+    // Добавляем обработчик клика
+    youtubeIcon.addEventListener("click", () => {
+      // Воспроизводим видео
+      video
+        .play()
+        .then(() => {
+          // Скрываем иконку после начала воспроизведения
+          youtubeIcon.style.display = "none";
+          logoLouvre.style.display = "none";
+          itemTxt.style.display = "none";
+          // Добавляем атрибут controls
+          video.setAttribute("controls", "");
+        })
+        .catch((error) => {
+          console.error("Ошибка при воспроизведении видео:", error);
+        });
+    });
+
+    // Добавляем обработчик окончания воспроизведения
+    video.addEventListener("ended", () => {
+      // Показываем иконку после окончания видео
+      youtubeIcon.style.display = "block";
+      logoLouvre.style.display = "block";
+      itemTxt.style.display = "block";
+      // Возвращаем poster и убираем controls
+      video.removeAttribute("controls");
+      video.load(); // Обновляем видео для отображения poster
+    });
+  });
+});
+// ---------------------------------------------------------------
+
 // ---------------- Gallery fullscreen drag ----------------
 document.addEventListener("DOMContentLoaded", () => {
   const galleryContainer = document.querySelector(".gallery-container-img");
@@ -357,6 +599,78 @@ document.addEventListener("DOMContentLoaded", () => {
   galContAdaptive.addEventListener("dragstart", (e) => e.preventDefault());
   galContAdaptive.addEventListener("scroll", updateGradient);
   updateGradient();
+});
+// ------------------------------------------------------------------------------------
+
+// ---------------------BUY TICKETS ---------------------
+document.addEventListener('DOMContentLoaded', () => {
+    // Получаем элементы
+    const basicValueElement = document.querySelector('.basic-value');
+    const seniorValueElement = document.querySelector('.senior-value');
+    const basicMinus = document.querySelector('.basic-minus');
+    const basicPlus = document.querySelector('.basic-plus');
+    const seniorMinus = document.querySelector('.senior-minus');
+    const seniorPlus = document.querySelector('.senior-plus');
+    const priceElement = document.querySelector('.price');
+    const radioButtons = document.querySelectorAll('input[name="color"]');
+    
+    // Получаем начальные значения как числа
+    let basicValue = parseInt(basicValueElement.innerText);
+    let seniorValue = parseInt(seniorValueElement.innerText);
+    let currentType = 'Permanent exhibition'; // начальное значение
+    
+    // Функция для обновления общей суммы
+    function updateTotal() {
+        let totalValue = 0;
+        
+        if (currentType === 'Permanent exhibition') {
+            totalValue = basicValue * 150 + seniorValue * 80;
+        } else if (currentType === 'Temporary exhibition') {
+            totalValue = basicValue * 20 + seniorValue * 10;
+        }
+        
+        priceElement.innerText = `Total € ${totalValue}`;
+    }
+    
+    // Обработчик для радио-кнопок
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', () => {
+            currentType = radio.value;
+            updateTotal();
+        });
+    });
+    
+    // Обработчик для кнопкок
+    basicPlus.onclick = () => {
+        basicValue++;
+        basicValueElement.innerText = basicValue;
+        updateTotal();
+    };
+
+    basicMinus.onclick = () => {
+        if (basicValue > 0) {
+            basicValue--;
+            basicValueElement.innerText = basicValue;
+            updateTotal();
+        }
+    };
+    
+    seniorPlus.onclick = () => {
+        seniorValue++;
+        seniorValueElement.innerText = seniorValue;
+        updateTotal();
+    };
+
+    seniorMinus.onclick = () => {
+        if (seniorValue > 0) {
+            seniorValue--;
+            seniorValueElement.innerText = seniorValue;
+            updateTotal();
+        }
+    };
+    
+    // Инициализируем начальное значение
+    updateTotal();
 });
 // ------------------------------------------------------------------------------------
 
