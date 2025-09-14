@@ -1167,7 +1167,7 @@ footer {
     font-size: 20px;
     font-weight: 300;
     justify-content: space-between;
-    width: 98%;
+    width: 96.09%;
     height: 130px;
     padding: 0;
   }
@@ -1237,7 +1237,7 @@ footer {
   }
 
   .visiting-container {
-    width: 984px;
+    width: 96.09%;
     height: 100%;
     margin: 0 auto;
   }
@@ -1322,7 +1322,7 @@ footer {
 .explore-container {
   display: flex;
   flex-direction: column;
-  width: 984px;
+  width: 96.09%;
   height: 100%;
 }
 
@@ -1436,7 +1436,7 @@ footer {
   }
 
   .parent-gallery-container {
-    width: 984px;
+    width: 96.09%;
     padding-top: 20px;
   }
 
@@ -1469,7 +1469,7 @@ footer {
   }
 
   .heading-buy-tickets {
-    width: 984px;
+    width: 96.09%;
   }
 
   .heading-buy-tickets h1 {
@@ -1478,7 +1478,7 @@ footer {
   }
 
   .buy-tickets-container {
-    width: 984px;
+    width: 96.09%;
     margin: 40px auto 0 auto;
   }
 
@@ -1544,7 +1544,7 @@ footer {
   }
 
   .contacts-heading {
-    width: 984px;
+    width: 96.09%;
   }
 
   .contacts-heading h1 {
@@ -1553,7 +1553,7 @@ footer {
   }
 
   .contacts-item {
-    width: 984px;
+    width: 96.09%;
     margin: 30px auto 0 auto;
     height: 518px;
   }
@@ -1584,7 +1584,7 @@ footer {
   }
 
   .footer-conteiner {
-    width: 97%;
+    width: 96.09%;
     height: 60%;
   }
 
@@ -1637,6 +1637,11 @@ footer {
     height: 110px;
   }
 
+  .navbar {
+    width: 728px;
+    height: 110px;
+  }
+
   /* для секции welcome */
   .welcome {
     width: 100%;
@@ -1658,18 +1663,15 @@ footer {
     top: 110%;
   }
 
-  .logo {
-    margin-left: 10px;
-  }
-
-  .text-container {
+    .text-container {
     position: static;
     top: auto;
     left: auto;
     transform: none;
     text-align: center;
     z-index: auto;
-    width: 98%;
+    width: 728px;
+    margin: 0;
   }
 
   .text-container h1 {
@@ -1697,8 +1699,8 @@ footer {
   }
 
   .image-container img {
-    width: 98%;
-    margin: 0 auto;
+    width: 728px;
+    margin: 0;
     height: auto;
   }
 
@@ -1808,7 +1810,7 @@ footer {
   }
 
   .video-container {
-    width: 94.79%;
+    width: 728px;
   }
 
   .video-heading h1 {

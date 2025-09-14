@@ -1,13 +1,18 @@
+/* Общие стили */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+    width: 100%;
+}
+
 /* Стили для HEADER */
 header {
   background-color: #030303;
-  width: 1920px;
+  width: 100%;
 }
 
 .header {
@@ -25,8 +30,8 @@ header {
   font-family: "Roboto Flex", sans-serif;
   color: #ffffff;
   font-weight: 200;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-size: 1.375rem;
+  letter-spacing: 0.125rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +48,7 @@ header {
 .menu a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.125rem;
   transition: color 0.3s;
 }
 
@@ -55,7 +60,7 @@ header {
 .burger {
   display: none;
   cursor: pointer;
-  /* z-index: 1000; */
+  z-index: 1000;
 }
 
 .burger .line {
@@ -98,10 +103,10 @@ header {
 .menu-adaptive-fst-txt a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Roboto Flex", sans-serif;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 
 .menu-adaptive-snd {
@@ -122,119 +127,184 @@ header {
   width: 20px;
 }
 
-/* Для секции CONTACTS */
-.contacts {
-  width: 1920px;
-  margin-top: 50px;
-  height: 865px;
+main {
+  /* width: 90%; */
+  /* max-width: 1400px; */
+  position: relative;
+  width: 75%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 50px auto 0 auto;
+  /* background-color: aquamarine; */
 }
 
-.contacts-heading {
-  width: 1440px;
-  height: 125px;
+.heading-carousel {
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   border-bottom: #710707 3px solid;
   display: block;
+  margin-bottom: 20px;
 }
 
-.contacts-heading h1 {
+.heading-carousel h1 {
   text-transform: uppercase;
   font-family: "Forum", sans-serif;
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
   color: #9d8665;
 }
 
-.contacts-heading svg {
+.heading-carousel svg {
   width: 50px;
   height: 50px;
 }
 
-.contacts-item {
-  width: 75%;
-  margin: 40px auto 0 auto;
-  height: 700px;
-  display: flex;
+/* Стили карусели */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 50px;
+  height: 630px;
 }
 
-.contacts-content {
-  width: 33%;
+.carousel-track {
+  display: flex;
+  width: 100%;
   height: 100%;
-  font-family: "Roboto Flex", sans-serif;
+  /* transition: transform 1.5s ease; */
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  position: relative;
+  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  /* background-color: #9d8665; */
 }
 
-.contacts-content-txt,
-.operating-time {
-  width: 100%;
-  height: 41%;
-  margin-bottom: 30px;
+.carousel-slide img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0);
 }
 
-.contacts-content-txt-heading,
-.operating-time-heading {
-  width: 227px;
-  margin: 0 0 60px 0;
-}
-
-.operating-time-heading {
-  margin-top: 30px;
-}
-
-.contacts-content-txt-heading h1,
-.operating-time-heading h1 {
-  font-size: 28px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.contacts-content-txt-adress p,
-.operating-time-child p {
-  font-size: 22px;
-  margin-bottom: 40px;
-}
-
-.operating-time-child span {
-  color: #710707;
-  font-weight: 700;
-}
-
-.buy-tickets {
+.carousel-caption {
+  /* padding: 15px; */
+  /* background: rgba(255,255,255,0.2); */
   position: absolute;
-  width: 175px;
-  height: 50px;
-  background-color: #030303;
   bottom: 0;
-  right: 2%;
+  width: 100%;
+  text-align: center;
+}
+
+.carousel-caption h2 {
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.carousel-caption p {
+  font-family: "Roboto Flex", sans-serif;
+  /* margin: 0; */
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+/* Стили кнопок навигации */
+.carousel-prev,
+.carousel-next {
+  height: 100%;
+  width: 80px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #030303;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.carousel-prev {
+  left: 0;
+}
+
+.carousel-next {
+  right: 0;
+}
+
+/* для секции BUY-TICKETS */
+.buy-tickets {
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.content-txt {
+  width: 80%;
+  background-color: #030303;
+  padding: 10px;
+}
+
+.content-txt p {
+  font-family: "Roboto Flex", sans-serif;
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.content-txt p span {
+  color: #9d8665;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.content-btn {
+  width: 20%;
+  position: relative;
+  background-color: #030303;
+}
+
+.buy-now {
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: 40%;
+  right: 0;
+  background-color: #710707;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1.75rem;
   color: #ffffff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  font-family: "Roboto Flex", sans-serif;
-  font-weight: 400;
-  letter-spacing: 2px;
 }
-.buy-tickets:hover {
+
+.buy-now:hover {
   background-color: #9d8665;
-  border: #030303 1px solid;
 }
 
-#map {
-  width: 67%;
-  height: 100%;
-}
-
-/* Для секции 'FOOTER' */
+/* Стили для FOOTER */
 footer {
-  width: 1920px;
+  width: 100%;
   height: 180px;
   background-color: #030303;
   margin-top: 50px;
@@ -243,7 +313,7 @@ footer {
 }
 
 .footer-conteiner {
-  width: 1440px;
+  width: 75%;
   height: 64%;
   margin: 0 auto;
   display: flex;
@@ -272,8 +342,8 @@ footer {
 .footer-conteiner-nav-item span {
   font-family: "Roboto Flex", sans-serif;
   font-weight: 200;
-  font-size: 22px;
-  letter-spacing: 2px;
+  font-size: 1.375rem;
+  letter-spacing: 0.125rem;
   margin-bottom: 20px;
   color: #ffffff;
   display: block;
@@ -321,18 +391,15 @@ footer {
   display: none;
 }
 
+/* Адаптивность */
 @media (max-width: 1024px) {
-  body {
-    width: 1024px;
-  }
-
   /* для header */
   header {
-    width: 1024px;
+    width: 100%;
   }
 
   .header {
-    width: 1024px;
+    width: 100%;
     position: relative;
     height: 130px;
   }
@@ -351,72 +418,63 @@ footer {
   }
 
   .navbar {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 300;
     justify-content: space-between;
     width: 98%;
     height: 130px;
     padding: 0;
   }
-
-  /* Для секции CONTACTS */
-  .contacts {
-    width: 1024px;
-    margin-top: 40px;
-    height: 668px;
+  /* для main */
+  main {
+    width: 96%;
+    margin: 40px auto 0 auto;
   }
 
-  .contacts-heading {
-    width: 984px;
-    height: 120px;
+  .heading-carousel {
+    margin-bottom: 15px;
   }
 
-  .contacts-heading h1 {
-    font-size: 50px;
-    margin: 0 0 8px 0;
+  .heading-carousel h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
   }
 
-  .contacts-item {
-    width: 984px;
-    margin: 30px auto 0 auto;
-    height: 518px;
+  .heading-carousel svg {
+    width: 40px;
+    height: 40px;
   }
 
-  .operating-time {
-    height: 209px;
+  .carousel {
+    margin-bottom: 40px;
+    height: 600px;
+  }
+  .carousel-prev,
+  .carousel-next {
+    width: 50px;
   }
 
-  .contacts-content-txt-heading,
-  .operating-time-heading {
-    width: 185px;
-    margin: 0 0 20px 0;
+  .carousel-slide img {
+    height: 470px;
   }
 
-  .contacts-content-txt-heading h1,
-  .operating-time-heading h1 {
-    font-size: 24px;
+  /* для секции BUY-TICKETS */
+  .content-txt {
+    padding: 7px;
   }
 
-  .contacts-content-txt-adress,
-  .operating-time-child {
-    width: 290px;
+  .content-txt p {
+    font-size: 1.5rem;
   }
 
-  .contacts-content-txt-adress p,
-  .operating-time-child p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  .buy-tickets {
-    width: 170px;
-    height: 48px;
-    font-size: 20px;
+  .buy-now {
+    font-size: 1.4rem;
   }
 
   /* для 'FOOTER' */
   footer {
-    width: 1024px;
+    width: 100%;
     height: 185px;
     margin-top: 40px;
   }
@@ -437,7 +495,7 @@ footer {
   }
 
   .footer-conteiner-nav-item span {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 20px;
   }
 
@@ -461,11 +519,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  body {
-    width: 100%;
-  }
-
-  /* для Header */
+  /* для header */
   header {
     width: 100%;
   }
@@ -474,74 +528,68 @@ footer {
     width: 100%;
   }
 
-  /* для секции 'CONTACTS' */
-  .contacts {
-    width: 768px;
-    margin-top: 30px;
-    height: 818px;
+  /* для main */
+  main {
+    width: 94.79%;
+    margin: 30px auto 0 auto;
   }
 
-  .contacts-heading {
-    width: 728px;
+  .heading-carousel {
+    margin-bottom: 10px;
   }
 
-  .contacts-heading h1 {
-    font-size: 40px;
-    margin: 0 0 10px 0;
+  .heading-carousel h1 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    letter-spacing: 0.25rem;
   }
 
-  .contacts-item {
-    width: 728px;
-    margin: 15px auto 0 auto;
-    height: 683px;
-    display: block;
+  .heading-carousel svg {
+    width: 30px;
+    height: 30px;
   }
 
-  .contacts-content {
-    height: 210px;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
+  .carousel {
+    margin-bottom: 40px;
+    height: 450px;
   }
 
-  .contacts-content-txt, .operating-time {
-    width: 50%;
-    height: 100%;
+  .carousel-slide {
+    padding: 5px;
   }
 
-  .contacts-content-txt-heading, .operating-time-heading {
-    width: 165px;
-    height: 48px;
-    margin: 0 0 40px 0;
+  .carousel-slide img {
+    height: 355px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0);
   }
 
-  .contacts-content-txt-heading h1, .operating-time-heading h1 {
-    font-size: 20px;
+  .carousel-caption h2 {
+    font-size: 1.2rem;
   }
 
-  .contacts-content-txt-adress, .operating-time-child {
-    width: 274px;
+  .carousel-caption p {
+    font-size: 0.9rem;
   }
 
-  .contacts-content-txt-adress p, .operating-time-child p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  .carousel-prev,
+  .carousel-next {
+    width: 30px;
   }
 
-  .buy-tickets {
-    right: 0;
-    bottom: 10%;
-    width: 160px;
-    height: 45px;
-    font-size: 18px;
+  /* для секции BUY-TICKETS */
+  .content-txt {
+    padding: 5px;
   }
 
-  #map {
-    width: 100%;
-    height: 473px;
+  .content-txt p {
+    font-size: 1.25rem;
   }
 
-  /* для секции 'FOOTER' */
+  .buy-now {
+    font-size: 1.15rem;
+  }
+
+  /* для 'FOOTER' */
   footer {
     width: 100%;
     height: 305px;
@@ -567,7 +615,7 @@ footer {
   }
 
   .footer-conteiner-nav-item span {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 27px;
   }
 

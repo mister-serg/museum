@@ -1,0 +1,252 @@
+[
+  {
+    "title": "Mona Lisa",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1503–1506",
+    "type": "Painting",
+    "medium": "Oil on wood panel",
+    "dimensions": "77 x 53 cm",
+    "period": "High Renaissance",
+    "imageUrl": "./api-img/1.jpg"
+  },
+  {
+    "title": "Liberty Leading the People",
+    "artist": "Eugène Delacroix",
+    "year": "1830",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "260 × 325 cm",
+    "period": "Romanticism",
+    "imageUrl": "./api-img/867198_1601118778.jpg"
+  },
+  {
+    "title": "Venus de Milo",
+    "artist": "Possibly Alexandros of Antioch",
+    "year": "c. 130–100 BC",
+    "type": "Sculpture",
+    "medium": "Marble",
+    "dimensions": "Height: 202 cm",
+    "period": "Hellenistic period",
+    "imageUrl": "./api-img/Venus de Milo.jpg"
+  },
+  {
+    "title": "Winged Victory of Samothrace",
+    "artist": "Unknown",
+    "year": "c. 190 BC",
+    "type": "Sculpture",
+    "medium": "Marble",
+    "dimensions": "Height: 244 cm",
+    "period": "Hellenistic period",
+    "imageUrl": "./api-img/Winged Victory of Samothrace.jpg"
+  },
+  {
+    "title": "Dying Slave",
+    "artist": "Michelangelo Buonarroti",
+    "year": "c. 1513–1516",
+    "type": "Sculpture",
+    "medium": "Marble",
+    "dimensions": "Height: 235 cm",
+    "period": "High Renaissance",
+    "imageUrl": "./api-img/Dying Slave.jpg"
+  },
+  {
+    "title": "Raft of the Medusa",
+    "artist": "Théodore Géricault",
+    "year": "1818–1819",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "491 × 716 cm",
+    "period": "Romanticism",
+    "imageUrl": "./api-img/Raft of the Medusa.jpg"
+  },
+  {
+    "title": "Virgin and Child with St Anne",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1503–1519",
+    "type": "Painting",
+    "medium": "Oil on wood",
+    "dimensions": "168 × 130 cm",
+    "period": "High Renaissance",
+    "imageUrl": "./api-img/Virgin and Child with St Anne.jpg"
+  },
+  {
+    "title": "Seated Scribe",
+    "artist": "Unknown",
+    "year": "c. 2450–2350 BC",
+    "type": "Sculpture",
+    "medium": "Limestone",
+    "dimensions": "Height: 53.5 cm",
+    "period": "Old Kingdom, Egypt",
+    "imageUrl": "./api-img/Seated Scribe.jpg"
+  },
+  {
+    "title": "Code of Hammurabi",
+    "artist": "Unknown",
+    "year": "c. 1754 BC",
+    "type": "Stele",
+    "medium": "Black basalt",
+    "dimensions": "Height: 225 cm",
+    "period": "Babylonian Empire",
+    "imageUrl": "./api-img/Code of Hammurabi.jpg"
+  },
+  {
+    "title": "The Wedding Feast at Cana",
+    "artist": "Paolo Veronese",
+    "year": "1563",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "666 × 990 cm",
+    "period": "Late Italian Renaissance",
+    "imageUrl": "./api-img/The Wedding Feast at Cana.jpg"
+  },
+  {
+    "title": "Samson and Delilah",
+    "artist": "Peter Paul Rubens",
+    "year": "c. 1609–1610",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "185 × 205 cm",
+    "period": "Baroque",
+    "imageUrl": "./api-img/Samson and Delilah.jpg"
+  },
+  {
+    "title": "Portrait of Louis XIV",
+    "artist": "Hyacinthe Rigaud",
+    "year": "1701",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "277 × 194 cm",
+    "period": "Baroque",
+    "imageUrl": "./api-img/Portrait of Louis XIV.jpg"
+  },
+  {
+    "title": "St John the Baptist",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1513–1516",
+    "type": "Painting",
+    "medium": "Oil on walnut wood",
+    "dimensions": "69 × 57 cm",
+    "period": "High Renaissance",
+    "imageUrl": "./api-img/St John the Baptist.jpg"
+  },
+  {
+    "title": "Coronation of Napoleon",
+    "artist": "Jacques-Louis David",
+    "year": "1805–1807",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "621 × 979 cm",
+    "period": "Neoclassicism",
+    "imageUrl": "./api-img/Coronation of Napoleon.jpg"
+  },
+  {
+    "title": "Cupids as Judges",
+    "artist": "Francesco Primaticcio",
+    "year": "c. 1540–1545",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "137 × 185 cm",
+    "period": "Italian Mannerism",
+    "imageUrl": "./api-img/Cupids as Judges.jpg"
+  },
+  {
+    "title": "Charioteer of Delphi",
+    "artist": "Unknown",
+    "year": "c. 474 BC",
+    "type": "Sculpture",
+    "medium": "Bronze",
+    "dimensions": "Height: 180 cm",
+    "period": "Classical Greece",
+    "imageUrl": "./api-img/Charioteer of Delphi.jpg"
+  },
+  {
+    "title": "Grand Gallery ceiling decoration",
+    "artist": "Charles Le Brun",
+    "year": "1679–1684",
+    "type": "Ceiling decoration",
+    "medium": "Frescoes",
+    "dimensions": "Multiple panels covering over 30 meters long ceiling",
+    "period": "French Classicism",
+    "imageUrl": "./api-img/Grand Gallery ceiling decoration.jpg"
+  },
+  {
+    "title": "The Coronation Throne of Charlemagne",
+    "artist": "Unknown",
+    "year": "Early Middle Ages",
+    "type": "Artifact",
+    "medium": "Ivory plaques",
+    "dimensions": "Not specified",
+    "period": "Medieval Europe",
+    "imageUrl": "./api-img/The Coronation Throne of Charlemagne.jpg"
+  },
+  {
+    "title": "The Battle of San Romano",
+    "artist": "Paolo Uccello",
+    "year": "c. 1438–1440",
+    "type": "Painting",
+    "medium": "Tempera on wood",
+    "dimensions": "182 × 317 cm",
+    "period": "Early Renaissance",
+    "imageUrl": "./api-img/The Battle of San Romano.jpg"
+  },
+  {
+    "title": "Madonna of the Rocks",
+    "artist": "Leonardo da Vinci",
+    "year": "c. 1483–1486",
+    "type": "Painting",
+    "medium": "Oil on panel",
+    "dimensions": "199 × 122 cm",
+    "period": "High Renaissance",
+    "imageUrl": "./api-img/Madonna of the Rocks.jpg"
+  },
+  {
+    "title": "The Oath of Horatii",
+    "artist": "Jacques-Louis David",
+    "year": "1784",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "330 × 425 cm",
+    "period": "Neoclassicism",
+    "imageUrl": "./api-img/The Oath of Horatii.jpg"
+  },
+  {
+    "title": "Head of an Egyptian Pharaoh",
+    "artist": "Unknown",
+    "year": "c. 1300 BC",
+    "type": "Sculpture",
+    "medium": "Granite",
+    "dimensions": "Height: 50 cm",
+    "period": "New Kingdom, Egypt",
+    "imageUrl": "./api-img/Head of an Egyptian Pharaoh.jpg"
+  },
+  {
+    "title": "Self Portrait",
+    "artist": "Rembrandt van Rijn",
+    "year": "1659",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "113 × 93 cm",
+    "period": "Dutch Golden Age",
+    "imageUrl": "./api-img/Self Portrait.jpg"
+  },
+  {
+    "title": "The Adoration of the Shepherds",
+    "artist": "Georges de La Tour",
+    "year": "c. 1644–1645",
+    "type": "Painting",
+    "medium": "Oil on canvas",
+    "dimensions": "107 × 147 cm",
+    "period": "Baroque",
+    "imageUrl": "./api-img/The Adoration of the Shepherds.jpg"
+  },
+  {
+    "title": "Apollo Belvedere",
+    "artist": "Leochares",
+    "year": "AD 120–140",
+    "type": "Sculpture",
+    "medium": "Marble copy after bronze original",
+    "dimensions": "Height: 224 cm",
+    "period": "Roman copies of Hellenistic art",
+    "imageUrl": "./api-img/Apollo Belvedere.jpg"
+  }
+]
