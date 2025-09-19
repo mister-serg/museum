@@ -1,0 +1,52 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "Au Louvre ! La galerie d'Apollon",
+      "poster": "./api-video/poster1.png",
+      "url": "./api-video/video1.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Au Louvre ! La salle du temple et la salle des sarcophages",
+      "poster": "./api-video/poster2.png",
+      "url": "./api-video/video2.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Au Louvre ! Sacre l'empereur Napoleon I",
+      "poster": "./api-video/poster3.png",
+      "url": "./api-video/video3.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Au Louvre ! Le scribe accroupi",
+      "poster": "./api-video/poster4.png",
+      "url": "./api-video/video4.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Au Louvre ! Les appartements Napoleon III",
+      "poster": "./api-video/poster5.png",
+      "url": "./api-video/video5.mp4"
+    },
+    {
+      "id": 6,
+      "title": "Au Louvre! Psyché ranimée par le baiser de l’Amour",
+      "poster": "./api-video/poster6.png",
+      "url": "./api-video/video6.mp4"
+    },
+    {
+      "id": 7,
+      "title": "Au Louvre ! Pèlerinage à l’île de Cythère",
+      "poster": "./api-video/poster7.png",
+      "url": "./api-video/video7.mp4"
+    },
+    {
+      "id": 8,
+      "title": "Au Louvre ! Sainte Marie-Madeleine",
+      "poster": "./api-video/poster8.png",
+      "url": "./api-video/video8.mp4"
+    }
+  ]
+}

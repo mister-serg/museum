@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  background-color: #030303;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+}
+
+.logo {
+  cursor: pointer;
+}
+.logo svg {
+  width: 40px;
+  height: 40px;
+}
+.navbar {
+  font-family: "Roboto Flex", sans-serif;
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 1.375rem;
+  letter-spacing: 0.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 75%;
+  height: 150px;
+}
+
+.menu {
+  display: flex;
+  gap: 60px;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.125rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #9d8665;
+}
+
+/* Стили для бургер-меню */
+.burger {
+  display: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger .line {
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px;
+}
+
+/* Стили для адаптивного меню */
+.menu-adaptive {
+  display: none;
+  flex-direction: row;
+  width: 300px;
+  height: 230px;
+  justify-content: center;
+  align-items: center;
+  background-color: #030303;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu-adaptive-fst {
+  display: block;
+  width: 30%;
+  height: 100%;
+  background-color: #030303;
+}
+
+.menu-adaptive-fst-txt {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 16.5%;
+}
+
+.menu-adaptive-fst-txt a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.125rem;
+}
+
+.menu-adaptive-snd {
+  display: block;
+  width: 20px;
+  height: 100%;
+}
+
+.menu-adaptive-snd-svg {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 16.5%;
+}
+
+.menu-adaptive-snd-svg svg {
+  width: 20px;
+}
+
+/* Стили для MAIN */
+main {
+  width: 75%;
+  margin: 50px auto;
+}
+
+/* Контейнер заголовка */
+.video-heading {
+  width: 100%;
+  border-bottom: #710707 3px solid;
+  margin-bottom: 1.25rem;
+}
+
+.video-heading h1 {
+  text-transform: uppercase;
+  font-family: "Forum", sans-serif;
+  font-size: 3.125rem;
+  font-weight: 400;
+  letter-spacing: 0.3125rem;
+  color: #9d8665;
+  margin-bottom: 1.25rem;
+}
+
+.video-heading svg {
+  width: 50px;
+  height: 50px;
+}
+/* Контейнер карусели */
+.video-caroousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Внешний вид виджета: центрируем контент */
+.video-widget {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Слайды (строка слайдов) */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Отдельный слайд */
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 10px 0;
+}
+
+/* Видеоплеер внутри слайда */
+.slide video {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0);
+}
+
+/* Подписи/описания видео */
+.video-description {
+  position: absolute;
+  top: 10px;
+  left: 108px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Roboto Flex", sans-serif;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  z-index: 15;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+}
+
+/* Контейнер кнопок: растянут по ширине, но сам по себе некликабелен */
+.buttons-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none; /* контейнер не мешает кликам по видео */
+  z-index: 20;
+}
+
+/* Общие стили для кнопок */
+.prev-btn,
+.next-btn {
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  pointer-events: auto; /* только сами кнопки кликабельны */
+  background-color: #030303;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Левая кнопка — сдвигаем влево наружу */
+.prev-btn {
+  left: 0;
+}
+
+/* Правая кнопка — сдвигаем вправо наружу */
+.next-btn {
+  right: 0;
+}
+
+/* Скрытие описания (если нужно через класс) */
+.video-description.hidden {
+  display: none;
+}
+
+/* Стили для FOOTER */
+footer {
+  width: 100%;
+  height: 180px;
+  background-color: #030303;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-conteiner {
+  width: 75%;
+  height: 64%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.footer-conteiner svg {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.footer-conteiner-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-left: 389px;
+}
+
+.footer-conteiner-nav-item {
+  width: 100px;
+  display: inline-flex;
+  flex-direction: column; /* Вертикальное расположение элементов */
+  align-items: flex-start; /* Выравнивание по левому краю */
+}
+
+.footer-conteiner-nav-item span {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 200;
+  font-size: 1.375rem;
+  letter-spacing: 0.125rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  display: block;
+  cursor: pointer;
+}
+
+.footer-conteiner-social-networks {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.footer-conteiner-social-network {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-conteiner-social-network-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-conteiner-social-network-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-conteiner-social-network-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-conteiner-social-networks-hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  /* для header */
+  header {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+    position: relative;
+    height: 130px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    cursor: default;
+    margin-left: 5px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navbar {
+    font-size: 1.25rem;
+    font-weight: 300;
+    justify-content: space-between;
+    width: 98%;
+    height: 130px;
+    padding: 0;
+  }
+
+  /* для 'MAIN' */
+  main {
+    width: 96.09%;
+    margin: 40px auto;
+  }
+
+  /* Контейнер заголовка */
+.video-heading {
+  margin-bottom: 1rem;
+}
+
+  .video-heading h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .video-heading svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Отдельный слайд */
+  .slide {
+    padding: 8px 0 8px 0;
+  }
+
+  /* Подписи/описания видео */
+  .video-description {
+    top: 8px;
+    left: 73px;
+    padding: 8px 10px;
+  }
+
+  /* Контейнер карусели */
+  .prev-btn,
+  .next-btn {
+    width: 60px;
+  }
+
+  /* для 'FOOTER' */
+  footer {
+    width: 100%;
+    height: 185px;
+    margin-top: 40px;
+  }
+
+  .footer-conteiner {
+    width: 97%;
+    height: 60%;
+  }
+
+  .footer-conteiner-nav {
+    width: 30%;
+    margin-left: 155px;
+    height: 99%;
+  }
+
+  .footer-conteiner-nav-item {
+    width: 94px;
+  }
+
+  .footer-conteiner-nav-item span {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-conteiner-social-networks {
+    width: 50%;
+  }
+
+  .footer-conteiner-social-network {
+    width: 70%;
+  }
+
+  .footer-conteiner-social-network-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer-conteiner-social-network-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* для header */
+  header {
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  /* для 'MAIN' */
+  main {
+    width: 94.79%;
+    margin: 30px auto;
+  }
+
+  /* Контейнер заголовка */
+.video-heading {
+  margin-bottom: 0.75rem;
+}
+
+  .video-heading h1 {
+    font-size: 1.875rem;
+    letter-spacing: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .video-heading svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Отдельный слайд */
+  .slide {
+    padding: 6px 0 6px 0;
+  }
+
+  /* Подписи/описания видео */
+  .video-description {
+    top: 7px;
+    left: 53px;
+  }
+
+  /* Контейнер карусели */
+  .prev-btn,
+  .next-btn {
+    width: 40px;
+  }
+
+  /* для 'FOOTER' */
+  footer {
+    width: 100%;
+    height: 305px;
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  .footer-conteiner {
+    width: 97%;
+    height: 121px;
+    margin-top: 30px;
+  }
+
+  .footer-conteiner-nav {
+    width: 50%;
+    margin-left: 180px;
+    height: 100%;
+    padding-top: 10px;
+  }
+
+  .footer-conteiner-nav-item {
+    width: 94px;
+  }
+
+  .footer-conteiner-nav-item span {
+    font-size: 1.125rem;
+    margin-bottom: 27px;
+  }
+
+  .footer-conteiner-social-networks {
+    display: none;
+  }
+
+  .footer-conteiner-social-networks-hidden {
+    display: flex;
+    width: 364px;
+    justify-content: space-between;
+    margin: 50px 0 0 232px;
+  }
+
+  .footer-conteiner-social-network-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .footer-conteiner-social-network-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+}
