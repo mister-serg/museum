@@ -192,7 +192,8 @@ header {
 }
 
 .date {
-  width: 47.5%;
+  margin-top: 25px;
+  width: 100%;
   height: 45px;
   position: relative;
 }
@@ -221,7 +222,7 @@ header {
   height: 25px;
   position: absolute;
   top: 27%;
-  left: 5%;
+  left: 2.5%;
 }
 
 .dropDownDate {
@@ -229,8 +230,24 @@ header {
   height: 25px;
   position: absolute;
   top: 23%;
-  right: 5%;
+  right: 2%;
   cursor: pointer;
+}
+
+/* Визуализация ошибки для поля даты */
+.date .invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231,76,60,0.08);
+  outline: none;
+}
+
+/* Сообщение об ошибке */
+.date .error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px;
+  line-height: 1;
 }
 
 .time {
@@ -265,6 +282,20 @@ header {
   position: relative;
 }
 
+.name.invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 0 3px rgba(231,76,60,0.12);
+  outline: none;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px; /* чтобы не прыгал контент при появлении ошибки */
+  line-height: 1;
+}
+
 .name-conteiner svg {
   width: 25px;
   height: 25px;
@@ -281,12 +312,44 @@ header {
   left: 2.5%;
 }
 
+/* Визуализация ошибки для поля e-mail */
+.email-conteiner .email.invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231,76,60,0.08);
+  outline: none;
+}
+
+/* Сообщение об ошибке */
+.email-conteiner .error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px; /* чтобы не прыгал контент при появлении/исчезновении */
+  line-height: 1;
+}
+
 .phone-conteiner svg {
   width: 25px;
   height: 25px;
   position: absolute;
   top: 23%;
   left: 2.5%;
+}
+
+/* Ошибка для phone */
+.phone-conteiner .phone.invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231,76,60,0.08);
+  outline: none;
+}
+
+/* Сообщение об ошибке */
+.phone-conteiner .error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px;
+  line-height: 1;
 }
 
 .ticketSVG {
@@ -305,6 +368,69 @@ header {
   right: 2%;
   cursor: pointer;
 }
+
+/* Ошибка для поля */
+.ticketType-conteiner .ticketType.invalid {
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231,76,60,0.08);
+  outline: none;
+}
+
+/* Сообщение об ошибке */
+.ticketType-conteiner .error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px;
+  line-height: 1;
+}
+
+/* Стили выпадающего меню */
+.tickettype-list {
+  position: absolute;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 6px 0;
+  min-width: 100%;
+  display: none; /* скрыто по умолчанию */
+  margin-top: 8px;
+}
+
+/* Показать меню */
+.tickettype-list.show {
+  display: block;
+}
+
+/* Опции */
+.tickettype-option {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: "Roboto Flex", monospace;
+  font-size: 1rem;
+  color: #222;
+}
+.tickettype-option:hover,
+.tickettype-option:focus {
+  background: #f3f4f6;
+  outline: none;
+}
+
+/* Выбранная опция */
+.tickettype-option[aria-selected="true"] {
+  background: #eef2ff;
+}
+
+/* Опционально: курсор по svg-кнопке */
+/* .ticketType-conteiner .dropDownTicketType {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+} */
+
 
 .entry-tickets {
   width: 100%;
@@ -677,6 +803,24 @@ header {
   font-size: 20px;
   font-weight: 400;
 }
+
+/* Состояние ошибки для полей карты */
+.invalid {
+  border: 2px solid #e74c3c;
+  box-shadow: 0 0 0 4px rgba(231,76,60,0.06);
+  outline: none;
+}
+
+/* Сообщение об ошибке */
+/* .child-card-front .error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 16px;
+  line-height: 1;
+  font-family: "Roboto Flex", monospace;
+} */
+
 
 .card-back {
   display: flex;
