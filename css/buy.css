@@ -637,7 +637,7 @@ header {
 
 .results-tickets-child-fst-txt,
 .results-tickets-child-snd-txt {
-  width: 81.86%;
+  width: 70%;
   font-family: "Roboto Flex", monospace;
   font-size: 22px;
   font-weight: 400;
@@ -646,7 +646,7 @@ header {
 
 .results-tickets-child-fst-price,
 .results-tickets-child-snd-price {
-  width: 9.14%;
+  width: 30%;
   font-family: "Roboto Flex", monospace;
   font-size: 22px;
   font-weight: 400;

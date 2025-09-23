@@ -1,3 +1,4 @@
+// Прописываем обработчик события click на бургер для открытия календаря
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".burger");
   const menuAdaptive = document.querySelector(".menu-adaptive");
@@ -36,333 +37,171 @@ document.addEventListener("DOMContentLoaded", () => {
   // Проверка изменений размеров окна
   window.addEventListener("resize", checkScreenSize);
 });
+// -------------------------------------------------------------------------------------------
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   flatpickr("#datepicker", {
-//     dateFormat: "d.m.Y", // Формат даты dd.mm.yyyy
-//     altInput: true,
-//     altFormat: "d.m.Y",
-//     altInputClass: "date-input",
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const dateInput = document.getElementById("datepicker");
-//   const dropDownDateSVG = document.querySelector(".dropDownDate");
-
-//   // Сохраняем экземпляр flatpickr в переменную
-//   const fp = flatpickr(dateInput, {
-//     dateFormat: "d.m.Y",
-//     altInput: true,
-//     altFormat: "d.m.Y",
-//     altInputClass: "date-input",
-//   });
-
-//   // Теперь используем сохраненный экземпляр для открытия календаря
-//   dropDownDateSVG.addEventListener("click", () => {
-//     if (fp.isOpen) {
-//       fp.close();
-//     } else {
-//       fp.open();
-//     }
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const dateInput = document.getElementById("datepicker");
-//   const dropDownDateSVG = document.querySelector(".dropDownDate");
-
-//   // Сохраняем экземпляр flatpickr в переменную
-//   const fp = flatpickr(dateInput, {
-//     dateFormat: "d.m.Y",
-//     altInput: true,
-//     altFormat: "d.m.Y",
-//     altInputClass: "date-input",
-//     // Отключаем автоматическое закрытие
-//     closeOnSelect: false,
-//   });
-
-//   // Создаем переменную для отслеживания состояния
-//   let isOpen = false;
-
-//   // Обработчик для SVG
-//   dropDownDateSVG.addEventListener("click", (event) => {
-//     event.stopPropagation();
-//     if (isOpen) {
-//       fp.close();
-//       isOpen = false;
-//     } else {
-//       fp.open();
-//       isOpen = true;
-//     }
-//   });
-
-//   // Обработчик для закрытия при выборе даты
-//   fp.on("selected", () => {
-//     isOpen = false;
-//   });
-
-//   // Обработчик для закрытия при клике вне поля
-//   document.addEventListener("click", (event) => {
-//     if (
-//       !dateInput.contains(event.target) &&
-//       !dropDownDateSVG.contains(event.target)
-//     ) {
-//       if (isOpen) {
-//         fp.close();
-//         isOpen = false;
-//       }
-//     }
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const dateInput = document.getElementById("datepicker");
-//   const dropDownDateSVG = document.querySelector(".dropDownDate");
-
-//   // Получаем текущую дату
-//   const today = new Date();
-
-//   // Сохраняем экземпляр flatpickr в переменную
-//   const fp = flatpickr(dateInput, {
-//     dateFormat: "d.m.Y",
-//     altInput: true,
-//     altFormat: "d.m.Y",
-//     altInputClass: "date-input",
-//     closeOnSelect: false,
-//     // Блокируем выбор прошедших дат
-//     minDate: today,
-//   });
-
-//   let isOpen = false;
-
-//   dropDownDateSVG.addEventListener("click", (event) => {
-//     event.stopPropagation();
-//     if (isOpen) {
-//       fp.close();
-//       isOpen = false;
-//     } else {
-//       fp.open();
-//       isOpen = true;
-//     }
-//   });
-
-//   fp.on("selected", () => {
-//     isOpen = false;
-//   });
-
-//   document.addEventListener("click", (event) => {
-//     if (
-//       !dateInput.contains(event.target) &&
-//       !dropDownDateSVG.contains(event.target)
-//     ) {
-//       if (isOpen) {
-//         fp.close();
-//         isOpen = false;
-//       }
-//     }
-//   });
-// });
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     const dateInput = document.getElementById("datepicker");
-//     const dropDownDateSVG = document.querySelector(".dropDownDate");
-
-//     // Получаем текущую дату
-//     const today = new Date();
-
-//     // Функция для проверки, является ли день вторником
-//     const isTuesday = (date) => {
-//         return date.getDay() === 2; // 2 - это вторник
-//     };
-
-//     // Сохраняем экземпляр flatpickr в переменную
-//     const fp = flatpickr(dateInput, {
-//         dateFormat: "d.m.Y",
-//         altInput: true,
-//         altFormat: "d.m.Y",
-//         altInputClass: "date-input",
-//         closeOnSelect: false,
-//         minDate: today,
-//         disable: [
-//             isTuesday // Используем функцию для отключения вторников
-//         ]
-//     });
-
-//     let isOpen = false;
-
-//     dropDownDateSVG.addEventListener("click", (event) => {
-//         event.stopPropagation();
-//         if (isOpen) {
-//             fp.close();
-//             isOpen = false;
-//         } else {
-//             fp.open();
-//             isOpen = true;
-//         }
-//     });
-
-//     fp.on("selected", () => {
-//         isOpen = false;
-//     });
-
-//     document.addEventListener("click", (event) => {
-//         if (
-//             !dateInput.contains(event.target) &&
-//             !dropDownDateSVG.contains(event.target)
-//         ) {
-//             if (isOpen) {
-//                 fp.close();
-//                 isOpen = false;
-//             }
-//         }
-//     });
-// });
-
-// Прописываем обработчик события click на SVG для открытия календаря
+// -------------- Прописываем обработчик события click для открытия календаря ----------------
 document.addEventListener("DOMContentLoaded", () => {
-    const dateContainer = document.querySelector(".date");
-    const dateInput = document.getElementById("datepicker");
-    const dropDownDateSVG = document.querySelector(".dropDownDate");
+  const dateContainer = document.querySelector(".date");
+  const dateInput = document.getElementById("datepicker");
+  const dropDownDateSVG = document.querySelector(".dropDownDate");
+  const resDateTxt = document.querySelector('.res-date-txt'); // Элемент для вывода отформатированной даты
 
-    // Получаем текущую дату
-    const today = new Date();
+  const today = new Date();
 
-    // Функция для проверки, является ли день вторником
-    const isTuesday = (date) => date.getDay() === 2; // 2 - вторник
+  // Проверка, что дата — не вторник
+  const isTuesday = (date) => date.getDay() === 2;
 
-    // Создаём/получаем элемент для сообщения об ошибке (под контейнером .date)
-    let errorEl = dateContainer.querySelector(".error-message");
-    if (!errorEl) {
-        errorEl = document.createElement("div");
-        errorEl.className = "error-message";
-        errorEl.id = "date-error";
-        errorEl.setAttribute("aria-live", "polite");
-        errorEl.setAttribute("role", "status");
-        // Размещаем после контейнера (чтобы не ломать существующую структуру)
-        dateContainer.appendChild(errorEl);
+  // Создаём/получаем элемент для сообщения об ошибке
+  let errorEl = dateContainer.querySelector(".error-message");
+  if (!errorEl) {
+    errorEl = document.createElement("div");
+    errorEl.className = "error-message";
+    errorEl.id = "date-error";
+    errorEl.setAttribute("aria-live", "polite");
+    errorEl.setAttribute("role", "status");
+    dateContainer.appendChild(errorEl);
+  }
+
+  function setInvalidState(message) {
+    const visible = fp && fp.altInput ? fp.altInput : dateInput;
+    if (message) {
+      visible.classList.add("invalid");
+      visible.setAttribute("aria-invalid", "true");
+      errorEl.textContent = message;
+    } else {
+      visible.classList.remove("invalid");
+      visible.setAttribute("aria-invalid", "false");
+      errorEl.textContent = "";
     }
+  }
 
-    // Помощник: установить состояние ошибки (message = "" => валидно)
-    function setInvalidState(message) {
-        // Видимый input, который создаёт flatpickr при altInput: true
+  function validateRequired() {
+    const value = (fp && fp.input ? fp.input.value : dateInput.value).trim();
+    if (value.length === 0) {
+      return "This field is required.";
+    }
+    return "";
+  }
+
+  function formatDateLong(date) {
+    const weekday = date.toLocaleDateString('en-GB', { weekday: 'long' });
+    const dayMonth = date.toLocaleDateString('en-GB', { day: '2-digit', month: 'long' });
+    const year = date.getFullYear();
+    return `${weekday}, ${dayMonth}, ${year}`;
+  }
+
+  function syncCalendarWidth() {
+    const calendarContainer = fp.calendarContainer;
+    const visibleInput = fp.altInput || fp.input;
+    if (calendarContainer && visibleInput) {
+      const inputWidth = visibleInput.getBoundingClientRect().width;
+      calendarContainer.style.width = `${inputWidth}px`;
+    }
+  }
+
+  // Инициализация flatpickr
+  const fp = flatpickr(dateInput, {
+    dateFormat: "d.m.Y",
+    altInput: true,
+    altFormat: "d.m.Y",
+    altInputClass: "date-input",
+    closeOnSelect: false,
+    minDate: today,
+    clickOpens: false,
+    disable: [isTuesday],
+    onChange(selectedDates, dateStr) {
+      const msg = validateRequired();
+      if (!msg) {
+        setInvalidState("");
+      } else {
+        setInvalidState(msg);
+      }
+
+      if (selectedDates.length) {
+        const formatted = formatDateLong(selectedDates[0]);
+        if (resDateTxt) {
+          resDateTxt.textContent = formatted;
+        }
+      } else if (resDateTxt) {
+        resDateTxt.textContent = '';
+      }
+    },
+    onOpen() {
+      syncCalendarWidth();
+    },
+  });
+
+  // Синхронизируем ширину календаря при инициализации
+  syncCalendarWidth();
+
+  let isOpen = false;
+
+  // Назначаем обработчики на видимый input (altInput)
+  const attachAltInputListeners = () => {
+    const visible = fp && fp.altInput ? fp.altInput : dateInput;
+
+    visible.addEventListener("input", () => {
+      const msg = validateRequired();
+      setInvalidState(msg);
+    });
+
+    visible.addEventListener("blur", () => {
+      const msg = validateRequired();
+      setInvalidState(msg);
+    });
+  };
+
+  attachAltInputListeners();
+
+  // Переключатель открытия/закрытия по клику на svg
+  dropDownDateSVG.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (isOpen) {
+      fp.close();
+      isOpen = false;
+      const msg = validateRequired();
+      setInvalidState(msg);
+    } else {
+      fp.open();
+      isOpen = true;
+    }
+  });
+
+  // Закрываем календарь при клике вне
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    const altInput = fp.altInput;
+    const calendarContainer = fp.calendarContainer;
+
+    const clickedInsideInput = fp.input && fp.input.contains(target);
+    const clickedInsideAltInput = altInput && altInput.contains(target);
+    const clickedInsideSvg = dropDownDateSVG && dropDownDateSVG.contains(target);
+    const clickedInsideCalendar = calendarContainer && calendarContainer.contains(target);
+
+    if (!clickedInsideInput && !clickedInsideAltInput && !clickedInsideSvg && !clickedInsideCalendar) {
+      if (isOpen) {
+        fp.close();
+        isOpen = false;
+        const msg = validateRequired();
+        setInvalidState(msg);
+      }
+    }
+  });
+
+  // Проверка при отправке формы
+  const form = dateInput.closest("form");
+  if (form) {
+    form.addEventListener("submit", (ev) => {
+      const msg = validateRequired();
+      setInvalidState(msg);
+      if (msg) {
+        ev.preventDefault();
         const visible = fp && fp.altInput ? fp.altInput : dateInput;
-
-        if (message) {
-            visible.classList.add("invalid");
-            visible.setAttribute("aria-invalid", "true");
-            errorEl.textContent = message;
-        } else {
-            visible.classList.remove("invalid");
-            visible.setAttribute("aria-invalid", "false");
-            errorEl.textContent = "";
-        }
-    }
-
-    // Проверка — пустое значение => ошибка
-    function validateRequired() {
-        const value = (fp && fp.input ? fp.input.value : dateInput.value).trim();
-        if (value.length === 0) {
-            return "This field is required.";
-        }
-        return "";
-    }
-
-    // Сохраняем экземпляр flatpickr в переменную
-    const fp = flatpickr(dateInput, {
-        dateFormat: "d.m.Y",
-        altInput: true,
-        altFormat: "d.m.Y",
-        altInputClass: "date-input",
-        closeOnSelect: false,
-        minDate: today,
-        clickOpens: false, // предотвращаем открытие по клику в input
-        disable: [isTuesday],
-        onChange(selectedDates, dateStr, instance) {
-            // Если есть значение — убираем ошибку
-            const msg = validateRequired();
-            if (!msg) {
-                setInvalidState("");
-            } else {
-                // Если пользователь очистил дату — показываем сообщение
-                setInvalidState(msg);
-            }
-            console.log(`Selected dates: ${dateStr}`);
-        }
+        visible.focus();
+      }
     });
-
-    let isOpen = false;
-
-    // Подключаем события к видимому input (altInput) — он уже должен существовать
-    const attachAltInputListeners = () => {
-        const visible = fp && fp.altInput ? fp.altInput : dateInput;
-
-        // input событие — интерактивная проверка
-        visible.addEventListener("input", () => {
-            const msg = validateRequired();
-            setInvalidState(msg);
-        });
-
-        // blur — финальная проверка
-        visible.addEventListener("blur", () => {
-            const msg = validateRequired();
-            setInvalidState(msg);
-        });
-    };
-
-    attachAltInputListeners();
-
-    // Открытие/закрытие календаря только по клику на SVG
-    dropDownDateSVG.addEventListener("click", (event) => {
-        event.stopPropagation();
-        if (isOpen) {
-            fp.close();
-            isOpen = false;
-            // при закрытии проверяем обязательность
-            const msg = validateRequired();
-            setInvalidState(msg);
-        } else {
-            fp.open();
-            isOpen = true;
-        }
-    });
-
-    // Закрываем при клике вне input/altInput и svg
-    document.addEventListener("click", (event) => {
-        const target = event.target;
-        const altInput = fp.altInput;
-
-        const clickedInsideInput = fp.input && fp.input.contains(target);
-        const clickedInsideAltInput = altInput && altInput.contains(target);
-        const clickedInsideSvg = dropDownDateSVG && dropDownDateSVG.contains(target);
-
-        if (!clickedInsideInput && !clickedInsideAltInput && !clickedInsideSvg) {
-            if (isOpen) {
-                fp.close();
-                isOpen = false;
-                // Проверяем обязательность при закрытии
-                const msg = validateRequired();
-                setInvalidState(msg);
-            }
-        }
-    });
-
-    // При отправке формы — дополнительная проверка (если поле внутри формы)
-    const form = dateInput.closest("form");
-    if (form) {
-        form.addEventListener("submit", (ev) => {
-            const msg = validateRequired();
-            setInvalidState(msg);
-            if (msg) {
-                ev.preventDefault();
-                // Фокусируем видимый input
-                const visible = fp && fp.altInput ? fp.altInput : dateInput;
-                visible.focus();
-            }
-        });
-    }
+  }
 });
-
 // ------------------------------------------------------------------------------
 
 // ---------------------- Прописываем валидацию формы NAME ----------------------
@@ -450,8 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const MAX_LEN = 254; // практический максимум для email
-  // Простая проверка формата email (не пытаться покрыть все RFC-случаи)
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   function getValidationMessage(value) {
     const v = value.trim();
@@ -595,6 +433,155 @@ document.addEventListener("DOMContentLoaded", () => {
 // -------------------------------------------------------------------------------------
 
 // --------------- Прописываем клик и валидацию формы TICKET TYPE ----------------------
+// document.addEventListener("DOMContentLoaded", () => {
+//   const container = document.querySelector(".ticketType-conteiner");
+//   if (!container) return;
+
+//   const input = container.querySelector(".ticketType");
+//   const toggle = container.querySelector(".dropDownTicketType");
+//   const list = document.getElementById("tickettype-list");
+//   const options = Array.from(list.querySelectorAll(".tickettype-option"));
+//   const errorEl = document.getElementById("ticketType-error");
+
+//   // Установка значения по умолчанию при загрузке страницы
+//   input.value = "Temporary exhibition";
+
+//   // Удобная функция для установки состояния ошибки
+//   function setInvalidState(message) {
+//     if (message) {
+//       input.classList.add("invalid");
+//       input.setAttribute("aria-invalid", "true");
+//       errorEl.textContent = message;
+//     } else {
+//       input.classList.remove("invalid");
+//       input.setAttribute("aria-invalid", "false");
+//       errorEl.textContent = "";
+//     }
+//   }
+
+//   // Валидация: обязательное поле
+//   function getValidationMessage(value) {
+//     if (!value || value.trim().length === 0) {
+//       return "This field is required.";
+//     }
+//     return "";
+//   }
+
+//   // Открыть/закрыть список
+//   function openList() {
+//     list.classList.add("show");
+//     toggle.setAttribute("aria-expanded", "true");
+//     // сброс aria-selected и фокус на первую опцию
+//     options.forEach(opt => opt.setAttribute("aria-selected", "false"));
+//     options[0]?.focus();
+//   }
+//   function closeList() {
+//     list.classList.remove("show");
+//     toggle.setAttribute("aria-expanded", "false");
+//   }
+//   function toggleList() {
+//     if (list.classList.contains("show")) closeList();
+//     else openList();
+//   }
+
+//   // При клике на svg-toggle
+//   toggle.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//     toggleList();
+//   });
+//   // Доступность: открыть по Enter/Space
+//   toggle.addEventListener("keydown", (e) => {
+//     if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
+//       e.preventDefault();
+//       toggleList();
+//     } else if (e.key === "ArrowDown") {
+//       e.preventDefault();
+//       openList();
+//     }
+//   });
+
+//   // Клик по опции
+//   options.forEach(opt => {
+//     opt.addEventListener("click", (e) => {
+//       const value = opt.getAttribute("data-value") || opt.textContent.trim();
+//       input.value = value;
+//       setInvalidState(getValidationMessage(input.value));
+//       // Отметить выбранную опцию (для aria)
+//       options.forEach(o => o.setAttribute("aria-selected", "false"));
+//       opt.setAttribute("aria-selected", "true");
+//       closeList();
+//       input.focus();
+//     });
+
+//     // Клавиши для опций (Enter/Esc/Arrow)
+//     opt.addEventListener("keydown", (e) => {
+//       if (e.key === "Enter" || e.key === " ") {
+//         e.preventDefault();
+//         opt.click();
+//         return;
+//       }
+//       if (e.key === "Escape") {
+//         e.preventDefault();
+//         closeList();
+//         toggle.focus();
+//         return;
+//       }
+//       if (e.key === "ArrowDown") {
+//         e.preventDefault();
+//         const idx = options.indexOf(opt);
+//         const next = options[idx + 1] || options[0];
+//         next.focus();
+//         return;
+//       }
+//       if (e.key === "ArrowUp") {
+//         e.preventDefault();
+//         const idx = options.indexOf(opt);
+//         const prev = options[idx - 1] || options[options.length - 1];
+//         prev.focus();
+//         return;
+//       }
+//     });
+//   });
+
+//   // Закрыть при клике вне
+//   document.addEventListener("click", (e) => {
+//     if (!container.contains(e.target)) {
+//       closeList();
+//     }
+//   });
+
+//   // Esc при фокусе на документе
+//   document.addEventListener("keydown", (e) => {
+//     if (e.key === "Escape") {
+//       closeList();
+//     }
+//   });
+
+//   // Live validation
+//   input.addEventListener("input", (e) => {
+//     const msg = getValidationMessage(e.target.value);
+//     setInvalidState(msg);
+//   });
+
+//   // Final check on blur
+//   input.addEventListener("blur", (e) => {
+//     const msg = getValidationMessage(e.target.value);
+//     setInvalidState(msg);
+//   });
+
+//   // Validation on form submit (если внутри формы)
+//   const form = input.closest("form");
+//   if (form) {
+//     form.addEventListener("submit", (ev) => {
+//       const msg = getValidationMessage(input.value);
+//       setInvalidState(msg);
+//       if (msg) {
+//         ev.preventDefault();
+//         input.focus();
+//       }
+//     });
+//   }
+// });
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".ticketType-conteiner");
   if (!container) return;
@@ -603,268 +590,295 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = container.querySelector(".dropDownTicketType");
   const list = document.getElementById("tickettype-list");
   const options = Array.from(list.querySelectorAll(".tickettype-option"));
-  const errorEl = document.getElementById("ticketType-error");
 
-  // Удобная функция для установки состояния ошибки
-  function setInvalidState(message) {
-    if (message) {
-      input.classList.add("invalid");
-      input.setAttribute("aria-invalid", "true");
-      errorEl.textContent = message;
-    } else {
-      input.classList.remove("invalid");
-      input.setAttribute("aria-invalid", "false");
-      errorEl.textContent = "";
-    }
-  }
+  // Новый элемент, в который будет помещено выбранное значение
+  const resultSpan = document.querySelector('.res-exhibition-txt');
 
-  // Валидация: обязательное поле
-  function getValidationMessage(value) {
-    if (!value || value.trim().length === 0) {
-      return "This field is required.";
-    }
-    return "";
-  }
+  // Запрещаем прямой ввод текста
+  input.readOnly = true;
 
-  // Открыть/закрыть список
+  // Изначально выставляем значение по умолчанию
+  input.value = "Temporary exhibition";
+
+  // Функции для открытия и закрытия списка
   function openList() {
+    list.classList.remove("hide");
     list.classList.add("show");
     toggle.setAttribute("aria-expanded", "true");
-    // сброс aria-selected и фокус на первую опцию
-    options.forEach(opt => opt.setAttribute("aria-selected", "false"));
-    options[0]?.focus();
+    options[0].focus();
   }
+
   function closeList() {
     list.classList.remove("show");
+    list.classList.add("hide");
     toggle.setAttribute("aria-expanded", "false");
   }
-  function toggleList() {
-    if (list.classList.contains("show")) closeList();
-    else openList();
+
+  function isListOpen() {
+    return list.classList.contains("show");
   }
 
-  // При клике на svg-toggle
-  toggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    toggleList();
-  });
-  // Доступность: открыть по Enter/Space
-  toggle.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
-      e.preventDefault();
-      toggleList();
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
+  // Переключение списка
+  function toggleList() {
+    if (isListOpen()) {
+      closeList();
+    } else {
       openList();
     }
-  });
+  }
 
-  // Клик по опции
-  options.forEach(opt => {
-    opt.addEventListener("click", (e) => {
-      const value = opt.getAttribute("data-value") || opt.textContent.trim();
-      input.value = value;
-      setInvalidState(getValidationMessage(input.value));
-      // Отметить выбранную опцию (для aria)
-      options.forEach(o => o.setAttribute("aria-selected", "false"));
-      opt.setAttribute("aria-selected", "true");
+  // Выбор опции из списка
+  options.forEach((opt) => {
+    opt.addEventListener("click", () => {
+      const selectedOptionText =
+        opt.getAttribute("data-value") || opt.textContent.trim();
+
+      input.value = selectedOptionText;
       closeList();
       input.focus();
+
+      // Обновляем текст в результирующем элементе
+      resultSpan.textContent = selectedOptionText;
     });
 
-    // Клавиши для опций (Enter/Esc/Arrow)
     opt.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        opt.click();
-        return;
-      }
-      if (e.key === "Escape") {
-        e.preventDefault();
-        closeList();
-        toggle.focus();
-        return;
-      }
-      if (e.key === "ArrowDown") {
-        e.preventDefault();
-        const idx = options.indexOf(opt);
-        const next = options[idx + 1] || options[0];
-        next.focus();
-        return;
-      }
-      if (e.key === "ArrowUp") {
-        e.preventDefault();
-        const idx = options.indexOf(opt);
-        const prev = options[idx - 1] || options[options.length - 1];
-        prev.focus();
-        return;
+      switch (e.key) {
+        case "Enter":
+        case " ": {
+          e.preventDefault();
+          opt.click();
+          break;
+        }
+        case "Escape": {
+          e.preventDefault();
+          closeList();
+          input.focus();
+          break;
+        }
+        case "ArrowDown": {
+          e.preventDefault();
+          const index = options.indexOf(opt);
+          const nextOpt = options[(index + 1) % options.length];
+          nextOpt.focus();
+          break;
+        }
+        case "ArrowUp": {
+          e.preventDefault();
+          const index = options.indexOf(opt);
+          const prevOpt = options[index ? index - 1 : options.length - 1];
+          prevOpt.focus();
+          break;
+        }
       }
     });
   });
 
-  // Закрыть при клике вне
+  // Обработчик клика по иконке: переключаем видимость списка
+  toggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // чтобы клик не дошёл до документа и не закрыл список сразу
+    toggleList();
+  });
+
+  // Закрываем список при клике вне контейнера
   document.addEventListener("click", (e) => {
     if (!container.contains(e.target)) {
       closeList();
     }
   });
 
-  // Esc при фокусе на документе
+  // Закрываем список при нажатии Escape, если он открыт
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
+    if (e.key === "Escape" && isListOpen()) {
       closeList();
+      input.focus();
     }
   });
 
-  // Live validation
-  input.addEventListener("input", (e) => {
-    const msg = getValidationMessage(e.target.value);
-    setInvalidState(msg);
-  });
-
-  // Final check on blur
-  input.addEventListener("blur", (e) => {
-    const msg = getValidationMessage(e.target.value);
-    setInvalidState(msg);
-  });
-
-  // Validation on form submit (если внутри формы)
-  const form = input.closest("form");
-  if (form) {
-    form.addEventListener("submit", (ev) => {
-      const msg = getValidationMessage(input.value);
-      setInvalidState(msg);
-      if (msg) {
-        ev.preventDefault();
-        input.focus();
-      }
-    });
-  }
+  // Изначально установим значение в res-exhibition-txt
+  resultSpan.textContent = input.value;
 });
 // -------------------------------------------------------------------------------------
 
-// --------------- Прописываем клик и валидацию формы CARD NUMBER ----------------------
-// document.addEventListener("DOMContentLoaded", () => {
-//   const cardInput = document.querySelector(".cardNumber");
+// -------------------- Счётчики для контейнера entry-tickets --------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.querySelector('.ticketType');
+  const basicPriceContainer = document.querySelector('.child-entry-tickets-basic .child-entry-tickets-price');
+  const seniorPriceContainer = document.querySelector('.child-entry-tickets-senior .child-entry-tickets-price');
 
-//   if (cardInput) {
-//     cardInput.addEventListener("blur", validateCardNumber); // проверка при потере фокуса
-//     cardInput.addEventListener("input", formatCardNumber); // форматирование при вводе
-//     cardInput.addEventListener("focus", resetValidation); // очистка ошибки при повторном заходе
-//   } else {
-//     console.error("Не найден элемент с классом cardNumber!");
-//   }
+  // Базовые элементы счётчиков
+  const basicMinusBtn = document.querySelector('.basic-minus');
+  const basicValueField = document.querySelector('.basic-value');
+  const basicPlusBtn = document.querySelector('.basic-plus');
 
-//   // Валидация номера карты
-//   function validateCardNumber() {
-//     const value = this.value.trim().replace(/\s+/g, ''); // Убираем пробелы
-//     const regex = /^(\d){16}$/; // Ровно 16 цифр
+  const seniorMinusBtn = document.querySelector('.senior-minus');
+  const seniorValueField = document.querySelector('.senior-value');
+  const seniorPlusBtn = document.querySelector('.senior-plus');
 
-//     if (!regex.test(value)) {
-//       this.classList.add("invalid"); // Добавляем класс при ошибке
-//     } else {
-//       this.classList.remove("invalid"); // Убираем класс при успешной проверке
-//     }
-//   }
+  // Функция обновления цен в зависимости от значения input
+  function updatePrices() {
+    if (input.value === 'Permanent exhibition') {
+      basicPriceContainer.innerHTML = 'Basic 18+ (150 &#8364;)';
+      seniorPriceContainer.innerHTML = 'Senior 65+ (80 &#8364;)';
+    } else {
+      basicPriceContainer.innerHTML = 'Basic 18+ (20 &#8364;)';
+      seniorPriceContainer.innerHTML = 'Senior 65+ (10 &#8364;)';
+    }
+  }
 
-//   // Обнуление ошибки при повторном входе в поле
-//   function resetValidation() {
-//     this.classList.remove("invalid"); // Убираем красный цвет при повторном заходе
-//   }
+  // Обновляем цены при загрузке страницы
+  updatePrices();
 
-//   // Функционал для автоматического расстановки пробелов после каждых 4-х цифр
-//   function formatCardNumber(e) {
-//     let rawValue = e.target.value.replace(/[^0-9]+/g, ""); // Оставляем только цифры
+  // Обновляем цены при выборе из выпадающего списка
+  const dropdownOptions = document.querySelectorAll('.tickettype-option');
 
-//     if (rawValue.length > 16) {
-//       rawValue = rawValue.slice(0, 16); // Только 16 цифр
-//     }
+  dropdownOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      input.value = option.dataset.value || option.textContent.trim();
+      updatePrices();
+    });
+  });
 
-//     let formattedValue = "";
-//     for (let i = 0; i < rawValue.length; i++) {
-//       formattedValue += rawValue.charAt(i);
-//       if ((i + 1) % 4 === 0 && i !== rawValue.length - 1) {
-//         formattedValue += " "; // Пробел после каждых 4-х цифр
-//       }
-//     }
+  // Реакция на изменение поля input
+  input.addEventListener('change', updatePrices);
 
-//     e.target.value = formattedValue;
-//   }
-// });
-// // -------------------------------------------------------------------------------------
+  // Обработчики для кнопок счётчиков
 
-// // --------------- Прописываем клик и валидацию формы CARD EXPIRY ----------------------
-// document.addEventListener("DOMContentLoaded", () => {
-//   const validityInput = document.querySelector(".cardValidity");
+  // Для взрослых (Basic 18+)
+  basicMinusBtn.addEventListener('click', () => {
+    let count = parseInt(basicValueField.textContent);
+    if (count > 0) {
+      basicValueField.textContent = count - 1;
+    }
+  });
 
-//   if (validityInput) {
-//     validityInput.addEventListener("blur", validateExpiryDate); // проверка при потере фокуса
-//     validityInput.addEventListener("input", formatExpiryDate); // форматирование при вводе
-//     validityInput.addEventListener("focus", resetValidation); // очистим ошибку при повторном входе
-//   } else {
-//     console.error("Не найден элемент с классом cardValidity!");
-//   }
+  basicPlusBtn.addEventListener('click', () => {
+    let count = parseInt(basicValueField.textContent);
+    basicValueField.textContent = count + 1;
+  });
 
-//   // Валидация срока действия
-//   function validateExpiryDate() {
-//     const value = this.value.trim().replace(/[^0-9\s\/\-]/g, ""); // Оставляем только цифры, пробелы и слэш
-//     const parts = value.split(/[\s\/]+/); // Разделение по пробелам и слэшу
+  // Для пожилых (Senior 65+)
+  seniorMinusBtn.addEventListener('click', () => {
+    let count = parseInt(seniorValueField.textContent);
+    if (count > 0) {
+      seniorValueField.textContent = count - 1;
+    }
+  });
 
-//     if (parts.length !== 2) {
-//       this.classList.add("invalid"); // Недостаточно данных для проверки
-//       return;
-//     }
+  seniorPlusBtn.addEventListener('click', () => {
+    let count = parseInt(seniorValueField.textContent);
+    seniorValueField.textContent = count + 1;
+  });
+});
+// --------------------------------------------------------------------------------------
 
-//     const month = parseInt(parts[0], 10);
-//     const year = parseInt(parts[1], 10);
+// -------------------- счётчики для контейнера results-tickets -------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  // Получаем элементы для отображения значений
+  const basicQuantitySpan = document.querySelector('.basic-quantity');
+  const seniorQuantitySpan = document.querySelector('.senior-quantity');
 
-//     // Получаем текущий год (получаем последние две цифры)
-//     const currentYearFull = new Date().getFullYear();
-//     const currentYearShort = String(currentYearFull).slice(-2);
+  // Получаем элементы с количеством билетов
+  const basicValue = document.querySelector('.basic-value');
+  const seniorValue = document.querySelector('.senior-value');
 
-//     // Проверка месяца и года
-//     if (
-//       !(month >= 1 && month <= 12) ||                         // Проверка месяца
-//       !(year >= Number(currentYearShort)) ||                   // Год должен быть не меньше текущего
-//       (year === Number(currentYearShort) && month < (new Date().getMonth() + 1)) // Если год текущий, месяц должен быть не меньше текущего
-//     ) {
-//       this.classList.add("invalid"); // Добавляем класс при ошибке
-//     } else {
-//       this.classList.remove("invalid"); // Убираем класс при успешной проверке
-//     }
-//   }
+  // Элемент с названием экспозиции
+  const resExhibitionTxt = document.querySelector('.res-exhibition-txt');
 
-//   // Форматирование ввода (автоматически ставит слэш после месяца)
-//   function formatExpiryDate(e) {
-//     let rawValue = e.target.value.replace(/[^0-9]+/g, ""); // Оставляем только цифры
+  // Элементы для отображения общей суммы
+  const basicPrice = document.querySelector('.basic-price');
+  const seniorPrice = document.querySelector('.senior-price');
 
-//     if (rawValue.length > 4) {
-//       rawValue = rawValue.slice(0, 4); // Только 4 цифры
-//     }
+  // Элемент для отображения итоговой суммы
+  const totalPriceNum = document.querySelector('.total-price-num');
 
-//     let formattedValue = "";
-//     if (rawValue.length > 2) {
-//       formattedValue = `${rawValue.substring(0, 2)} / ${rawValue.substring(2)}`;
-//     } else {
-//       formattedValue = rawValue;
-//     }
+  // Элементы для изменения содержания
+  const firstResultTxt = document.querySelector('.results-tickets-child-fst-txt');
+  const secondResultTxt = document.querySelector('.results-tickets-child-snd-txt');
 
-//     e.target.value = formattedValue;
-//   }
+  // Первоначальное обновление значений
+  updateValues();
 
-//   // Сброс ошибки при повторном входе в поле
-//   function resetValidation() {
-//     this.classList.remove("invalid"); // Убираем красный цвет при повторном заходе
-//   }
-// });
+  // Обновляем значения на странице
+  function updateValues() {
+    basicQuantitySpan.textContent = basicValue.textContent;
+    seniorQuantitySpan.textContent = seniorValue.textContent;
 
-// -------------- Прописываем клик и валидацию для карты ----------------------
+    // Проверяем текущее значение и обновляем тексты
+    if (resExhibitionTxt.textContent === 'Permanent exhibition') {
+      firstResultTxt.textContent = 'Basic 18+ (150 €)';      
+      secondResultTxt.textContent = 'Senior 65+ (80 €)';
+
+      // Рассчитываем суммы
+      basicPrice.textContent = calculateTotal(basicValue.textContent, 150);
+      seniorPrice.textContent = calculateTotal(seniorValue.textContent, 80);
+    } else {
+      firstResultTxt.textContent = 'Basic 18+ (20 €)';
+      secondResultTxt.textContent = 'Senior 65+ (10 €)';
+
+      // Если другое значение экспозиции, вычисляем по обычной цене
+      basicPrice.textContent = calculateTotal(basicValue.textContent, 20);
+      seniorPrice.textContent = calculateTotal(seniorValue.textContent, 10);
+    }
+
+    // Высчитываем итоговую сумму
+    totalPriceNum.textContent = calculateGrandTotal(
+      basicPrice.textContent,
+      seniorPrice.textContent
+    );
+  }
+
+  // Функция для расчета суммы
+  function calculateTotal(count, pricePerUnit) {
+    const quantity = parseInt(count);
+    return quantity * pricePerUnit;
+  }
+
+  // Функция для расчета итоговой суммы
+  function calculateGrandTotal(firstSum, secondSum) {
+    const total = parseFloat(firstSum) + parseFloat(secondSum);
+    return total; // Возвращаем сумму с символом валюты
+  }
+
+  // Обновляем значения при клике на плюс/минус
+  document.querySelectorAll('.basic-minus, .basic-plus').forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateValues(); // Обновляем значения после изменения
+    });
+  });
+
+  document.querySelectorAll('.senior-minus, .senior-plus').forEach(btn => {
+    btn.addEventListener('click', () => {
+      updateValues(); // Обновляем значения после изменения
+    });
+  });
+
+  // Дополнительно следим за изменением экспозиции
+  const input = document.querySelector('.ticketType');
+  input.addEventListener('change', () => {
+    resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
+    updateValues(); // Обновляем тексты
+  });
+
+  // Обновляем при выборе из выпадающего списка
+  const dropdownOptions = document.querySelectorAll('.tickettype-option');
+  dropdownOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      input.value = option.dataset.value || option.textContent.trim();
+      resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
+      updateValues(); // Обновляем тексты
+    });
+  });
+});
+// --------------------------------------------------------------------------------------
+
+// ------------------------- Прописываем валидацию для карты ----------------------------
 document.addEventListener("DOMContentLoaded", () => {
   const cardInput = document.querySelector(".cardNumber");
   const expiryInput = document.querySelector(".cardValidity");
   const holderInput = document.querySelector(".cardholderName");
+  const cvcInput = document.querySelector(".cvc-cvv"); // Добавляем селектор для поля CVV/CVC
 
-  if (cardInput && expiryInput && holderInput) {
+  if (cardInput && expiryInput && holderInput && cvcInput) {
     cardInput.addEventListener("blur", validateCardNumber);
     cardInput.addEventListener("input", formatCardNumber);
     cardInput.addEventListener("focus", resetValidation);
@@ -874,8 +888,12 @@ document.addEventListener("DOMContentLoaded", () => {
     expiryInput.addEventListener("focus", resetValidation);
 
     holderInput.addEventListener("blur", validateHolderName);
-    holderInput.addEventListener("input", allowLettersSpacesDashes); // новое событие input
+    holderInput.addEventListener("input", allowLettersSpacesDashes);
     holderInput.addEventListener("focus", resetValidation);
+
+    cvcInput.addEventListener("blur", validateCVC); // проверка при потере фокуса
+    cvcInput.addEventListener("input", formatCVV); // форматирование при вводе
+    cvcInput.addEventListener("focus", resetValidation);
   } else {
     console.error("Один из элементов не найден!");
   }
@@ -931,6 +949,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Валидация CVV/CVC
+  function validateCVC() {
+    const value = this.value.trim();
+    const regex = /^\d{3}$/; // Ровно 3 цифры
+
+    if (!regex.test(value)) {
+      this.classList.add("invalid");
+    } else {
+      this.classList.remove("invalid");
+    }
+  }
+
   // Форматирование номера карты
   function formatCardNumber(e) {
     let rawValue = e.target.value.replace(/[^0-9]+/g, "");
@@ -968,6 +998,17 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.value = formattedValue;
   }
 
+  // Форматирование CVV/CVC
+  function formatCVV(e) {
+    let rawValue = e.target.value.replace(/[^0-9]+/g, ""); // Оставляем только цифры
+
+    if (rawValue.length > 3) {
+      rawValue = rawValue.slice(0, 3); // Только 3 цифры
+    }
+
+    e.target.value = rawValue;
+  }
+
   // Обнуление ошибки при повторном входе в поле
   function resetValidation() {
     this.classList.remove("invalid");
@@ -979,3 +1020,4 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.value = cleanedValue;
   }
 });
+// ---------------------------------------------------------------------------------------------
