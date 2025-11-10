@@ -257,6 +257,62 @@ main {
   display: none;
 }
 
+/* для секции BUY-TICKETS */
+.buy-tickets {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+}
+
+.content-txt {
+  width: 80%;
+  background-color: #030303;
+  padding: 10px;
+}
+
+.content-txt p {
+  font-family: "Roboto Flex", sans-serif;
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+.content-txt p span {
+  color: #9d8665;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.content-btn {
+  width: 20%;
+  position: relative;
+  background-color: #030303;
+}
+
+.buy-now {
+  width: 90%;
+  height: 50px;
+  position: absolute;
+  bottom: 30%;
+  right: 0;
+  background-color: #710707;
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 1.75rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buy-now:hover {
+  background-color: #9d8665;
+}
+
 /* Стили для FOOTER */
 footer {
   width: 100%;
@@ -420,6 +476,19 @@ footer {
     width: 60px;
   }
 
+  /* для секции BUY-TICKETS */
+  .content-txt {
+    padding: 7px;
+  }
+
+  .content-txt p {
+    font-size: 1.5rem;
+  }
+
+  .buy-now {
+    font-size: 1.4rem;
+  }
+
   /* для 'FOOTER' */
   footer {
     width: 100%;
@@ -513,6 +582,19 @@ footer {
   .prev-btn,
   .next-btn {
     width: 40px;
+  }
+
+  /* для секции BUY-TICKETS */
+  .content-txt {
+    padding: 5px;
+  }
+
+  .content-txt p {
+    font-size: 1.25rem;
+  }
+
+  .buy-now {
+    font-size: 1.15rem;
   }
 
   /* для 'FOOTER' */
