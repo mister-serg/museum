@@ -433,155 +433,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // -------------------------------------------------------------------------------------
 
 // --------------- Прописываем клик и валидацию формы TICKET TYPE ----------------------
-// document.addEventListener("DOMContentLoaded", () => {
-//   const container = document.querySelector(".ticketType-conteiner");
-//   if (!container) return;
-
-//   const input = container.querySelector(".ticketType");
-//   const toggle = container.querySelector(".dropDownTicketType");
-//   const list = document.getElementById("tickettype-list");
-//   const options = Array.from(list.querySelectorAll(".tickettype-option"));
-//   const errorEl = document.getElementById("ticketType-error");
-
-//   // Установка значения по умолчанию при загрузке страницы
-//   input.value = "Temporary exhibition";
-
-//   // Удобная функция для установки состояния ошибки
-//   function setInvalidState(message) {
-//     if (message) {
-//       input.classList.add("invalid");
-//       input.setAttribute("aria-invalid", "true");
-//       errorEl.textContent = message;
-//     } else {
-//       input.classList.remove("invalid");
-//       input.setAttribute("aria-invalid", "false");
-//       errorEl.textContent = "";
-//     }
-//   }
-
-//   // Валидация: обязательное поле
-//   function getValidationMessage(value) {
-//     if (!value || value.trim().length === 0) {
-//       return "This field is required.";
-//     }
-//     return "";
-//   }
-
-//   // Открыть/закрыть список
-//   function openList() {
-//     list.classList.add("show");
-//     toggle.setAttribute("aria-expanded", "true");
-//     // сброс aria-selected и фокус на первую опцию
-//     options.forEach(opt => opt.setAttribute("aria-selected", "false"));
-//     options[0]?.focus();
-//   }
-//   function closeList() {
-//     list.classList.remove("show");
-//     toggle.setAttribute("aria-expanded", "false");
-//   }
-//   function toggleList() {
-//     if (list.classList.contains("show")) closeList();
-//     else openList();
-//   }
-
-//   // При клике на svg-toggle
-//   toggle.addEventListener("click", (e) => {
-//     e.stopPropagation();
-//     toggleList();
-//   });
-//   // Доступность: открыть по Enter/Space
-//   toggle.addEventListener("keydown", (e) => {
-//     if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") {
-//       e.preventDefault();
-//       toggleList();
-//     } else if (e.key === "ArrowDown") {
-//       e.preventDefault();
-//       openList();
-//     }
-//   });
-
-//   // Клик по опции
-//   options.forEach(opt => {
-//     opt.addEventListener("click", (e) => {
-//       const value = opt.getAttribute("data-value") || opt.textContent.trim();
-//       input.value = value;
-//       setInvalidState(getValidationMessage(input.value));
-//       // Отметить выбранную опцию (для aria)
-//       options.forEach(o => o.setAttribute("aria-selected", "false"));
-//       opt.setAttribute("aria-selected", "true");
-//       closeList();
-//       input.focus();
-//     });
-
-//     // Клавиши для опций (Enter/Esc/Arrow)
-//     opt.addEventListener("keydown", (e) => {
-//       if (e.key === "Enter" || e.key === " ") {
-//         e.preventDefault();
-//         opt.click();
-//         return;
-//       }
-//       if (e.key === "Escape") {
-//         e.preventDefault();
-//         closeList();
-//         toggle.focus();
-//         return;
-//       }
-//       if (e.key === "ArrowDown") {
-//         e.preventDefault();
-//         const idx = options.indexOf(opt);
-//         const next = options[idx + 1] || options[0];
-//         next.focus();
-//         return;
-//       }
-//       if (e.key === "ArrowUp") {
-//         e.preventDefault();
-//         const idx = options.indexOf(opt);
-//         const prev = options[idx - 1] || options[options.length - 1];
-//         prev.focus();
-//         return;
-//       }
-//     });
-//   });
-
-//   // Закрыть при клике вне
-//   document.addEventListener("click", (e) => {
-//     if (!container.contains(e.target)) {
-//       closeList();
-//     }
-//   });
-
-//   // Esc при фокусе на документе
-//   document.addEventListener("keydown", (e) => {
-//     if (e.key === "Escape") {
-//       closeList();
-//     }
-//   });
-
-//   // Live validation
-//   input.addEventListener("input", (e) => {
-//     const msg = getValidationMessage(e.target.value);
-//     setInvalidState(msg);
-//   });
-
-//   // Final check on blur
-//   input.addEventListener("blur", (e) => {
-//     const msg = getValidationMessage(e.target.value);
-//     setInvalidState(msg);
-//   });
-
-//   // Validation on form submit (если внутри формы)
-//   const form = input.closest("form");
-//   if (form) {
-//     form.addEventListener("submit", (ev) => {
-//       const msg = getValidationMessage(input.value);
-//       setInvalidState(msg);
-//       if (msg) {
-//         ev.preventDefault();
-//         input.focus();
-//       }
-//     });
-//   }
-// });
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".ticketType-conteiner");
   if (!container) return;
@@ -1021,3 +872,97 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 // ---------------------------------------------------------------------------------------------
+
+// Создадим функцию, которая показывает всплывающее окно с результатом
+function showPopup(successfulPurchase) {
+  const popup = document.createElement("div");
+  popup.className = "popup";
+  popup.innerHTML = successfulPurchase
+    ? "<p>The purchase was completed successfully!</p>"
+    : "<p>Please fill in all fields!</p>";
+
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "Close";
+  closeButton.className = "close-popup-btn";
+  closeButton.addEventListener("click", () => {
+    document.body.removeChild(popup);
+  });
+
+  popup.appendChild(closeButton);
+  document.body.appendChild(popup);
+
+  // Автоматически скрываем поп-ап через 5 секунд
+  setTimeout(() => {
+    document.body.removeChild(popup);
+  }, 5000);
+}
+
+// Функция очистки всех полей формы
+function clearInputs() {
+  const inputs = document.querySelectorAll("input");
+  inputs.forEach(input => input.value = "");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const buyButton = document.querySelector(".buy-button");
+
+  if (buyButton) {
+    buyButton.addEventListener("click", () => {
+      // Проверяем сумму покупок
+      const totalPriceNum = document.querySelector(".total-price-num");
+      const totalAmount = parseFloat(totalPriceNum.textContent);
+
+      // Проверяем, что сумма больше нуля
+      if (totalAmount > 0) {
+        // Проверяем все поля на наличие классов "invalid"
+        const allFields = document.querySelectorAll("input, .ticketType");
+        const hasErrors = [...allFields].some(field => field.classList.contains("invalid"));
+        
+        // Дополнительно проверяем каждое поле на обязательность
+        const emptyOrInvalidFields = [...allFields].some(field => {
+          const val = field.value.trim();
+          return (val.length === 0 || field.classList.contains("invalid"));
+        });
+
+        if (!emptyOrInvalidFields && !hasErrors) {
+          // Покупка успешна!
+          showPopup(true);
+          clearInputs();
+        } else {
+          // Есть ошибки валидации или пустые поля
+          showPopup(false);
+        }
+      } else {
+        // Общая сумма нулевая
+        showPopup(false);
+      }
+    });
+  }
+});
+
+// Стили для всплывающего окна
+document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .popup {
+      position: fixed;
+      z-index: 9999;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fefefe;
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .close-popup-btn {
+      margin-top: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #710707;
+      color: white;
+      border: none;
+    }
+  </style>
+`);
