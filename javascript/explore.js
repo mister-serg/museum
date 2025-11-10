@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
       menuAdaptive.style.display = "none";
 
       // Устанавливаем соответствующие состояния других блоков
-      // textContainer.style.display = "block";
-      // imageContainer.style.display = "block";
       carousel.style.display = "flex";
       welcomeGallery.style.display = "none";
       socialNetwork.style.display = "none";

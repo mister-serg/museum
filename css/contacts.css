@@ -55,7 +55,6 @@ header {
 .burger {
   display: none;
   cursor: pointer;
-  /* z-index: 1000; */
 }
 
 .burger .line {

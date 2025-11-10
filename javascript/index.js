@@ -1,5 +1,3 @@
-// Скрипты страницы (объединённый файл)
-
 // -------------------- Адаптивное меню --------------------
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".burger");
@@ -723,5 +721,3 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // ------------------------------------------------------------------------------------
-
-// Конец файла

@@ -873,7 +873,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ---------------------------------------------------------------------------------------------
 
-// Создадим функцию, которая показывает всплывающее окно с результатом
+// Создаем функцию, которая показывает всплывающее окно с результатом
 function showPopup(successfulPurchase) {
   const popup = document.createElement("div");
   popup.className = "popup";
@@ -896,13 +896,16 @@ function showPopup(successfulPurchase) {
     document.body.removeChild(popup);
   }, 5000);
 }
+// ---------------------------------------------------------------------------------------------
 
 // Функция очистки всех полей формы
 function clearInputs() {
   const inputs = document.querySelectorAll("input");
   inputs.forEach(input => input.value = "");
 }
+// ---------------------------------------------------------------------------------------------
 
+// Добавляем обработчик события DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
   const buyButton = document.querySelector(".buy-button");
 
