@@ -140,7 +140,7 @@ header {
   border-bottom: #710707 3px solid;
 }
 
-.hero-container-heading h1 {
+.hero-container-heading h2 {
   font-family: "Forum", monospace;
   font-size: 50px;
   font-weight: 700;
@@ -148,7 +148,7 @@ header {
   text-transform: uppercase;
 }
 
-.hero-container-heading h1 span {
+.hero-container-heading h2 span {
   font-style: italic;
 }
 
@@ -189,7 +189,7 @@ header {
     border-bottom: #710707 3px solid;
 }
 
-.about-painting-parent-container-heading h1 {
+.about-painting-parent-container-heading h2 {
     font-family: "Forum", monospace;
     font-size: 50px;
     font-weight: 700;
@@ -203,7 +203,7 @@ header {
     margin-top: 15px;
 }
 
-.about-painting-parent-container-content h2 {
+.about-painting-parent-container-content h3 {
     font-family: "Forum", monospace;
     font-size: 36px;
     font-weight: 600;
@@ -250,7 +250,7 @@ header {
   width: 50%;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   display: inline-block;
   font-family: "Forum", sans-serif;
   font-size: 50px;
@@ -340,7 +340,7 @@ header {
   border-bottom: #710707 3px solid;
 }
 
-.public-reaction-container-heading h1 {
+.public-reaction-container-heading h2 {
   font-family: "Forum", sans-serif;
   font-size: 50px;
   font-weight: 700;
@@ -505,7 +505,7 @@ footer {
     height: 115px;
   }
 
-  .hero-container-heading h1 {
+  .hero-container-heading h2 {
     font-size: 45px;
   }
 
@@ -537,7 +537,7 @@ footer {
 
 }
 
-.about-painting-parent-container-heading h1 {
+.about-painting-parent-container-heading h2 {
     font-size: 45px;
 }
 
@@ -547,7 +547,7 @@ footer {
     margin-top: 15px;
 }
 
-.about-painting-parent-container-content h2 {
+.about-painting-parent-container-content h3 {
     font-size: 32px;
 }
 
@@ -576,7 +576,7 @@ footer {
   width: 100%;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   font-size: 45px;
 }
 
@@ -611,7 +611,7 @@ footer {
   width: 420px;
 }
 
-.public-reaction-container-heading h1 {
+.public-reaction-container-heading h2 {
   font-size: 45px;
 }
 
@@ -699,7 +699,7 @@ footer {
     height: 110px;
   }
 
-  .hero-container-heading h1 {
+  .hero-container-heading h2 {
     font-size: 45px;
   }
 
@@ -730,7 +730,7 @@ footer {
 
 }
 
-.about-painting-parent-container-heading h1 {
+.about-painting-parent-container-heading h2 {
     font-size: 45px;
 }
 
@@ -740,7 +740,7 @@ footer {
     margin-top: 15px;
 }
 
-.about-painting-parent-container-content h2 {
+.about-painting-parent-container-content h3 {
     font-size: 32px;
 }
 
@@ -769,7 +769,7 @@ footer {
   width: 100%;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   font-size: 45px;
 }
 
@@ -801,7 +801,7 @@ footer {
   width: 420px;
 }
 
-.public-reaction-container-heading h1 {
+.public-reaction-container-heading h2 {
   font-size: 45px;
 }
 

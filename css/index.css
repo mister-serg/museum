@@ -164,7 +164,7 @@ header {
   width: 598px;
 }
 
-.text-container h1 {
+.text-container h2 {
   font-family: "Forum", monospace;
   font-size: 5rem;
   font-weight: 400;
@@ -358,7 +358,7 @@ header {
   margin-bottom: 20px;
 }
 
-.visiting-container-header h1 {
+.visiting-container-header h2 {
   font-size: 80px;
   font-weight: 400;
   letter-spacing: 5px;
@@ -472,7 +472,7 @@ header {
   width: 50%;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   display: inline-block;
   font-family: "Forum", sans-serif;
   font-size: 80px;
@@ -563,7 +563,7 @@ header {
   width: 57%;
 }
 
-.video-heading h1 {
+.video-heading h2 {
   text-transform: uppercase;
   font-family: "Forum", sans-serif;
   font-size: 80px;
@@ -739,7 +739,7 @@ header {
   padding-top: 30px;
 }
 
-.parent-gallery-container h1 {
+.parent-gallery-container h2 {
   text-transform: uppercase;
   font-family: "Forum", sans-serif;
   font-size: 80px;
@@ -802,7 +802,7 @@ header {
   border-bottom: #710707 3px solid;
 }
 
-.heading-buy-tickets h1 {
+.heading-buy-tickets h2 {
   text-transform: uppercase;
   font-family: "Forum", sans-serif;
   font-size: 80px;
@@ -840,7 +840,7 @@ header {
   align-items: flex-start;
 }
 
-.buy-tickets-content-ticket-type h1 {
+.buy-tickets-content-ticket-type h3 {
   margin: 0;
   font-family: "Roboto Flex", sans-serif;
   font-size: 28px;
@@ -884,7 +884,7 @@ input[type="radio"]:checked + .ticket-type {
   position: relative;
 }
 
-.buy-tickets-content-amount h1 {
+.buy-tickets-content-amount h3 {
   margin: 0;
   margin-bottom: 20px;
   font-family: "Roboto Flex", sans-serif;
@@ -993,7 +993,7 @@ input[type="radio"]:checked + .ticket-type {
   border-bottom: #710707 3px solid;
 }
 
-.contacts-heading h1 {
+.contacts-heading h2 {
   text-transform: uppercase;
   font-family: "Forum", sans-serif;
   font-size: 80px;
@@ -1025,7 +1025,7 @@ input[type="radio"]:checked + .ticket-type {
   margin: 0 0 60px 0;
 }
 
-.contacts-content-txt-heading h1 {
+.contacts-content-txt-heading h3 {
   font-size: 28px;
   font-weight: 500;
   margin: 0;
@@ -1188,7 +1188,7 @@ footer {
     height: 100%;
   }
 
-  .text-container h1 {
+  .text-container h2 {
     font-size: 50px;
     margin: 0 0 30px 0;
   }
@@ -1245,7 +1245,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .visiting-container-header h1 {
+  .visiting-container-header h2 {
     font-size: 50px;
   }
 
@@ -1332,7 +1332,7 @@ footer {
   border-bottom: #710707 3px solid;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   display: inline-block;
   font-size: 50px;
   margin: 65px 0 10px 0;
@@ -1375,7 +1375,7 @@ footer {
     width: 100%;
   }
 
-  .video-heading h1 {
+  .video-heading h2 {
     font-size: 50px;
   }
 
@@ -1437,7 +1437,7 @@ footer {
     padding-top: 20px;
   }
 
-  .parent-gallery-container h1 {
+  .parent-gallery-container h2 {
     font-size: 50px;
   }
 
@@ -1469,7 +1469,7 @@ footer {
     width: 96.09%;
   }
 
-  .heading-buy-tickets h1 {
+  .heading-buy-tickets h2 {
     font-size: 50px;
     margin: 0 0 8px 0;
   }
@@ -1493,7 +1493,7 @@ footer {
     width: 100%;
   }
 
-  .buy-tickets-content-amount h1 {
+  .buy-tickets-content-amount h3 {
     margin: 0;
     margin-bottom: 15px;
     text-align: left;
@@ -1544,7 +1544,7 @@ footer {
     width: 96.09%;
   }
 
-  .contacts-heading h1 {
+  .contacts-heading h2 {
     font-size: 50px;
     margin: 0 0 8px 0;
   }
@@ -1560,7 +1560,7 @@ footer {
     margin: 0 0 50px 0;
   }
 
-  .contacts-content-txt-heading h1 {
+  .contacts-content-txt-heading h3 {
     font-size: 24px;
   }
 
@@ -1671,7 +1671,7 @@ footer {
     margin: 0;
   }
 
-  .text-container h1 {
+  .text-container h2 {
     font-size: 40px;
     margin: 0 0 20px 0;
   }
@@ -1729,7 +1729,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .visiting-container-header h1 {
+  .visiting-container-header h2 {
     font-size: 40px;
   }
 
@@ -1788,7 +1788,7 @@ footer {
   border-bottom: #710707 3px solid;
 }
 
-.explore-heading h1 {
+.explore-heading h2 {
   display: inline-block;
   font-size: 40px;
   margin: 25px 0 20px 0;
@@ -1810,7 +1810,7 @@ footer {
     width: 728px;
   }
 
-  .video-heading h1 {
+  .video-heading h2 {
     font-size: 40px;
   }
 
@@ -1871,7 +1871,7 @@ footer {
     margin: 0 auto 0 auto;
   }
 
-  .parent-gallery-container h1 {
+  .parent-gallery-container h2 {
     font-size: 40px;
     padding-left: 2px;
   }
@@ -1927,7 +1927,7 @@ footer {
     width: 728px;
   }
 
-  .heading-buy-tickets h1 {
+  .heading-buy-tickets h2 {
     font-size: 40px;
     margin: 0 0 10px 0;
   }
@@ -1953,7 +1953,7 @@ footer {
     height: auto;
   }
 
-  .buy-tickets-content-amount h1 {
+  .buy-tickets-content-amount h3 {
     margin-bottom: 30px;
     font-weight: 800;
   }
@@ -1999,7 +1999,7 @@ footer {
     width: 728px;
   }
 
-  .contacts-heading h1 {
+  .contacts-heading h2 {
     font-size: 40px;
     margin: 0 0 10px 0;
   }
@@ -2024,7 +2024,7 @@ footer {
     margin: 0 0 40px 0;
   }
 
-  .contacts-content-txt-heading h1 {
+  .contacts-content-txt-heading h3 {
     font-size: 20px;
   }
 

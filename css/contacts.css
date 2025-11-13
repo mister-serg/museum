@@ -184,8 +184,8 @@ header {
   margin-top: 30px;
 }
 
-.contacts-content-txt-heading h1,
-.operating-time-heading h1 {
+.contacts-content-txt-heading h2,
+.operating-time-heading h2 {
   font-size: 28px;
   font-weight: 500;
   margin: 0;
@@ -391,8 +391,8 @@ footer {
     margin: 0 0 20px 0;
   }
 
-  .contacts-content-txt-heading h1,
-  .operating-time-heading h1 {
+  .contacts-content-txt-heading h2,
+  .operating-time-heading h2 {
     font-size: 24px;
   }
 
@@ -514,7 +514,8 @@ footer {
     margin: 0 0 40px 0;
   }
 
-  .contacts-content-txt-heading h1, .operating-time-heading h1 {
+  .contacts-content-txt-heading h2, 
+  .operating-time-heading h2 {
     font-size: 20px;
   }
 
