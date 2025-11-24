@@ -616,6 +616,10 @@ header {
   align-items: center;
   background-color: #030303;
   border-radius: 5px;
+  color: #a4a4a3; 
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Forum", monospace;
 }
 
 .basic-quantity,

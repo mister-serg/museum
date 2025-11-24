@@ -756,6 +756,103 @@ document.addEventListener("DOMContentLoaded", () => {
 // --------------------------------------------------------------------------------------
 
 // -------------------- счётчики для контейнера results-tickets -------------------------
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Получаем элементы для отображения значений
+//   const basicQuantitySpan = document.querySelector('.basic-quantity');
+//   const seniorQuantitySpan = document.querySelector('.senior-quantity');
+
+//   // Получаем элементы с количеством билетов
+//   const basicValue = document.querySelector('.basic-value');
+//   const seniorValue = document.querySelector('.senior-value');
+
+//   // Элемент с названием экспозиции
+//   const resExhibitionTxt = document.querySelector('.res-exhibition-txt');
+
+//   // Элементы для отображения общей суммы
+//   const basicPrice = document.querySelector('.basic-price');
+//   const seniorPrice = document.querySelector('.senior-price');
+
+//   // Элемент для отображения итоговой суммы
+//   const totalPriceNum = document.querySelector('.total-price-num');
+
+//   // Элементы для изменения содержания
+//   const firstResultTxt = document.querySelector('.results-tickets-child-fst-txt');
+//   const secondResultTxt = document.querySelector('.results-tickets-child-snd-txt');
+
+//   // Первоначальное обновление значений
+//   updateValues();
+
+//   // Обновляем значения на странице
+//   function updateValues() {
+//     basicQuantitySpan.textContent = basicValue.textContent;
+//     seniorQuantitySpan.textContent = seniorValue.textContent;
+
+//     // Проверяем текущее значение и обновляем тексты
+//     if (resExhibitionTxt.textContent === 'Permanent exhibition') {
+//       firstResultTxt.textContent = 'Basic 18+ (150 €)';      
+//       secondResultTxt.textContent = 'Senior 65+ (80 €)';
+
+//       // Рассчитываем суммы
+//       basicPrice.textContent = calculateTotal(basicValue.textContent, 150);
+//       seniorPrice.textContent = calculateTotal(seniorValue.textContent, 80);
+//     } else {
+//       firstResultTxt.textContent = 'Basic 18+ (20 €)';
+//       secondResultTxt.textContent = 'Senior 65+ (10 €)';
+
+//       // Если другое значение экспозиции, вычисляем по обычной цене
+//       basicPrice.textContent = calculateTotal(basicValue.textContent, 20);
+//       seniorPrice.textContent = calculateTotal(seniorValue.textContent, 10);
+//     }
+
+//     // Высчитываем итоговую сумму
+//     totalPriceNum.textContent = calculateGrandTotal(
+//       basicPrice.textContent,
+//       seniorPrice.textContent
+//     );
+//   }
+
+//   // Функция для расчета суммы
+//   function calculateTotal(count, pricePerUnit) {
+//     const quantity = parseInt(count);
+//     return quantity * pricePerUnit;
+//   }
+
+//   // Функция для расчета итоговой суммы
+//   function calculateGrandTotal(firstSum, secondSum) {
+//     const total = parseFloat(firstSum) + parseFloat(secondSum);
+//     return total; // Возвращаем сумму с символом валюты
+//   }
+
+//   // Обновляем значения при клике на плюс/минус
+//   document.querySelectorAll('.basic-minus, .basic-plus').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       updateValues(); // Обновляем значения после изменения
+//     });
+//   });
+
+//   document.querySelectorAll('.senior-minus, .senior-plus').forEach(btn => {
+//     btn.addEventListener('click', () => {
+//       updateValues(); // Обновляем значения после изменения
+//     });
+//   });
+
+//   // Дополнительно следим за изменением экспозиции
+//   const input = document.querySelector('.ticketType');
+//   input.addEventListener('change', () => {
+//     resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
+//     updateValues(); // Обновляем тексты
+//   });
+
+//   // Обновляем при выборе из выпадающего списка
+//   const dropdownOptions = document.querySelectorAll('.tickettype-option');
+//   dropdownOptions.forEach(option => {
+//     option.addEventListener('click', () => {
+//       input.value = option.dataset.value || option.textContent.trim();
+//       resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
+//       updateValues(); // Обновляем тексты
+//     });
+//   });
+// });
 document.addEventListener("DOMContentLoaded", () => {
   // Получаем элементы для отображения значений
   const basicQuantitySpan = document.querySelector('.basic-quantity');
@@ -779,6 +876,34 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstResultTxt = document.querySelector('.results-tickets-child-fst-txt');
   const secondResultTxt = document.querySelector('.results-tickets-child-snd-txt');
 
+  // Элементы для отображения количества билетов в результатах
+  const firstQuantityElement = document.querySelector('.results-tickets-child-fst-quantity');
+  const secondQuantityElement = document.querySelector('.results-tickets-child-snd-quantity');
+
+  // Получаем элемент поля выбора экспозиции
+  const input = document.querySelector('.ticketType');
+
+  // Чтение данных из localStorage
+  const storedSelectedExhibition = localStorage.getItem('selectedExhibition');
+  const storedBasicTickets = localStorage.getItem('basicTickets');
+  const storedSeniorTickets = localStorage.getItem('seniorTickets');
+
+  // Обновляем элементы в зависимости от хранимых данных
+  if (storedSelectedExhibition) {
+    input.value = storedSelectedExhibition;
+    resExhibitionTxt.textContent = storedSelectedExhibition;
+  }
+
+  if (storedBasicTickets !== null) {
+    basicValue.textContent = storedBasicTickets;
+    firstQuantityElement.textContent = storedBasicTickets; // Присвоение в результативный элемент
+  }
+
+  if (storedSeniorTickets !== null) {
+    seniorValue.textContent = storedSeniorTickets;
+    secondQuantityElement.textContent = storedSeniorTickets; // Присвоение в результативный элемент
+  }
+
   // Первоначальное обновление значений
   updateValues();
 
@@ -787,9 +912,13 @@ document.addEventListener("DOMContentLoaded", () => {
     basicQuantitySpan.textContent = basicValue.textContent;
     seniorQuantitySpan.textContent = seniorValue.textContent;
 
+    // Здесь обновляем результативные элементы еще раз
+    firstQuantityElement.textContent = basicValue.textContent;
+    secondQuantityElement.textContent = seniorValue.textContent;
+
     // Проверяем текущее значение и обновляем тексты
     if (resExhibitionTxt.textContent === 'Permanent exhibition') {
-      firstResultTxt.textContent = 'Basic 18+ (150 €)';      
+      firstResultTxt.textContent = 'Basic 18+ (150 €)';
       secondResultTxt.textContent = 'Senior 65+ (80 €)';
 
       // Рассчитываем суммы
@@ -806,21 +935,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Высчитываем итоговую сумму
     totalPriceNum.textContent = calculateGrandTotal(
-      basicPrice.textContent,
-      seniorPrice.textContent
+      Number(basicPrice.textContent.replace(/[^0-9.-]/g, '')), // Приводим к числу
+      Number(seniorPrice.textContent.replace(/[^0-9.-]/g, ''))
     );
   }
 
   // Функция для расчета суммы
   function calculateTotal(count, pricePerUnit) {
-    const quantity = parseInt(count);
+    const quantity = parseInt(count) || 0; // Приведение к числу
     return quantity * pricePerUnit;
   }
 
   // Функция для расчета итоговой суммы
   function calculateGrandTotal(firstSum, secondSum) {
-    const total = parseFloat(firstSum) + parseFloat(secondSum);
-    return total; // Возвращаем сумму с символом валюты
+    const total = Math.round((firstSum + secondSum) * 100) / 100; // Округляем до двух знаков после запятой
+    return `${total}`; // Возвращаем строку с числом
   }
 
   // Обновляем значения при клике на плюс/минус
@@ -836,11 +965,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Дополнительно следим за изменением экспозиции
-  const input = document.querySelector('.ticketType');
+  // Обновляем при изменении экспозиции
   input.addEventListener('change', () => {
-    resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
-    updateValues(); // Обновляем тексты
+    resExhibitionTxt.textContent = input.value; // Обновляем текст
+    updateValues(); // Обновляем остальные элементы
   });
 
   // Обновляем при выборе из выпадающего списка
@@ -848,8 +976,13 @@ document.addEventListener("DOMContentLoaded", () => {
   dropdownOptions.forEach(option => {
     option.addEventListener('click', () => {
       input.value = option.dataset.value || option.textContent.trim();
-      resExhibitionTxt.textContent = input.value; // Обновляем текст в res-exhibition-txt
-      updateValues(); // Обновляем тексты
+
+      // Обновляем текст сразу после выбора
+      resExhibitionTxt.textContent = input.value;
+
+      // Генерация события change вручную
+      const event = new Event('change', { bubbles: true });
+      input.dispatchEvent(event);
     });
   });
 });
@@ -1111,3 +1244,24 @@ document.head.insertAdjacentHTML('beforeend', `
     }
   </style>
 `);
+// ---------------------------------------------------------------------------------------------
+
+// Загружаем данные из localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    // Получаем элементы
+    const ticketTypeInput = document.querySelector('.ticketType');
+    const basicValue = document.querySelector('.basic-value');
+    const seniorValue = document.querySelector('.senior-value');
+
+    // Читаем значение из localStorage
+    const selectedExhibition = localStorage.getItem('selectedExhibition');
+    const basicTickets = localStorage.getItem('basicTickets');
+    const seniorTickets = localStorage.getItem('seniorTickets');
+
+    // Если значение найдено, назначаем его полю
+    if (selectedExhibition && basicTickets && seniorTickets) {
+        ticketTypeInput.value = selectedExhibition;
+        basicValue.textContent = basicTickets;
+        seniorValue.textContent = seniorTickets;
+    }
+});

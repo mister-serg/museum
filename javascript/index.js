@@ -600,7 +600,76 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ------------------------------------------------------------------------------------
 
-// ---------------------BUY TICKETS ---------------------
+// // ---------------------BUY TICKETS ---------------------
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Получаем элементы
+//     const basicValueElement = document.querySelector('.basic-value');
+//     const seniorValueElement = document.querySelector('.senior-value');
+//     const basicMinus = document.querySelector('.basic-minus');
+//     const basicPlus = document.querySelector('.basic-plus');
+//     const seniorMinus = document.querySelector('.senior-minus');
+//     const seniorPlus = document.querySelector('.senior-plus');
+//     const priceElement = document.querySelector('.price');
+//     const radioButtons = document.querySelectorAll('input[name="color"]');
+    
+//     // Получаем начальные значения как числа
+//     let basicValue = parseInt(basicValueElement.innerText);
+//     let seniorValue = parseInt(seniorValueElement.innerText);
+//     let currentType = 'Permanent exhibition'; // начальное значение
+    
+//     // Функция для обновления общей суммы
+//     function updateTotal() {
+//         let totalValue = 0;
+        
+//         if (currentType === 'Permanent exhibition') {
+//             totalValue = basicValue * 150 + seniorValue * 80;
+//         } else if (currentType === 'Temporary exhibition') {
+//             totalValue = basicValue * 20 + seniorValue * 10;
+//         }
+        
+//         priceElement.innerText = `Total € ${totalValue}`;
+//     }
+    
+//     // Обработчик для радио-кнопок
+//     radioButtons.forEach(radio => {
+//         radio.addEventListener('change', () => {
+//             currentType = radio.value;
+//             updateTotal();
+//         });
+//     });
+    
+//     // Обработчик для кнопкок
+//     basicPlus.onclick = () => {
+//         basicValue++;
+//         basicValueElement.innerText = basicValue;
+//         updateTotal();
+//     };
+
+//     basicMinus.onclick = () => {
+//         if (basicValue > 0) {
+//             basicValue--;
+//             basicValueElement.innerText = basicValue;
+//             updateTotal();
+//         }
+//     };
+    
+//     seniorPlus.onclick = () => {
+//         seniorValue++;
+//         seniorValueElement.innerText = seniorValue;
+//         updateTotal();
+//     };
+
+//     seniorMinus.onclick = () => {
+//         if (seniorValue > 0) {
+//             seniorValue--;
+//             seniorValueElement.innerText = seniorValue;
+//             updateTotal();
+//         }
+//     };
+    
+//     // Инициализируем начальное значение
+//     updateTotal();
+// });
 document.addEventListener('DOMContentLoaded', () => {
     // Получаем элементы
     const basicValueElement = document.querySelector('.basic-value');
@@ -611,12 +680,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const seniorPlus = document.querySelector('.senior-plus');
     const priceElement = document.querySelector('.price');
     const radioButtons = document.querySelectorAll('input[name="color"]');
-    
-    // Получаем начальные значения как числа
-    let basicValue = parseInt(basicValueElement.innerText);
-    let seniorValue = parseInt(seniorValueElement.innerText);
-    let currentType = 'Permanent exhibition'; // начальное значение
-    
+
+    // Установим стартовые значения при первой загрузке
+    let initialDataSet = false;
+
+    // Если нет данных в localStorage, устанавливаем стандартные значения
+    if (!localStorage.getItem('basicTickets')) {
+        localStorage.setItem('basicTickets', '1'); // Стандартные билеты
+        localStorage.setItem('seniorTickets', '1'); // Билеты старше 65+
+        localStorage.setItem('selectedExhibition', 'Permanent exhibition'); // Постоянная выставка
+        initialDataSet = true;
+    }
+
+    // Получаем текущие значения из localStorage
+    let basicValue = parseInt(localStorage.getItem('basicTickets'));
+    let seniorValue = parseInt(localStorage.getItem('seniorTickets'));
+    let currentType = localStorage.getItem('selectedExhibition');
+
+    // Если данные установлены впервые, помечаем соответствующие элементы
+    if (initialDataSet) {
+        radioButtons.forEach(radio => {
+            if (radio.value === currentType) {
+                radio.checked = true;
+            }
+        });
+    }
+
+    // Обновляем отображаемое значение полей
+    basicValueElement.innerText = basicValue;
+    seniorValueElement.innerText = seniorValue;
+
     // Функция для обновления общей суммы
     function updateTotal() {
         let totalValue = 0;
@@ -629,45 +722,53 @@ document.addEventListener('DOMContentLoaded', () => {
         
         priceElement.innerText = `Total € ${totalValue}`;
     }
-    
+
     // Обработчик для радио-кнопок
     radioButtons.forEach(radio => {
         radio.addEventListener('change', () => {
             currentType = radio.value;
+            localStorage.setItem('selectedExhibition', currentType); // Сохраняем выбранный тип выставки
             updateTotal();
         });
     });
-    
-    // Обработчик для кнопкок
+
+    // Обработчик для кнопки "+" базовой категории
     basicPlus.onclick = () => {
         basicValue++;
         basicValueElement.innerText = basicValue;
+        localStorage.setItem('basicTickets', basicValue); // Сохраняем новую величину базовых билетов
         updateTotal();
     };
 
+    // Обработчик для кнопки "-" базовой категории
     basicMinus.onclick = () => {
         if (basicValue > 0) {
             basicValue--;
             basicValueElement.innerText = basicValue;
+            localStorage.setItem('basicTickets', basicValue); // Сохраняем новую величину базовых билетов
             updateTotal();
         }
     };
-    
+
+    // Обработчик для кнопки "+" старшей категории
     seniorPlus.onclick = () => {
         seniorValue++;
         seniorValueElement.innerText = seniorValue;
+        localStorage.setItem('seniorTickets', seniorValue); // Сохраняем новую величину старших билетов
         updateTotal();
     };
 
+    // Обработчик для кнопки "-" старшей категории
     seniorMinus.onclick = () => {
         if (seniorValue > 0) {
             seniorValue--;
             seniorValueElement.innerText = seniorValue;
+            localStorage.setItem('seniorTickets', seniorValue); // Сохраняем новую величину старших билетов
             updateTotal();
         }
     };
-    
-    // Инициализируем начальное значение
+
+    // Инициализация общего значения цены
     updateTotal();
 });
 // ------------------------------------------------------------------------------------
