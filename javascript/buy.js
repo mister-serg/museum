@@ -346,6 +346,90 @@ document.addEventListener("DOMContentLoaded", () => {
 // -------------------------------------------------------------------------------------
 
 // -------------------- Прописываем валидацию формы PHONE ------------------------------
+// document.addEventListener("DOMContentLoaded", () => {
+//   const phoneContainer = document.querySelector(".phone-conteiner");
+//   const phoneInput = phoneContainer.querySelector(".phone");
+//   let errorEl = document.getElementById("phone-error");
+
+//   if (!errorEl) {
+//     errorEl = document.createElement("div");
+//     errorEl.id = "phone-error";
+//     errorEl.className = "error-message";
+//     errorEl.setAttribute("aria-live", "polite");
+//     errorEl.setAttribute("role", "status");
+//     phoneContainer.appendChild(errorEl);
+//   }
+
+//   // Разрешенные символы: цифры, пробелы, +, -, ( ), точки
+//   const allowedCharsRegex = /^[+\d\s().-]+$/;
+//   const MIN_DIGITS = 7;
+//   const MAX_DIGITS = 15;
+
+//   function countDigits(value) {
+//     return (value.match(/\d/g) || []).length;
+//   }
+
+//   function getValidationMessage(value) {
+//     const v = value.trim();
+
+//     if (v.length === 0) {
+//       return "This field is required.";
+//     }
+
+//     if (!allowedCharsRegex.test(v)) {
+//       return "Only digits, spaces, +, parentheses, hyphens and dots are allowed.";
+//     }
+
+//     const digits = countDigits(v);
+//     if (digits < MIN_DIGITS || digits > MAX_DIGITS) {
+//       return `Phone number must contain between ${MIN_DIGITS} and ${MAX_DIGITS} digits.`;
+//     }
+
+//     // Доп. проверка: не слишком длинная строка (на случай злоупотреблений)
+//     if (v.length > 30) {
+//       return "Phone number is too long.";
+//     }
+
+//     return "";
+//   }
+
+//   function setInvalidState(message) {
+//     if (message) {
+//       phoneInput.classList.add("invalid");
+//       phoneInput.setAttribute("aria-invalid", "true");
+//       errorEl.textContent = message;
+//     } else {
+//       phoneInput.classList.remove("invalid");
+//       phoneInput.setAttribute("aria-invalid", "false");
+//       errorEl.textContent = "";
+//     }
+//   }
+
+//   // Live validation
+//   phoneInput.addEventListener("input", (e) => {
+//     const msg = getValidationMessage(e.target.value);
+//     setInvalidState(msg);
+//   });
+
+//   // Final check on blur
+//   phoneInput.addEventListener("blur", (e) => {
+//     const msg = getValidationMessage(e.target.value);
+//     setInvalidState(msg);
+//   });
+
+//   // Form submit validation
+//   const form = phoneInput.closest("form");
+//   if (form) {
+//     form.addEventListener("submit", (ev) => {
+//       const msg = getValidationMessage(phoneInput.value);
+//       setInvalidState(msg);
+//       if (msg) {
+//         ev.preventDefault();
+//         phoneInput.focus();
+//       }
+//     });
+//   }
+// });
 document.addEventListener("DOMContentLoaded", () => {
   const phoneContainer = document.querySelector(".phone-conteiner");
   const phoneInput = phoneContainer.querySelector(".phone");
@@ -360,7 +444,6 @@ document.addEventListener("DOMContentLoaded", () => {
     phoneContainer.appendChild(errorEl);
   }
 
-  // Разрешенные символы: цифры, пробелы, +, -, ( ), точки
   const allowedCharsRegex = /^[+\d\s().-]+$/;
   const MIN_DIGITS = 7;
   const MAX_DIGITS = 15;
@@ -372,22 +455,21 @@ document.addEventListener("DOMContentLoaded", () => {
   function getValidationMessage(value) {
     const v = value.trim();
 
-    if (v.length === 0) {
-      return "This field is required.";
+    if (v.length === 0 || v === "(+7)") {
+      return "This is a required field.";
     }
 
     if (!allowedCharsRegex.test(v)) {
-      return "Only digits, spaces, +, parentheses, hyphens and dots are allowed.";
+      return "Only digits, spaces, +, parentheses, dashes, and dots are allowed.";
     }
 
     const digits = countDigits(v);
     if (digits < MIN_DIGITS || digits > MAX_DIGITS) {
-      return `Phone number must contain between ${MIN_DIGITS} and ${MAX_DIGITS} digits.`;
+      return `Number of digits must be between ${MIN_DIGITS} and ${MAX_DIGITS}.`;
     }
 
-    // Доп. проверка: не слишком длинная строка (на случай злоупотреблений)
     if (v.length > 30) {
-      return "Phone number is too long.";
+      return "Number is too long.";
     }
 
     return "";
@@ -405,19 +487,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Live validation
+  function applyPhoneMask(value) {
+    // Очищаем от всех нецифровых символов, кроме permettent
+    const onlyDigits = value.replace(/\D/g, '');
+
+    if (onlyDigits.length === 0) {
+      return "(+7)";
+    }
+
+    // Обеспечиваем, что номер начинается с 7
+    let digits = onlyDigits;
+    if (!digits.startsWith('7')) {
+      digits = '7' + digits;
+    }
+
+    // Форматируем номер
+    let result = "(+7) ";
+    let remainingDigits = digits.substring(1); // убираем первую 7
+
+    const groups = [3, 3, 2, 2];
+
+    for (let group of groups) {
+      if (remainingDigits.length === 0) break;
+      result += remainingDigits.substring(0, group) + " ";
+      remainingDigits = remainingDigits.substring(group);
+    }
+
+    if (remainingDigits.length > 0) {
+      result += remainingDigits;
+    }
+
+    return result.trim();
+  }
+
+  // Обработчик фокуса
+  phoneInput.addEventListener("focus", () => {
+    if (phoneInput.value.trim() === "") {
+      phoneInput.value = "(+7)";
+    }
+  });
+
+  // Обработчик input
   phoneInput.addEventListener("input", (e) => {
-    const msg = getValidationMessage(e.target.value);
+    const rawValue = e.target.value;
+
+    // Если пользователь начал ввод без ((+7)), восстанавливаем
+    if (!rawValue.startsWith("(+7)")) {
+      e.target.value = "(+7)";
+      return;
+    }
+
+    const maskedValue = applyPhoneMask(rawValue);
+    e.target.value = maskedValue;
+
+    const msg = getValidationMessage(maskedValue);
     setInvalidState(msg);
   });
 
-  // Final check on blur
-  phoneInput.addEventListener("blur", (e) => {
-    const msg = getValidationMessage(e.target.value);
+  // Обработка blur
+  phoneInput.addEventListener("blur", () => {
+    const msg = getValidationMessage(phoneInput.value);
     setInvalidState(msg);
   });
 
-  // Form submit validation
+  // Проверка при отправке формы
   const form = phoneInput.closest("form");
   if (form) {
     form.addEventListener("submit", (ev) => {
@@ -728,6 +861,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const expiryInput = document.querySelector(".cardValidity");
   const holderInput = document.querySelector(".cardholderName");
   const cvcInput = document.querySelector(".cvc-cvv"); // Добавляем селектор для поля CVV/CVC
+  let timeoutId;
+
+  // Авто-преобразование символов в верхний регистр с задержкой
+holderInput.addEventListener('input', () => {
+  clearTimeout(timeoutId); // Очищаем предыдущий таймер, если существует
+  timeoutId = setTimeout(() => {
+    holderInput.value = holderInput.value.toUpperCase(); // Преобразуем в верхний регистр
+  }, 100); // Задержка в 300 мс 
+});
 
   if (cardInput && expiryInput && holderInput && cvcInput) {
     cardInput.addEventListener("blur", validateCardNumber);
